@@ -20,7 +20,7 @@
 </h4>
 
 <p align="center">
-	<img src="images/silhouette_placeholder.gif">
+	<img src="images/v4banner.png">
 </p>
 
 ---
@@ -53,7 +53,7 @@ There are a few items you need to setup before installing:
 Please navigate to the AppExchange link below to install the component.
 
 <p align="left">
-	<a href="https://appexchange.salesforce.com/appxListingDetail?listingId=placeYourListingIDHere">
+	<a href="https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EtEHSUA3">
 		<img width=200 src="images/available-on-appexchange.png">
 	</a>
 </p>
@@ -65,8 +65,8 @@ Deploy the source:
 1. Clone this repository:
 
 ```
-git clone git@github.com:sfdc-qbranch/<REPONAME>.git
-cd <REPONAME>
+git clone git@github.com:sfdc-qbranch/InnovationHub.git
+cd InnovationHub
 ```
 
 2. Authorize with your org and provide it with an alias (OrgAlias):
