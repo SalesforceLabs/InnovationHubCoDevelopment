@@ -1,0 +1,3 @@
+<design:component label="Community Header">
+    <design:attribute name="panelImage" label="IH Header Image" default="innohub__IH_Header_Image"/>
+</design:component>

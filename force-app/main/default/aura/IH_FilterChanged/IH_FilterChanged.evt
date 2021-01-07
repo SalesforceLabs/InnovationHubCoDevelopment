@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="IH List View Filter Changed" access="global">
+    <aura:attribute name="filterName" type="List"/>
+    <aura:attribute name="selectedFilters" type="List"/>
+</aura:event>

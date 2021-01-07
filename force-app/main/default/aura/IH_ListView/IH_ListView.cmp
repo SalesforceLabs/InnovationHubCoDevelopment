@@ -1,0 +1,37 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,force:hasRecordId" access="global" controller="listViewCtr">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="queryObject" type="String" access="global"/>
+    <aura:attribute name="queryObjectwithC" type="String" access="global"/>
+    <aura:attribute name="relatedObject" type="String" access="global"/>
+    <aura:attribute name="ListofsObject" type="sObject[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-float_right slds-p-around_medium">
+        <button class="slds-button slds-button_neutral" onclick="{!c.newRecord}">New</button>
+    </div>
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <tbody>
+            <aura:if isTrue="{!v.ListofsObject.length > 0}">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Name">Name</div>
+                        </th>
+                    </tr>
+                </thead>
+                <aura:iteration items="{!v.ListofsObject}" var="item">
+                    <tr>
+                        <c:listItem objectItem="{!item}" />
+                    </tr>
+                </aura:iteration>
+                <aura:set attribute="else">
+                    <div class="missingFileText"> 
+                        <div >
+                            Looks like we can't find any associations yet
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </tbody>
+    </table>
+</aura:component>

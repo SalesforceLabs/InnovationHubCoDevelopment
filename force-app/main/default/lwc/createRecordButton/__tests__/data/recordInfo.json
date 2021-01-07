@@ -1,0 +1,132 @@
+{
+  "apiName": "innohub__Challenge__c",
+  "childRelationships": {},
+  "id": "a011X000003Lu4tQAC",
+  "lastModifiedById": "0051X000003NcAKQA0",
+  "lastModifiedDate": "2020-02-21T16:11:12.000Z",
+  "recordTypeId": "012000000000000AAA",
+  "recordTypeInfo": null,
+  "systemModstamp": "2020-02-21T16:11:12.000Z",
+  "fields": {
+    "CreatedBy": {
+      "displayValue": "User User",
+      "value": {
+        "apiName": "User",
+        "childRelationships": {},
+        "id": "0051X000003NcAKQA0",
+        "lastModifiedById": "0051X000003NcAKQA0",
+        "lastModifiedDate": "2020-02-17T11:07:43.000Z",
+        "recordTypeId": null,
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-02-21T09:48:54.000Z",
+        "fields": {
+          "Id": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+          "Name": { "displayValue": null, "value": "User User" }
+        }
+      }
+    },
+    "CreatedById": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+    "CreatedDate": {
+      "displayValue": "17/02/2020, 11:15",
+      "value": "2020-02-17T11:15:18.000Z"
+    },
+    "LastModifiedBy": {
+      "displayValue": "User User",
+      "value": {
+        "apiName": "User",
+        "childRelationships": {},
+        "id": "0051X000003NcAKQA0",
+        "lastModifiedById": "0051X000003NcAKQA0",
+        "lastModifiedDate": "2020-02-17T11:07:43.000Z",
+        "recordTypeId": null,
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-02-21T09:48:54.000Z",
+        "fields": {
+          "Id": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+          "Name": { "displayValue": null, "value": "User User" }
+        }
+      }
+    },
+    "LastModifiedById": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+    "LastModifiedDate": {
+      "displayValue": "21/02/2020, 16:11",
+      "value": "2020-02-21T16:11:12.000Z"
+    },
+    "Name": { "displayValue": null, "value": "Innovation Hub Features" },
+    "Owner": {
+      "displayValue": "User User",
+      "value": {
+        "apiName": "Name",
+        "childRelationships": {},
+        "id": "0051X000003NcAKQA0",
+        "lastModifiedById": null,
+        "lastModifiedDate": null,
+        "recordTypeId": null,
+        "recordTypeInfo": null,
+        "systemModstamp": null,
+        "fields": {
+          "Id": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+          "Name": { "displayValue": null, "value": "User User" }
+        }
+      }
+    },
+    "OwnerId": { "displayValue": null, "value": "0051X000003NcAKQA0" },
+    "innohub__Allow_Idea_Submission__c": {
+      "displayValue": null,
+      "value": false
+    },
+    "innohub__Author_Image__c": {
+      "displayValue": null,
+      "value": "<p style=\"\"><img src=\"/servlet/rtaImage?eid=a011X000003Lu4t&amp;feoid=00N1X000003iJyy&amp;refid=0EM1X0000005khM\" alt=\"M.png\"></img></p>"
+    },
+    "innohub__Author__c": {
+      "displayValue": null,
+      "value": "Maximilian Goldschmidt"
+    },
+    "innohub__Banner_Background_Color__c": {
+      "displayValue": null,
+      "value": "rgb(13, 19, 53)"
+    },
+    "innohub__Banner_Text_Color__c": {
+      "displayValue": null,
+      "value": "rgb(255, 255, 255)"
+    },
+    "innohub__Category__c": {
+      "displayValue": "Value 2;Value 3",
+      "value": "Value 2;Value 3"
+    },
+    "innohub__End_Date__c": {
+      "displayValue": "21/02/2020",
+      "value": "2020-02-21"
+    },
+    "innohub__Image__c": {
+      "displayValue": null,
+      "value": "<p style=\"\"><img src=\"/servlet/rtaImage?eid=a011X000003Lu4t&amp;feoid=00N1X000003iJz4&amp;refid=0EM1X0000005khC\" alt=\"opTV_header.jpg\"></img></p>"
+    },
+    "innohub__Long_Description__c": {
+      "displayValue": null,
+      "value": "<p><span style=\"font-size: 14px; color: rgb(0, 0, 0);\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span></p>"
+    },
+    "innohub__Short_Description__c": {
+      "displayValue": null,
+      "value": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i"
+    },
+    "innohub__Start_Date__c": {
+      "displayValue": "31/01/2020",
+      "value": "2020-01-31"
+    },
+    "innohub__Status__c": {
+      "displayValue": "Shortlisting",
+      "value": "Shortlisting"
+    },
+    "innohub__Video_File_Id__c": { "displayValue": null, "value": null },
+    "innohub__Video_Title__c": {
+      "displayValue": null,
+      "value": "A Message From Our Sponsor"
+    },
+    "innohub__Video_Url__c": {
+      "displayValue": null,
+      "value": "https://vimeo.com/385647949"
+    }
+  }
+}

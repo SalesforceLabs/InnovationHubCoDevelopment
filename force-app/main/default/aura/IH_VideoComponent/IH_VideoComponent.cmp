@@ -1,0 +1,61 @@
+<aura:component access="global" controller="IHvideoController">
+    <aura:attribute name="theObject" type="sObject" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="filevideoHeight" type="String"/>
+    <aura:attribute name="filevideoWidth" type="String" />
+    <aura:attribute name="videoHeight" type="String" />
+    <aura:attribute name="videoWidth" type="String" />
+    <aura:attribute name="testBoolean" type="Boolean" default="true"/>
+    <aura:attribute name="videoFileNotDeleted" type="Boolean" default="true"/>
+    
+    <aura:attribute name="edit" type="Boolean" default="true"/>
+    <aura:attribute name="videoIdOld" type="String" />
+    
+    <aura:handler name="change" value="{!v.Video_File_Id_Field}" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.videoFileNotDeleted}" >
+        <div class="theVideoContainer">
+            <div style="padding: 0px;" class="slds-card__header slds-grid">
+                <div class="slds-text-heading--small slds-truncate videoTitle">{!v.theObject.innohub__Video_Title__c}</div>
+            </div>
+            <aura:if isTrue="{!v.theObject.innohub__Video_File_Id__c==NULL}">
+                <div class="theVideoContainer">
+                    <div class="slds-card__body theVideo">
+                        <iframe src="{!v.theObject.innohub__Video_URL__c}" height="{!v.videoHeight}" width="{!v.videoWidth}" frameborder="0" allow="encrypted-media;fullscreen" allowfullscreen="allowfullscreen" webkitallowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!empty(v.videoIdOld)}">
+                        <div class="theVideoContainer">
+                            
+                            <video width="{!v.filevideoWidth}" height="{!v.filevideoHeight}" controls="controls" class="theVideo">
+                                <source aura:id="myVideo" src="{!$SfdcSite.pathPrefix + '/sfc/servlet.shepherd/document/download/' + v.theObject.innohub__Video_File_Id__c}" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video> 
+                        </div>
+                        <aura:set attribute="else">
+                            <div class="theVideoContainer">
+                                
+                                <video width="{!v.filevideoWidth}" height="{!v.filevideoHeight}" controls="controls">
+                                    <source src="{!$SfdcSite.pathPrefix + '/sfc/servlet.shepherd/document/download/' + v.videoIdOld}" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video> 
+                            </div>
+                        </aura:set>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </div>
+        <aura:set attribute="else">
+            <div style="padding: 0px;" class="slds-card__header slds-grid">
+                <div class="slds-text-heading--small slds-truncate videoTitle">{!v.theObject.innohub__Video_Title__c}</div>
+            </div>
+            <div class="theVideoContainer">
+                <div class="slds-card__body theVideo">
+                    <iframe src="{!v.theObject.innohub__Video_URL__c}" height="{!v.videoHeight}" width="{!v.videoWidth}" frameborder="0" allow="encrypted-media;fullscreen" allowfullscreen="allowfullscreen" webkitallowfullscreen="true"></iframe>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

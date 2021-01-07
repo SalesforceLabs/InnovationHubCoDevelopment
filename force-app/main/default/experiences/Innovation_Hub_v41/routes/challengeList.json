@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "a94b4b85-11f0-42c6-9f14-ab70a773b390",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "33de6ab6-d6f1-4f7c-a3cd-953f78628735",
+  "label" : "Challenge List",
+  "objectApiName" : "innohub__Challenge__c",
+  "routeType" : "list-a01",
+  "type" : "route",
+  "urlPrefix" : "challenge"
+}

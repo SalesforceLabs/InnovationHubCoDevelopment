@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "f8a6d938-5c92-4177-992e-0f69c8bff2b5",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "23ce1fab-aa53-4060-96f8-cb3ee65fba08",
+  "label" : "Analytics",
+  "pageAccess" : "UseParent",
+  "routeType" : "custom-analytics",
+  "type" : "route",
+  "urlPrefix" : "analytics"
+}

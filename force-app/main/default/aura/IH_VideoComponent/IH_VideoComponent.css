@@ -1,0 +1,20 @@
+.THIS .theVideoContainer{
+    margin-top: 15px; 
+    width: 900px;
+    height:800px; 
+}
+
+
+
+.slds.innohubIH_VideoComponent {
+    padding: 25px 0px;
+}
+
+
+/* iPhone and iPad */
+
+@media all and (max-width : 766px) {
+    .THIS .theVideo{
+        width: 80%;
+    }
+}

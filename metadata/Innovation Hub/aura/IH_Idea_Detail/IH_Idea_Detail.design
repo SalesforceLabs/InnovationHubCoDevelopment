@@ -1,0 +1,7 @@
+<design:component label="Idea Detail">
+    <design:attribute name="filevideoHeight" label="File Video Height" default="500"/>
+    <design:attribute name="filevideoWidth" label="File Video Width" default="600"/>
+    
+    <design:attribute name="videoHeight" label="Video Height" default="315px"/>
+    <design:attribute name="videoWidth" label="Video Width" default="100%"/>   
+</design:component>

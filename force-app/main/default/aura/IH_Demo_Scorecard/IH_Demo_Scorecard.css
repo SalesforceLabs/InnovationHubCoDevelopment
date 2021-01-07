@@ -1,0 +1,36 @@
+.THIS .theButton{
+    background-color: #fce500;
+    color:black !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+    font-weight: 700;
+    font-size: 21px;
+    
+    background: #FFE900;
+    width: 24px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1.8rem;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.THIS .bottom-link {
+    font-family: 'Arial';
+    text-decoration: none;
+    color: #404040;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    content: ">";
+    background: #ffe900;
+    width: 27px;
+    display: inline-block;
+    height: 26px;
+    line-height: 28px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: center;
+}

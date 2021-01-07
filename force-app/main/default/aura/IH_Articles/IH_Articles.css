@@ -1,0 +1,102 @@
+.THIS .outerContainer{
+    min-height: 305px;
+    max-width: 315px;
+}
+
+.THIS .noEvents{
+    max-width: 302px;
+}
+
+.THIS .theArea{
+    background-size: cover;
+    height: 0px;
+    bottom: 140px;
+}
+
+.THIS .overlay{
+    width: 100%; 
+    height: 100%;
+}
+
+.THIS.articleMargin{
+    margin-bottom:40px;
+    margin-top: 40px;
+}
+
+.THIS .slds-col--padded{
+    padding-bottom:15px;
+}
+
+.THIS .evetDate {
+    height:150px !important;
+    /*background-color: rgba(171, 173, 176, 0.72);*/
+}
+
+.THIS .mtm{
+    margin: 10px;
+}
+
+.THIS .myHeaderMain{
+    height: 139px;
+    line-height: 148px;
+    overflow: hidden;
+    background-color: #c2c3c5;
+}
+
+.THIS .spanClass{
+    font-family:arial black !important;
+    font-style: italic;
+    position: relative;
+    color:white;
+    bottom: 3px;
+    margin-left: 7px;
+}
+
+.THIS .highlightTitle{
+    font-size: 1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    line-height: 19px;
+}
+
+.THIS .articleTitle{
+    margin: 10px;
+    max-height: 37px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.THIS .tileCategory{
+    font-size: 0.7rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    font-style:italic;
+    color:white;
+    margin-left: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.THIS .slds-card{
+    overflow: hidden;
+    max-width: 306px;
+    max-height: 140px;
+}
+
+.THIS .tileCategory {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    /*color: rgb(84, 105, 141);*/
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    font-style:italic;
+}
+
+@media only screen and (max-width: 1025px) {
+    .THIS.slds-card {
+        min-height: 139px;/*Louise edited from 250px to 152px Mar15------152px to 139px MAr 28th */    }
+}

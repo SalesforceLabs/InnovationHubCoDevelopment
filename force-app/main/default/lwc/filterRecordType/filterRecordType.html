@@ -1,0 +1,26 @@
+<template>
+  <template if:false={objectInfo.error}>
+    <template if:true={multipleRecordTypes}>
+      <lightning-combobox
+        name="record-types"
+        label={label}
+        value={selectedValue}
+        options={options}
+        onchange={handleChange}
+      ></lightning-combobox>
+    </template>
+  </template>
+  
+  <template if:true={isBuilder}>
+    <template if:false={multipleRecordTypes}>
+      <p>This object doesn't have multiple active record types.</p>
+    </template>
+
+    <!--Show error messages-->
+    <template if:true={error}>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-error-panel errors={error}></c-error-panel>
+      </lightning-layout-item>
+    </template>
+  </template>
+</template>

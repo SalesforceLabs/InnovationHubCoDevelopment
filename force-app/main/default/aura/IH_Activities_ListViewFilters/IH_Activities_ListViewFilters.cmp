@@ -1,0 +1,62 @@
+<aura:component access="global"> 
+    <aura:attribute name="types" type="String[]"  />
+    <aura:attribute name="bu" type="String[]"/>
+    <aura:attribute name="dates" type="String[]" default="['Recent', 'Popular', 'My Activities']" />
+    <aura:attribute name="filters" type="List" default="[]"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    <aura:attribute name="FilterLabel" type="String" />
+    <aura:attribute name="labelName1" type="string"/>
+    <aura:attribute name="labelName2" type="string"/>
+    
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="CategoryFilter" type="Boolean" access="global"/>
+    <aura:attribute name="BUFilter" type="Boolean" access="global"/> 
+    
+    
+    <div class="slds-p-top_small">
+        <div class="filterHeader slds-p-around_medium">
+            {!$Label.c.filter_Activities_Header}       
+        </div> 
+        <div class="slds-p-vertical_medium slds-p-horizontal_medium options">
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_Activity_Checkbox /></div>
+            </aura:if>
+            
+            <!-- fieldname passed as API field name-->
+            <aura:if isTrue="{!v.CategoryFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Activity filterName="innohub__Type__c" options="{!v.types}" aura:id="typesFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.BUFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Activity filterName="innohub__BU__c" options="{!v.bu}" aura:id="buFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Activity filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Activity filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Activity filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.FilterLabel}">
+                
+                <lightning:button variant="brand" label="{!$Label.c.create_Activity_Button}" onclick="{!c.handleShowModal}" class="createButton slds-p-vertical_small"/> 
+                <aura:set attribute="else">
+                    <lightning:button variant="brand" label="Create Activity" onclick="{!c.handleShowModal}" class="createButton slds-p-vertical_small"/>          
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,76 @@
+<aura:component access="global">
+    <aura:attribute name="theIdeas" type="sObject[]" />
+    <aura:attribute name="userField" type="String"  />
+    <aura:attribute name="myIdeasSection" type="String" />
+    <aura:attribute name="customField" type="String"  />
+    <!-- Paginator Attrinutes Below -->
+    <aura:attribute name="pageCount" type="Integer"/>
+    <aura:attribute name="pageSize" type="Integer" default="9"/>
+    <aura:attribute name="currentPage" type="Integer" default="1"/>
+    <aura:attribute name="pages" type="Integer[]"/>
+    <aura:attribute name="lastPage" type="Integer"/>
+    <aura:handler name="change" value="{!v.theIdeas}" action="{!c.initialisePaginator}"/>
+    <aura:handler name="change" value="{!v.pageSize}" action="{!c.initialisePaginator}"/>
+    <aura:attribute name="selectedIdeas" type="sObject[]" />
+    <aura:attribute name="currentButton" type="Object"/>
+    
+    
+    <aura:if isTrue="{!v.theIdeas.length == 0}">
+        <div class="slds-align_absolute-center slds-p-top_xx-large">
+            <div>
+                <lightning:icon class="slds-p-bottom_medium" iconName="utility:trail" size="large"/>
+            </div>
+            <div class="slds-text-heading_large slds-text-align_center slds-text-color_weak">
+                {!$Label.c.ideas_None_Message}
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <lightning:layout verticalAlign="start" multipleRows="true" pullToBoundary="small">
+                <aura:iteration items="{!v.selectedIdeas}" var='idea' indexVar="index">
+                    <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="around-small">
+                        <c:IH_IdeasTile idea="{!idea}" userField="{!v.userField}" customField="{!v.customField}"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+            <div class="slds-align_absolute-center" style="margin-top: 10px;">
+                <!--<lightning:button label="Previous" value="previous" onclick="{!c.paginatorButtons}"/>-->
+                
+                <lightning:buttonGroup>
+                    <lightning:button label="1" value="1" onclick="{!c.handlePageChange}" aura:id='btn-1'/>
+                    <aura:if isTrue="{! and((v.currentPage > 3),notequals(v.pageCount,4))}">
+                        <lightning:button disabled="true" label="..." value="..."/>
+                    </aura:if>
+                    <aura:iteration items="{!v.pages}" var='page' indexVar="index">
+                        <lightning:button label="{!page}" value="{!page}" onclick="{!c.handlePageChange}"/>
+                    </aura:iteration>
+                    <aura:if isTrue="{! and(lessthan(v.currentPage,(v.lastPage - 2)),(v.pageCount != 4))}">
+                        <lightning:button disabled="true" label="..." value="..." />
+                    </aura:if>
+                    <aura:if isTrue="{! greaterthan(v.lastPage,1)}">
+                        <lightning:button label="{!v.lastPage}" value="{!v.lastPage}" onclick="{!c.handlePageChange}"/>
+                    </aura:if>
+                </lightning:buttonGroup>
+                <!--<lightning:button label="Next" value="next" onclick="{!c.paginatorButtons}"/>-->
+                
+            </div>
+            <div class="slds-align_absolute-center">
+                <lightning:select name="select" label='' aura:id="select" onchange="{! c.pageSizeChange }" value="{! v.pageSize}">
+                    <option value="3">3</option>
+                    <option value="6">6</option>
+                    <option value="9">9</option>
+                    <option value="12">12</option>
+                    <option value="15">15</option>
+                    <option value="18">18</option>
+                    <option value="21">21</option>
+                    <option value="24">24</option>
+                    <option value="27">27</option>
+                    
+                </lightning:select>
+                <div class="slds-text-title" style="vertical-align: middle; padding-top: 12px; padding-left: 5px;">{!$Label.c.paginator_Results_Per_Page}</div>
+            </div>
+            
+        </aura:set>
+    </aura:if>	
+    
+    
+</aura:component>

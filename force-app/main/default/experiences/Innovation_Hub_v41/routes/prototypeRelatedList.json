@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "2a1c6667-ae07-4f07-8f3f-eae09c1445f7",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "1c49d73e-f5a0-4068-8086-fe3e19dad089",
+  "label" : "Prototype Related List",
+  "objectApiName" : "innohub__Prototype__c",
+  "routeType" : "relatedlist-a0H",
+  "type" : "route",
+  "urlPrefix" : "prototype"
+}

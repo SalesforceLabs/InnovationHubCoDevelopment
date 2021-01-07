@@ -1,0 +1,24 @@
+<aura:component access="global">
+<aura:attribute name="theUserVoices" type="Object[]" />
+
+    <aura:if isTrue="{!v.theUserVoices.length == 0}">
+        <div class="slds-align_absolute-center slds-p-top_xx-large">
+            <div>
+                <lightning:icon class="slds-p-bottom_medium" iconName="utility:trail" size="large"/>
+            </div>
+            <div class="slds-text-heading_large slds-text-align_center slds-text-color_weak">
+                {!$Label.c.inspiration_None_Message}
+            </div>
+        </div>
+        
+        <aura:set attribute="else">
+            <lightning:layout verticalAlign="start" multipleRows="true" pullToBoundary="small">
+                <aura:iteration items="{!v.theUserVoices}" var='userVoice' indexVar="index">
+                    <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="around-small">
+                        <c:IH_UserVoiceTile userVoice="{!userVoice}"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+        </aura:set>
+    </aura:if>
+</aura:component>

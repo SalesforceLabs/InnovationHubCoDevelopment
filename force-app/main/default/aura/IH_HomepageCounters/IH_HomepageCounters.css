@@ -1,0 +1,32 @@
+.THIS .theNumberHr{
+    margin-top: 5px;
+    width: 100px;
+}
+
+.THIS .theNum{
+    font-size: 56px;
+}
+
+.THIS .theTitleCounter{
+    font-size: 15px;
+}
+
+.THIS .overallDivClick{
+    cursor: pointer;
+
+}
+/* iPhone and iPad */
+
+@media all and (max-width : 1022px) {
+  
+    
+    .THIS .theTitleCounter{
+        font-family: arial !important;
+        text-align:center;
+        font-style: bold;
+
+    }
+    
+    
+    
+}

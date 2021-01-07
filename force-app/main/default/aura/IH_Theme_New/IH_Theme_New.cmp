@@ -1,0 +1,52 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Innovation Lab Theme 1">
+    
+    <!-- Theme Standard Attributes -->
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="brandLogo" type="String" access="global"/>
+    
+    <aura:handler event="c:IH_HeaderCSS_2" action="{!c.editCss}"/>
+    
+    <div class="desktopVersion">
+        <div class="wrapper">
+            <div class="panelImage" aura:id="panelImage"> <!--aura:id added-->
+                <lightning:layout horizontalAlign="space" class="dermo"> <!-- louise changed from end to space-->
+                    <lightning:layoutItem size="2" flexibility="auto" padding="around-small">
+                        <center>
+                            <img src="{!v.brandLogo}" onclick="{!c.gotoHome}" class="brandLogo"/>
+                        </center>
+                    </lightning:layoutItem> 
+                     <!--Louise Edit-->
+                    <lightning:layoutItem size="8" flexibility="shrink">
+                        <lightning:layout horizontalAlign="center">
+                            <lightning:layoutItem size="2" smallDeviceSize="2" mediumDeviceSize ="1" largeDeviceSize="1" flexibility="auto">
+                            </lightning:layoutItem>
+                            <lightning:layoutItem size="10"  smallDeviceSize="10" mediumDeviceSize ="11" largeDeviceSize="11"  flexibility="auto" padding="around-small" class="slds-is-relative theNav">
+                                {!v.navBar}
+                            </lightning:layoutItem> 
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                    <!--Louise Edit-->
+                    <lightning:layoutItem size="2" flexibility="auto" padding="around-small">
+                            {!v.profileMenu}
+                    </lightning:layoutItem>
+                </lightning:layout> 
+                <lightning:layout horizontalAlign="space" > 
+                    <lightning:layoutItem size="2" flexibility="auto" padding="around-small" class="">
+                    </lightning:layoutItem>   
+                    <lightning:layoutItem size="8" flexibility="auto" class="theSearch slds-align_absolute-center slds-is-relative">
+                        {!v.search}
+                    </lightning:layoutItem>  
+                    <lightning:layoutItem size="2" flexibility="auto" padding="around-small">
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </div>     
+        <div class="headerUnderLine"/>
+        <div class="newBody">
+            {!v.body} 
+        </div>
+    </div>
+</aura:component>

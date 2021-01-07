@@ -1,0 +1,6 @@
+<aura:component >
+    <aura:attribute name="objectItem" type="sObject" />
+    <td class="tableClick">
+        <div class="slds-truncate" title="{!v.objectItem.Name}" onclick="{!c.navigateToRecord}">{!v.objectItem.Name}</div>
+    </td>
+</aura:component>

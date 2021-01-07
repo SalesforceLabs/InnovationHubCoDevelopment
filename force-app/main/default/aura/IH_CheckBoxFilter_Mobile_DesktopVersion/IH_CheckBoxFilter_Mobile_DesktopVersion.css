@@ -1,0 +1,9 @@
+.THIS .slds-required{
+    display:none;
+}
+
+
+.THIS .slds-radio .slds-form-element__label {
+    font-size: .82rem;
+    line-height: 2.5;
+}

@@ -1,0 +1,182 @@
+/*.THIS.outerContainer{
+    max-width: 336px;
+}*/
+
+.THIS .headerArea{
+    background-size: cover;
+    height: 0px;
+    bottom: 140px;
+}
+
+.THIS .overlay{
+    width: 100%; 
+    height: 100%;
+}
+
+.THIS .detailButton{
+    bottom: 10px; 
+    width: 90%;
+}
+
+.THIS .theDate{
+    margin-top: -13px; 
+    text-transform:uppercase;
+}
+
+.THIS .tileCategory {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    /*color: rgb(84, 105, 141);*/
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    font-style:italic;
+}
+
+.THIS .tileTitle{
+    font-size:1rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    line-height: 19px;
+}
+
+.THIS .tileInfo {
+    position: relative;
+    height: 170px;
+    background-color: white;
+}
+
+.THIS .creatorInfo {
+    width: 95%;
+    position: absolute;
+    bottom: 2px;
+}
+
+.THIS .avatar {
+    border-radius: 50%;
+}
+
+.THIS .featuredRibbon {
+    position: absolute;
+    top: 30px;
+    left: -12px;
+    background-color: #00B2A9;
+    width: 140px;
+    height: 40px;
+    color: white;
+}
+
+.THIS .iconActive {
+    color: rgb(30, 93, 136);
+}
+
+.THIS .eventBanner {
+    width: 100%;
+    height: 140px;
+    /*background-color: #D0D9DE;*/
+}
+
+.THIS .tileBg{
+    background-color: rgba(171, 173, 176, 0.72);
+}
+
+.THIS .eventDate {
+    padding-left: 11px;
+    padding-bottom: 62px;
+}
+
+.THIS .text-lrg{
+    font-size: 50px;
+    padding-left: 5px;
+}
+
+.THIS .text-smll{
+    font-size: 0.8rem;
+    line-height: 1.25;
+}
+
+.THIS .txt-100 {
+    font-weight: 500;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.THIS .blueBorder {
+    border-color: #005fb2;
+    color: rgb(105, 105, 105);
+}
+
+.THIS .greenBorder {
+    border-color: #00B2A9;
+    color: rgb(105, 105, 105);
+}
+
+.THIS .eventFlag {
+    right: 0px;
+    top: 17px;
+    width: 46px;
+    height: 34px;
+}
+
+.THIS .slds-text-longform{
+    /*opacity: 0.4;*/
+}
+
+.THIS .myHeader{
+    height: 139px;
+    line-height: 148px;
+    overflow: hidden;
+}
+
+.THIS.opacityClass{
+    opacity: 0.5;
+}
+
+.THIS .hidden{
+    display:none;
+}
+
+.THIS .defaultImg{
+    height: 156px;
+    margin-top: -8px;
+    width: 314px;
+}
+
+.THIS .theButton{
+    background-color: #fce500;
+    color:black !important;
+    border-radius: 0px !important;
+    border: 0px !important;
+    font-weight: 700;
+    font-size: 21px;
+    
+    background: #FFE900;
+    width: 24px;
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 1.8rem;
+    margin-right: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.THIS .bottom-link {
+    font-family: 'Arial';
+    text-decoration: none;
+    color: #404040;
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    content: ">";
+    background: #ffe900;
+    width: 27px;
+    display: inline-block;
+    height: 26px;
+    line-height: 28px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    text-align: center;
+}

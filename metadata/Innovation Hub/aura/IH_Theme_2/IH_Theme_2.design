@@ -1,0 +1,3 @@
+<design:component  label="Innovation Hub Theme 2">
+	<design:attribute name="brandLogo" label="Company Logo" description="URL of Company Logo" />
+</design:component>

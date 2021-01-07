@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "27d48755-f29e-41c3-b04b-38cc001f0353",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "762d3ade-4e4f-4fff-82f4-6f528c1cb085",
+  "label" : "Activity (innohub) List",
+  "objectApiName" : "innohub__Activity__c",
+  "routeType" : "list-a00",
+  "type" : "route",
+  "urlPrefix" : "activity"
+}

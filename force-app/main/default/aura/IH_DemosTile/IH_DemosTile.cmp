@@ -1,0 +1,89 @@
+<aura:component controller="IH_DemoCtr" access="global">
+    <aura:attribute name="demo" type="sObject" />
+    <aura:attribute name="creator" type="sObject" />
+    <aura:attribute name="demoCat" type="String" />
+    <aura:attribute name="catSet" type="Boolean" default="false" />    
+    <aura:attribute name="demoCatTwo" type="String" />
+    <aura:attribute name="demoCatAll" type="String[]" />
+    <aura:attribute name="theVote" type="Boolean"/>
+    <aura:attribute name="votePresent" type="Boolean" />
+    <aura:attribute name="isHighlight" type="Boolean" default="false"/>
+    <aura:attribute name="thePoints" type="Double" default="0"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:registerEvent name="DemoVoteChange" type="c:DemoVoteChange" />
+    
+    <div class="slds-card outerContainer">
+        <lightning:spinner aura:id="mySpinner" class="slds-hide" alternativeText="Loading Demo"/>
+        <div class="ideaTileBanner cursorPointer" onclick="{!c.goToDemoDetail}">
+            <aura:if isTrue="{!v.demo.innohub__Image__c}">
+                <center><ui:outputRichText class="slds-text-longform" value="{!v.demo.innohub__Image__c}"/></center>
+                <aura:set attribute="else">
+                    <center>
+                        <lightning:icon iconName="utility:image" size="large" alternativeText="No image Set"/>
+                    </center>
+                </aura:set>
+            </aura:if>
+        </div> 
+        
+        <div class="tileBorderBottom tileInfo slds-p-around_medium">
+            <div class=" slds-clearfix">
+                <div class="slds-grid ">
+                    <div class="slds-size_2-of-3">
+                        <div class="slds-grid slds-has-flexi-truncate">
+                            <aura:if isTrue="{!v.catSet}">
+                                <div aura:id="theSize" class="slds-size_3-of-5">
+                                    <p aura:id="theTrunc" class="tileCategory slds-truncate">{!v.demoCatTwo}</p>
+                                </div>
+                                <div class="slds-size_2-of-5">
+                                    <span aura:id="theHelpText" class="slds-p-left_xx-small slds-is-relative bottomUp hidden"><lightning:helptext content="{!v.demoCatAll}" iconName="utility:list"/></span>
+                                </div>
+                                <aura:set attribute="else">
+                                    <i class="tileCategory">No category selected</i>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-3">
+                        <span class="slds-badge slds-float_right">{!v.demo.innohub__Points__c * 10 + ' '} {!$Label.c.points_Label}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-p-top_small">
+                <div class="tileTitle cursorPointer">
+                    <!-- removing sdls-truncate to review wrapping-->
+                    <p class="tileTitle" onclick="{!c.goToDemoDetail}">{!v.demo.Name}</p>
+                </div>
+            </div>
+            <div class="creatorInfo slds-p-vertical_small slds-grid slds-wrap slds-grid_pull-padded slds-text-align_center">
+                
+                <div class="slds-size_2-of-12">
+                    <span class="slds-avatar slds-avatar_small avatar">
+                        <img alt="Person name" src="{!v.demo.CreatedBy.SmallPhotoUrl}" title="User avatar"/>
+                    </span>
+                </div>
+                <div class="slds-size_7-of-12 slds-text-align_left">
+                    <p class="slds-truncate creatorName slds-text-title slds-p-top_xx-small">{!v.demo.CreatedBy.Name}</p>
+                </div>
+                
+                <div class="slds-size_3-of-12">
+                    <aura:if isTrue="{!v.votePresent}">
+                        <aura:if isTrue="{!v.theVote}">
+                            <lightning:buttonIconStateful selected="true" variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                            <lightning:buttonIconStateful variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                            <aura:set attribute="else">
+                                <lightning:buttonIconStateful variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                                <lightning:buttonIconStateful selected="true" variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                            </aura:set>
+                        </aura:if>
+                        <aura:set attribute="else">
+                            <lightning:buttonIconStateful variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                            <lightning:buttonIconStateful variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                        </aura:set>
+                    </aura:if>
+                </div>     
+            </div>            
+        </div>
+    </div>
+</aura:component>

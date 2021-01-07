@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Activities_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities Mobile Header</shortDescription>
+        <value>Activities</value>
+    </labels>
+    <labels>
+        <fullName>Countdown_Closed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Countdown Closed</shortDescription>
+        <value>Closed</value>
+    </labels>
+    <labels>
+        <fullName>Countdown_Closes</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Countdown Closes</shortDescription>
+        <value>Closes</value>
+    </labels>
+    <labels>
+        <fullName>Demo_Create_Scorecard_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo Create Scorecard Button</shortDescription>
+        <value>Create Scorecard</value>
+    </labels>
+    <labels>
+        <fullName>Demos_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demos Mobile Header</shortDescription>
+        <value>Demos</value>
+    </labels>
+    <labels>
+        <fullName>Events_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Events Mobile Header</shortDescription>
+        <value>Events</value>
+    </labels>
+    <labels>
+        <fullName>Favourite_Ideas_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: &apos;Favourite&apos; value</shortDescription>
+        <value>Favourites</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Date_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Date Filter Title</shortDescription>
+        <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Hide_Filters</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter_Hide_Filters</shortDescription>
+        <value>hide filters</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Label</shortDescription>
+        <value>Filters</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Popular_Idea</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter which sorts Ideas by votes (descending order)</shortDescription>
+        <value>Popular Ideas</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Show_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Show Label</shortDescription>
+        <value>Show</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Show_More</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter_Show_More</shortDescription>
+        <value>show more</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Sort_By_Alphabetical</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Sort By Alphabetical</shortDescription>
+        <value>Alphabetically</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Sort_By_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Sort By Label</shortDescription>
+        <value>Sort By</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Sort_By_Newest</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Sort By Newest</shortDescription>
+        <value>Newest</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Sort_By_Oldest</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Sort By Oldest</shortDescription>
+        <value>Oldest</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Sort_By_Popular</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Sort By Popular</shortDescription>
+        <value>Most Popular</value>
+    </labels>
+    <labels>
+        <fullName>Filter_Type_All</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type &amp; Custom filter: &apos;All&apos; value for each object</shortDescription>
+        <value>All</value>
+    </labels>
+    <labels>
+        <fullName>Ideas_Approved_Listview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Approved Ideas list view section header</shortDescription>
+        <value>Approved</value>
+    </labels>
+    <labels>
+        <fullName>Ideas_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Ideas Mobile Header</shortDescription>
+        <value>Ideas</value>
+    </labels>
+    <labels>
+        <fullName>Ideas_Submitted_Listview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Submitted ideas list view section header</shortDescription>
+        <value>Submitted</value>
+    </labels>
+    <labels>
+        <fullName>Ideas_onHold_Listview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>On Hold ideas list view section header</shortDescription>
+        <value>On Hold</value>
+    </labels>
+    <labels>
+        <fullName>Inspirations_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inspirations Mobile Header</shortDescription>
+        <value>Inspirations</value>
+    </labels>
+    <labels>
+        <fullName>Latest</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest</shortDescription>
+        <value>Latest</value>
+    </labels>
+    <labels>
+        <fullName>Learn_More_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Learn More Button Label</shortDescription>
+        <value>Learn More</value>
+    </labels>
+    <labels>
+        <fullName>My_Demos_Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: value &apos;Favourite Demos&apos;</shortDescription>
+        <value>Favourite Demos</value>
+    </labels>
+    <labels>
+        <fullName>Prototypes_Mobile_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prototypes_Mobile_Header</shortDescription>
+        <value>Prototypes</value>
+    </labels>
+    <labels>
+        <fullName>Rest_Filters_Button_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Rest Filters Button Label</shortDescription>
+        <value>Reset Filters</value>
+    </labels>
+    <labels>
+        <fullName>Type_Filter_Recent_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: value &apos;Recent&apos;</shortDescription>
+        <value>Recent</value>
+    </labels>
+    <labels>
+        <fullName>View_all</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View all</shortDescription>
+        <value>View all</value>
+    </labels>
+    <labels>
+        <fullName>activities_Filter_BU_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities filter BU title</shortDescription>
+        <value>BU</value>
+    </labels>
+    <labels>
+        <fullName>activities_Filter_Category_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities filter Category title</shortDescription>
+        <value>Category</value>
+    </labels>
+    <labels>
+        <fullName>activities_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Activities filter Type title</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>activity_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No activity message</shortDescription>
+        <value>looks like we can&apos;t find any activities yet</value>
+    </labels>
+    <labels>
+        <fullName>back_button_mobile</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Back Button on Mobile Devices</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>create_Activity_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Activity Button</shortDescription>
+        <value>Create Activity</value>
+    </labels>
+    <labels>
+        <fullName>create_Activity_Modal_Cancel_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Activity Modal Cancel Button</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>create_Activity_Modal_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Activity Modal Header</shortDescription>
+        <value>Modal: Create New Activity Header</value>
+    </labels>
+    <labels>
+        <fullName>create_Activity_Modal_Next_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Activity Modal Next Button</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>create_Idea_Button</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Create idea button</shortDescription>
+        <value>Create Idea</value>
+    </labels>
+    <labels>
+        <fullName>create_Idea_Modal_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Create Idea Modal Header</shortDescription>
+        <value>Create New Submission</value>
+    </labels>
+    <labels>
+        <fullName>demo_Edit_Scorecard_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo Edit Scorecard Button</shortDescription>
+        <value>Edit Scorecard</value>
+    </labels>
+    <labels>
+        <fullName>demo_Filter_Category_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo Category filter header</shortDescription>
+        <value>Category</value>
+    </labels>
+    <labels>
+        <fullName>demo_Filter_DemoType_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>DemoType Filter header</shortDescription>
+        <value>DemoType</value>
+    </labels>
+    <labels>
+        <fullName>demo_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo type filter header</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>demo_Filter_Workstreams_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Demo Workstreams filter header</shortDescription>
+        <value>Workstreams</value>
+    </labels>
+    <labels>
+        <fullName>demos_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No demos message</shortDescription>
+        <value>looks like we can&apos;t find any demos yet</value>
+    </labels>
+    <labels>
+        <fullName>detail_Description_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Detail description section header</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>detail_Overview_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Detail Overview section header</shortDescription>
+        <value>Overview</value>
+    </labels>
+    <labels>
+        <fullName>edit_Submission_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Edit Submission Button</shortDescription>
+        <value>Edit Submission</value>
+    </labels>
+    <labels>
+        <fullName>event_Contact_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Contact Header</shortDescription>
+        <value>Contact</value>
+    </labels>
+    <labels>
+        <fullName>event_Contact_None</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Contact None</shortDescription>
+        <value>No contact</value>
+    </labels>
+    <labels>
+        <fullName>event_Filter_Date_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prototype Date filter header</shortDescription>
+        <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>event_Filter_Location_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Location filter header</shortDescription>
+        <value>Location</value>
+    </labels>
+    <labels>
+        <fullName>event_Filter_SessionTypes_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event session type filter header</shortDescription>
+        <value>Session Types</value>
+    </labels>
+    <labels>
+        <fullName>event_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Filter Type Title</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>event_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No events message</shortDescription>
+        <value>looks like we can&apos;t find any events yet</value>
+    </labels>
+    <labels>
+        <fullName>event_Register_Me_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Register Me Button</shortDescription>
+        <value>Register Me</value>
+    </labels>
+    <labels>
+        <fullName>event_Register_Me_SuccessMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Register Success Message</shortDescription>
+        <value>You have successfully registered for this event.</value>
+    </labels>
+    <labels>
+        <fullName>event_Register_Me_Success_Status</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Register Success Status</shortDescription>
+        <value>Registered</value>
+    </labels>
+    <labels>
+        <fullName>event_Spaces</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event spaces counter</shortDescription>
+        <value>Spaces</value>
+    </labels>
+    <labels>
+        <fullName>event_Speaker_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Speaker Header</shortDescription>
+        <value>Speaker</value>
+    </labels>
+    <labels>
+        <fullName>event_Speaker_None</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Speaker None</shortDescription>
+        <value>No speaker</value>
+    </labels>
+    <labels>
+        <fullName>event_Unregister_Me_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Unregister Me Button</shortDescription>
+        <value>Unregister Me</value>
+    </labels>
+    <labels>
+        <fullName>event_Unregister_Me_SuccessMessage</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Unregister Success Message</shortDescription>
+        <value>You have successfully unregistered for this event.</value>
+    </labels>
+    <labels>
+        <fullName>event_Unregister_Me_Success_Status</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Unregister Success Status</shortDescription>
+        <value>Unregistered</value>
+    </labels>
+    <labels>
+        <fullName>event_Venue_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Venue Header</shortDescription>
+        <value>Venue</value>
+    </labels>
+    <labels>
+        <fullName>event_Venue_None</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event No venue message</shortDescription>
+        <value>No venue</value>
+    </labels>
+    <labels>
+        <fullName>event_When_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event When Header</shortDescription>
+        <value>When</value>
+    </labels>
+    <labels>
+        <fullName>event_When_None</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event no date specified</shortDescription>
+        <value>No date/time</value>
+    </labels>
+    <labels>
+        <fullName>event_description</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>event_description_none</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Event Description</shortDescription>
+        <value>No description provided</value>
+    </labels>
+    <labels>
+        <fullName>event_past_registration_closed</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Past Event Registration closed</shortDescription>
+        <value>Past Event Registration Closed</value>
+    </labels>
+    <labels>
+        <fullName>event_registration_full</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Event Registration Full Message on Banner</shortDescription>
+        <value>Registration Full</value>
+    </labels>
+    <labels>
+        <fullName>favourite_Demos_Counter_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title that appears above the counter for &apos;Favourite Demos&apos;</shortDescription>
+        <value>Favourite Demos</value>
+    </labels>
+    <labels>
+        <fullName>favourite_Submissions_Counter_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title that appears above the counter for &apos;Favourite Submissions&apos;</shortDescription>
+        <value>Favourite Ideas</value>
+    </labels>
+    <labels>
+        <fullName>filter_Activities_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Activities section header</shortDescription>
+        <value>Filter Activities</value>
+    </labels>
+    <labels>
+        <fullName>filter_Demos_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Demos section header</shortDescription>
+        <value>Filter Demos</value>
+    </labels>
+    <labels>
+        <fullName>filter_Events_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Events section header</shortDescription>
+        <value>Filter Events</value>
+    </labels>
+    <labels>
+        <fullName>filter_Ideas_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Ideas Header</shortDescription>
+        <value>Filter Ideas</value>
+    </labels>
+    <labels>
+        <fullName>filter_Inspirations_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Inspirations Header</shortDescription>
+        <value>Filter Inspirations</value>
+    </labels>
+    <labels>
+        <fullName>filter_Prototypes_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Filter Prototypes section header</shortDescription>
+        <value>Filter Prototypes</value>
+    </labels>
+    <labels>
+        <fullName>homepage_Greeting_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Welcome message that appears before the logged in username on the homepage</shortDescription>
+        <value>Welcome back</value>
+    </labels>
+    <labels>
+        <fullName>idea_Filter_Category_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Category filter section header on ideas</shortDescription>
+        <value>Category</value>
+    </labels>
+    <labels>
+        <fullName>idea_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter section header</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>idea_Recommended_Flag</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Recommended Idea tile banner</shortDescription>
+        <value>Recommended</value>
+    </labels>
+    <labels>
+        <fullName>ideas_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No Ideas message</shortDescription>
+        <value>Looks like we can&apos;t find any ideas yet</value>
+    </labels>
+    <labels>
+        <fullName>inspiration_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No inspirations message</shortDescription>
+        <value>looks like we can&apos;t find any inspirations yet</value>
+    </labels>
+    <labels>
+        <fullName>inspirations_AuthorPublication</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inspirations Author/Publication header</shortDescription>
+        <value>Author/Publication</value>
+    </labels>
+    <labels>
+        <fullName>inspirations_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inspirations Filter Type Title</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>inspirations_Filter_Workstreams_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Inspirations Filter Workstreams Title</shortDescription>
+        <value>Workstreams</value>
+    </labels>
+    <labels>
+        <fullName>latest_Activity_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Activity Header</shortDescription>
+        <value>Latest Activity</value>
+    </labels>
+    <labels>
+        <fullName>latest_Demo_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Demo Header</shortDescription>
+        <value>Latest Demo</value>
+    </labels>
+    <labels>
+        <fullName>latest_Events_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Events Header</shortDescription>
+        <value>Latest Events</value>
+    </labels>
+    <labels>
+        <fullName>latest_Idea_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Idea Header</shortDescription>
+        <value>Latest Idea</value>
+    </labels>
+    <labels>
+        <fullName>latest_Inspiration_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Inspiration Header</shortDescription>
+        <value>Latest Inspiration</value>
+    </labels>
+    <labels>
+        <fullName>latest_Prototype_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Latest Prototype Header</shortDescription>
+        <value>Latest Prototype</value>
+    </labels>
+    <labels>
+        <fullName>like_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for Like Button</shortDescription>
+        <value>Like</value>
+    </labels>
+    <labels>
+        <fullName>liked_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for Liked Button</shortDescription>
+        <value>Liked</value>
+    </labels>
+    <labels>
+        <fullName>my_Activities_Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: &apos;My Activities&apos; value</shortDescription>
+        <value>My Activities</value>
+    </labels>
+    <labels>
+        <fullName>my_Events_Counter_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title that appears above the counter for &apos;My Events&apos;</shortDescription>
+        <value>My Events</value>
+    </labels>
+    <labels>
+        <fullName>my_Events_Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type filter: value &apos;My Events&apos;</shortDescription>
+        <value>My Events</value>
+    </labels>
+    <labels>
+        <fullName>my_Prototypes_Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: value &apos;My Prototypes&apos;</shortDescription>
+        <value>My Prototypes</value>
+    </labels>
+    <labels>
+        <fullName>my_Submissions_Counter_Header</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Title that appears above the counter for &apos;My Submissions&apos;</shortDescription>
+        <value>My Submissions</value>
+    </labels>
+    <labels>
+        <fullName>my_Submissions_Filter_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: &apos;My Submissions&apos; value</shortDescription>
+        <value>My Submissions</value>
+    </labels>
+    <labels>
+        <fullName>no_category_selected_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Appears when no category is selected for a record within tile</shortDescription>
+        <value>No Category Selected</value>
+    </labels>
+    <labels>
+        <fullName>no_results_found_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Appears when no results are found within a Record List View</shortDescription>
+        <value>No results found</value>
+    </labels>
+    <labels>
+        <fullName>no_results_suggestion_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Appears as a suggestion when no results are found within Record List View</shortDescription>
+        <value>You may find what you&apos;re looking for by changing the selected filters</value>
+    </labels>
+    <labels>
+        <fullName>optionsSelected</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>optionsSelected</shortDescription>
+        <value>Options Selected</value>
+    </labels>
+    <labels>
+        <fullName>paginator_Results_Per_Page</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Paginator &quot;results per page&quot; value</shortDescription>
+        <value>results per page</value>
+    </labels>
+    <labels>
+        <fullName>paginator_next_page_label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Paginator &quot;Next page&quot; value</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>paginator_previous_page_label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Paginator &quot;Previous page&quot; value</shortDescription>
+        <value>Previous</value>
+    </labels>
+    <labels>
+        <fullName>points_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Points Label displayed after the total of votes accumulated for ideas/demos</shortDescription>
+        <value>points</value>
+    </labels>
+    <labels>
+        <fullName>prototype_Filter_Region_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prototype Region filter header</shortDescription>
+        <value>Region</value>
+    </labels>
+    <labels>
+        <fullName>prototype_Filter_Type_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prototypes type filter header</shortDescription>
+        <value>Type</value>
+    </labels>
+    <labels>
+        <fullName>prototype_Filter_Workstreams_Title</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Prototypes Workstreams filter header</shortDescription>
+        <value>Workstreams</value>
+    </labels>
+    <labels>
+        <fullName>prototypes_None_Message</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>No prototypes message</shortDescription>
+        <value>looks like we can&apos;t find any prototypes yet</value>
+    </labels>
+    <labels>
+        <fullName>selectOption</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>selectOption</shortDescription>
+        <value>Select an Option</value>
+    </labels>
+    <labels>
+        <fullName>spaces_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Spaces label after the total number of spaces displayed for events</shortDescription>
+        <value>spaces</value>
+    </labels>
+    <labels>
+        <fullName>this_month_filter_label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: value &apos;This Month&apos;</shortDescription>
+        <value>This Month</value>
+    </labels>
+    <labels>
+        <fullName>this_quarter_filter_label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: &apos;This Quarter&apos; value</shortDescription>
+        <value>This Quarter</value>
+    </labels>
+    <labels>
+        <fullName>this_week_filter_label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Type Filter: &apos;This Week&apos; value</shortDescription>
+        <value>This Week</value>
+    </labels>
+    <labels>
+        <fullName>unlike_Label</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Label for Unlike Button</shortDescription>
+        <value>Unlike</value>
+    </labels>
+    <labels>
+        <fullName>view_All_Activities_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All Activities Button</shortDescription>
+        <value>View all activities</value>
+    </labels>
+    <labels>
+        <fullName>view_All_Demos_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All Demos Button</shortDescription>
+        <value>View all demos</value>
+    </labels>
+    <labels>
+        <fullName>view_All_Ideas_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All Ideas Button</shortDescription>
+        <value>View all ideas</value>
+    </labels>
+    <labels>
+        <fullName>view_All_Inspirations_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All Inspirations Button</shortDescription>
+        <value>View all inspirations</value>
+    </labels>
+    <labels>
+        <fullName>view_All_Prototypes_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View All Prototypes Button</shortDescription>
+        <value>View all prototypes</value>
+    </labels>
+    <labels>
+        <fullName>view_Details_Event_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Details Event Button</shortDescription>
+        <value>View Details</value>
+    </labels>
+    <labels>
+        <fullName>view_Event_Button</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>View Event Button</shortDescription>
+        <value>View Event</value>
+    </labels>
+</CustomLabels>

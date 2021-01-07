@@ -1,0 +1,31 @@
+<template>
+  <lightning-layout vertical-align="center" style={textColorStyle}>
+    <lightning-layout-item class="icon-bg">
+      <lightning-helptext
+        icon-name="utility:list"
+        content="Number of submitted ideas"
+        class="slds-p-bottom_xx-small"
+      ></lightning-helptext>
+    </lightning-layout-item>
+    <lightning-layout-item class="slds-m-left_x-small child-count">
+      {childRecordCount}
+    </lightning-layout-item>
+    <lightning-layout-item class="slds-m-left_medium icon-bg">
+      <lightning-helptext
+        icon-name="utility:prompt"
+        content="Number of discussions on this challenge"
+        class="slds-p-bottom_xx-small"
+      ></lightning-helptext>
+    </lightning-layout-item>
+    <lightning-layout-item class="slds-m-left_x-small post-count">
+      {chatterPostCount}
+    </lightning-layout-item>
+  </lightning-layout>
+
+  <!--Show error messages-->
+  <template if:true={error}>
+    <lightning-layout-item size="12" padding="around-small">
+      <c-error-panel errors={error}></c-error-panel>
+    </lightning-layout-item>
+  </template>
+</template>

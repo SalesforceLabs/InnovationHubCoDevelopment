@@ -1,0 +1,24 @@
+.THIS .theArea{
+    background-size: cover;
+    height: 0px;
+    bottom: 140px;
+}
+
+.THIS .overlay{
+    width: 100%; 
+    height: 100%;
+}
+
+.THIS.slds-card{
+    max-width: unset;
+}
+
+.THIS .evetDate{
+    background-color: rgba(171, 173, 176, 0.72);
+}
+
+.THIS .myHeader{
+    height: 139px;
+    line-height: 148px;
+    overflow: hidden;
+}

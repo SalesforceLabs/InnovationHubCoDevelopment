@@ -1,0 +1,74 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="IH_EventCtr">
+    <aura:attribute name="event" type="sObject" />
+    <aura:attribute name="filevideoHeight" type="String"  access="global"/>
+    <aura:attribute name="filevideoWidth" type="String"  access="global"/>
+    <aura:attribute name="videoHeight" type="String"  access="global"/>
+    <aura:attribute name="videoWidth" type="String"  access="global"/>
+    <aura:attribute name="edit" type="Boolean" default="true"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-m-top_x-large">
+        <div class="slds-text-heading--medium"><strong>{!v.event.Name}</strong></div>
+        <br/>
+            
+        <p><strong>{!$Label.c.event_description}</strong><br/> </p>
+        <div class="slds-text-body--regular">
+            <aura:if isTrue="{!v.event.innohub__Description__c}">
+                {!v.event.innohub__Description__c}
+                <aura:set attribute="else">
+                    <i>{!$Label.c.event_description_none}</i>
+                </aura:set>
+            </aura:if> 
+        </div>
+
+        <br/> 
+        <p><strong>{!$Label.c.event_Venue_Header}</strong><br/> </p>
+        <div class="slds-text-body--regular">
+            <aura:if isTrue="{!v.event.innohub__Venue__c}">
+                {!v.event.innohub__Venue__c}
+                <aura:set attribute="else">
+                    <i>{!$Label.c.event_Venue_None}</i>
+                </aura:set>
+            </aura:if> 
+        </div>
+        <br/>
+        <p><strong>{!$Label.c.event_When_Header}</strong><br/></p>
+        <div class="slds-text-body--regular">
+            <aura:if isTrue="{!v.event.innohub__Start__c == v.event.innohub__End__c}">
+                <ui:outputDate value="{!v.event.innohub__Start__c}" format="dd MMM yyyy"/>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.event.innohub__Start__c}">
+                        <ui:outputDate value="{!v.event.innohub__Start__c}" format="dd MMM yyyy"/>
+                        <aura:set attribute="else">
+                            <i>{!$Label.c.event_When_None}</i>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!v.event.innohub__End__c}">
+                        -<ui:outputDate value="{!v.event.innohub__End__c}" format="dd MMM yyyy"/>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </div><br/>
+        <p><strong>{!$Label.c.event_Speaker_Header}</strong><br/> </p>
+        <div class="slds-text-body--regular">
+            <aura:if isTrue="{!v.event.innohub__Speaker__c}">
+                {!v.event.innohub__Speaker__c}
+                <aura:set attribute="else">
+                    <i>{!$Label.c.event_Speaker_None}</i>
+                </aura:set>
+            </aura:if> 
+        </div><br/>
+        <p><strong>{!$Label.c.event_Contact_Header}</strong><br/></p>
+        <div class="slds-text-body--regular">
+            <aura:if isTrue="{!v.event.innohub__Contact__c}">
+                {!v.event.innohub__Contact__c}
+                <aura:set attribute="else">
+                    <i>{!$Label.c.event_Contact_None}</i>
+                </aura:set>
+            </aura:if> 
+        </div>
+        <c:IH_VideoComponent filevideoHeight="{!v.filevideoHeight}" filevideoWidth="{!v.filevideoWidth}" videoHeight="{!v.videoHeight}" videoWidth="{!v.videoWidth}" recordId = "{!v.recordId}"/>
+        
+    </div>
+</aura:component>

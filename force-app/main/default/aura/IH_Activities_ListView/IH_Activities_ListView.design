@@ -1,0 +1,9 @@
+<design:component label="Activity List View">
+    <design:attribute name="TypeFilter" label="Show Default Type Filter" />
+    <design:attribute name="CategoryFilter" label="Show Default Category Filter" />
+    <design:attribute name="BUFilter" label="Show Default BU Filter" />
+    <design:attribute name="FilterFieldName1" placeholder="Filter Field API name" label="Custom Filter 1"/>
+    <design:attribute name="FilterFieldName2" placeholder="Filter Field API name" label="Custom Filter 2"/>
+    <design:attribute name="FilterFieldName3" placeholder="Filter Field API name" label="Custom Filter 3"/>
+    <design:attribute name="filterLayout" label="Filter Layout" datasource="Desktop,Mobile" />
+</design:component>

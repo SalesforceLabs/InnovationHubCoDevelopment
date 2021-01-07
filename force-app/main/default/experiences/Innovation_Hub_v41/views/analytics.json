@@ -1,0 +1,47 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "f8a6d938-5c92-4177-992e-0f69c8bff2b5",
+  "label" : "Analytics",
+  "regions" : [ {
+    "id" : "caf81922-1ab0-474f-aaa0-80cd8fc9c662",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "richTextValue" : "<h1 style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">ANALYTICS PAGE</span></h1><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">Set up your dashabord to show fundamental analytics for demo scorecards and idea review status.</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">Once you have created the dashboard simply use the dashboard component and place it on this page</span></p><p style=\"text-align: center;\"><br></p><h2 style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">SUGGESTED FILTERS</span></h2><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><b style=\"color: rgb(102, 163, 224); background-color: rgb(255, 255, 255);\">Key metrics filters</b></p><p style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">Allow administrator users to review key metrics through quarter, month and demo name filters.</span></p><p style=\"text-align: center;\"><br></p><p style=\"text-align: center;\"><b style=\"color: rgb(102, 163, 224);\">Scorecard</b></p><p style=\"text-align: center;\"><span style=\"color: rgb(32, 33, 36);\">Create a dashboard to show an overview of scorecard results by ‘review status’ are shown with results.</span></p>"
+      },
+      "componentName" : "forceCommunity:richTextInline",
+      "id" : "bbb168f6-5cf5-4d79-a58f-8d3d0593d599",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "6c188825-74fa-4b53-b24c-bcbf37a48f08",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "bd3b6854-4e1d-48d4-95ed-072cf5552682",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Analytics"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "43d0db9d-f0d6-49db-844e-519196378d4b",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "8a7a4882-e9a5-4872-ae26-8d2eff271651",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "custom-analytics"
+}

@@ -1,0 +1,45 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Innovation Lab Theme 2">
+    
+    <!-- Theme Standard Attributes -->
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="brandLogo" type="String" access="global"/>
+    
+    <aura:handler event="c:IH_HeaderCSS_2" action="{!c.editCss}"/>
+    
+    <div>
+        <div class="wrapper ">
+            <div class="panelImage" aura:id="panelImage">
+                <lightning:layout horizontalAlign="center" class="dermo">
+                    <lightning:layoutItem size="1" flexibility="auto">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="7" flexibility="auto" class="slds-p-top_large slds-p-bottom_large">
+                        <center><img src="{!v.brandLogo}" onclick="{!c.gotoHome}" class="brandLogo"/></center>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="2" flexibility="auto" class="slds-p-top_large">
+                            {!v.profileMenu}
+                    </lightning:layoutItem>
+                    
+                </lightning:layout>
+                <div class="lineAbove"/>
+                <div class="topBar slds-p-top_x-small slds-p-bottom_x-small">
+                    <lightning:layout horizontalAlign="space" class="dermo">
+                        <lightning:layoutItem size="1" smallDeviceSize="2" mediumDeviceSize="1" largeDeviceSize="1" flexibility="auto">
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="8" smallDeviceSize="8" mediumDeviceSize ="7" largeDeviceSize="8"  flexibility="auto" class="slds-is-relative">
+                                {!v.navBar}
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="3" smallDeviceSize="2" mediumDeviceSize ="4" largeDeviceSize="3" flexibility="auto" padding="horizontal-large">
+                                {!v.search}
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+            </div>           
+            <div class="newBody">
+                {!v.body} 
+            </div>
+        </div>
+    </div> 
+</aura:component>

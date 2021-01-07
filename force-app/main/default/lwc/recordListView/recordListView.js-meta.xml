@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub List View</masterLabel>
+    <description>A generic List View component which enables for any object to be displayed as tiles within. For a full description of the component refer to documentation.</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="object" type="String" label="Object API Name" default="{!objectApiName}" description="The API Name of an Object from which records are to be displayed as tiles within the component"/>
+            <property name="name" type="String" label="Name Field API Name" default="Name" description="The API Name of a Text Field which appears as main label on each tile"/>
+            <property name="image" type="String" label="Image Rich Text Field API Name" description="The API Name of a Rich Text Field which is used to display image on each tile"/>
+            <property name="recordType" type="String" label="Record Type Field API Name" default="RecordType.Name" description="The API Name of a Text Field which is displayed as an overlay over the image"/>
+            <property name="recommended" type="String" label="Recommended" description="The API Name of a Checkbox Field which determines whether record is recommended or not"/>
+            <property name="points" type="String" label="Points Field API Name" description="The API Name of a Field returning Number which is used to display the amount of votes for each record"/>
+            <property name="category" type="String" label="Category Field API Name" description="The API Name of a Multi-Select Picklist Field which returns the categories selected on each record"/>
+            <property name="userType" type="String" label="User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+            <property name="defaultUserImage" type="String" label="Default User Image" default="/img/icon/t4v35/standard/groups_120.png" description="The default image which appears when no image is set as users SmallPhotoUrl or when the owner is a queue"/>
+            <property name="customField" type="String" label="Custom Field API Name" description="The API Name of a Picklist Field which is displayed as an overlay between the Name and voting section"/>
+            <property name="approvalCondition" type="String" label="Approval Condition" description="The approval condition which will be enforced in all queries apart from when 'My Submissions' filter is applied, for further clarification and format refer to the documentation" default=""/>
+            <property name="dateField" type="String" label="Date Field API Name" default="" description="The API Name of a Date Field which creates an overlay over the image with the day and month of the date, intended for when specified object is Event based"/>
+            <property name="votesObject" type="String" label="Child Vote sObject API Name" description="The API Name of an Object which looks up to the current object and is intended to work as a means of storing votes, for further clarification visit the documentation"/>
+            <property name="voteRecordRelationship" type="String" label="Lookup Relationship Field API Name on Vote Object" description="The API Name of a Relationship (__r) between the voting object specified above which looks up to the main object displayed within the component"/>
+            <property name="voteField" type="String" label="Vote Field API Name on Vote Object" description="The API Name of a Checkbox field on Voting object which indicates whether a vote record is positive or negative (Negatives records are Ignored)"/>
+            <property name="voteObjectLookup" type="String" label="Record Lookup Field API Name on Vote Object" description="The API Name of a Lookup field which Looks up to the object displayed in each tile from the Voting object"/>
+            <property name="defaultRecordTypes" type="String" label="Default Record Type" description="The default Record Type to display on initialization, this is applied once and only when the ''innohub__userFiltered'' flag is missing from the URL query parameters"/>
+            <property name="defaultFilters" type="String" label="Default Filters" description="The default filters to display on initiailzation, this is applied once and only when the ''innohub__userFiltered'' flag is missing from the URL query parameters"/>
+            <property name="recordId" type="String" label="Record Id" description="Automatically binds the page's record id to the component variable, default value contextually obtains record Id from Lightning page, this can also be set explicitly" default="{!recordId}"/>
+            <property name="lookupField" type="String" label="Contextual lookup Field API Name" default="" description="When specified, List View queries for records related to object displayed in each tile where lookup field of said record contains the record ID which is obtained above"/>
+            <property name="usePagination" type="Boolean" label="Use Pagination" default="true" description="When selected, the component will rely on pagination component to provide information on which records to display"/>
+            <property name="inSidebar" type="Boolean" label="Component placed in sidebar" description="Intended for when component is placed in section which occupies 2 out of 3 columns on a Lightning page"/>
+            <property name="Tiletype" type="String" label="Choose the Tile you want" datasource="Standard,Mobile" default="Standard" />
+            <property name="backgroundColor" type="Color" label="Background Color" default="rgba(255, 255, 255,0)"/>
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="object" type="String" label="Object API Name" default="" description="The API Name of an Object from which records are to be displayed as tiles within the component"/>
+            <property name="name" type="String" label="Name Field API Name" default="Name" description="The API Name of a Text Field which appears as main label on each tile"/>
+            <property name="image" type="String" label="Image Rich Text Field API Name" description="The API Name of a Rich Text Field which is used to display image on each tile"/>
+            <property name="recordType" type="String" label="Record Type Field API Name" default="RecordType.Name" description="The API Name of a Text Field which is displayed as an overlay over the image"/>
+            <property name="recommended" type="String" label="Recommended" description="The API Name of a Checkbox Field which determines whether record is recommended or not"/>
+            <property name="points" type="String" label="Points Field API Name" description="The API Name of a Field returning Number which is used to display the amount of votes for each record"/>
+            <property name="category" type="String" label="Category Field API Name" description="The API Name of a Multi-Select Picklist Field which returns the categories selected on each record"/>
+            <property name="userType" type="String" label="User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+            <property name="defaultUserImage" type="String" label="Default User Image" default="/img/icon/t4v35/standard/groups_120.png" description="The default image which appears when no image is set as users SmallPhotoUrl or when the owner is a queue"/>
+            <property name="customField" type="String" label="Custom Field API Name" description="The API Name of a Picklist Field which is displayed as an overlay between the Name and voting section"/>
+            <property name="approvalCondition" type="String" label="Approval Condition" description="The approval condition which will be enforced in all queries apart from when 'My Submissions' filter is applied, for further clarification and format refer to the documentation" default=""/>
+            <property name="dateField" type="String" label="Date Field API Name" default="" description="The API Name of a Date Field which creates an overlay over the image with the day and month of the date, intended for when specified object is Event based"/>
+            <property name="votesObject" type="String" label="Child Vote sObject API Name" description="The API Name of an Object which looks up to the current object and is intended to work as a means of storing votes, for further clarification visit the documentation"/>
+            <property name="voteRecordRelationship" type="String" label="Lookup Relationship Field API Name on Vote Object" description="The API Name of a Relationship (__r) between the voting object specified above which looks up to the main object displayed within the component"/>
+            <property name="voteField" type="String" label="Vote Field API Name on Vote Object" description="The API Name of a Checkbox field on Voting object which indicates whether a vote record is positive or negative (Negatives records are Ignored)"/>
+            <property name="voteObjectLookup" type="String" label="Record Lookup Field API Name on Vote Object" description="The API Name of a Lookup field which Looks up to the object displayed in each tile from the Voting object"/>
+            <property name="defaultRecordTypes" type="String" label="Default Record Type" description="The default Record Type to display on initialization, this is applied once and only when the ''innohub__userFiltered'' flag is missing from the URL query parameters"/>
+            <property name="defaultFilters" type="String" label="Default Filters" description="The default filters to display on initiailzation, this is applied once and only when the ''innohub__userFiltered'' flag is missing from the URL query parameters"/>
+            <property name="recordId" type="String" label="Record Id" description="Automatically binds the page's record id to the component variable, default value contextually obtains record Id from Lightning page, this can also be set explicitly" default=""/>
+            <property name="lookupField" type="String" label="Contextual lookup Field API Name" default="" description="When specified, List View queries for records related to object displayed in each tile where lookup field of said record contains the record ID which is obtained above"/>
+            <property name="usePagination" type="Boolean" label="Use Pagination" default="true" description="When selected, the component will rely on pagination component to provide information on which records to display"/>
+            <property name="inSidebar" type="Boolean" label="Component placed in sidebar" description="Intended for when component is placed in section which occupies 2 out of 3 columns on a Lightning page"/>
+            <property name="Tiletype" type="String" label="Choose the Tile you want" datasource="Standard,Mobile" default="Standard" />
+            <property name="backgroundColor" type="String" label="Background Color" default="rgba(255, 255, 255,0)"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

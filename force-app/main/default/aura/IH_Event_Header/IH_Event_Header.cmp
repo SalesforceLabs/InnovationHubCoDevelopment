@@ -1,0 +1,84 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global"  controller="IH_EventCtr">
+    <aura:attribute name="event" type="sObject" />
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="isRegistered" type="Boolean" default="false"/>
+    <aura:attribute name="today" type="Date" />
+    <aura:attribute name="isFuture" type="Boolean" default="true"/>
+    <aura:attribute name="spaces" type="sObject" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div>
+        <div class="mobilePageBackButton">
+            <p onclick="{!c.gotoEvents}">&#60; Back</p>
+        </div>
+        <div class="eventBanner slds-is-relative">
+            <lightning:spinner aura:id="mySpinner" class="slds-hide" alternativeText="Registration"/>
+            
+            <div class="overlay">
+                <aura:if isTrue="{!v.event.innohub__Image__c}">
+                    <div class="lineHeight myHeader">
+                        <ui:outputRichText class="slds-text-longform" value="{!v.event.innohub__Image__c}"/>
+                    </div>
+                    <aura:set attribute="else">
+                        <div class="myHeader">
+                            <center><lightning:icon iconName="utility:image" size="large" class="myIcon slds-p-top_xx-large" alternativeText="No image Set"/></center>
+                        </div>
+                    </aura:set>
+                </aura:if>
+                
+                <lightning:layout horizontalAlign="end">
+                    <lightning:layoutItem flexibility="auto" padding="around-small">
+                    </lightning:layoutItem>
+                    <lightning:layoutItem class="section_2" flexibility="auto" padding="around-small">
+                        <div class="txt-s txt-100 eventTypeClass">
+                            <div class="slds-grid ">
+                                <div class="slds-size_2-of-3">
+                                    <aura:if isTrue="{!v.event.innohub__Type__c}">
+                                        {!v.event.innohub__Type__c}
+                                        <aura:set attribute="else">
+                                            <span class="slds-shrink-none slds-align-middle tileCategory">Event type not specified</span>
+                                        </aura:set>
+                                    </aura:if>
+                                </div>
+                                <div class="slds-size_1-of-3">
+                                    <span class="slds-badge slds-badge_inverse slds-float_right" aura:id="theCountofSpaces">{!v.spaces.innohub__Spaces_Available__c+ ' '} {!$Label.c.spaces_Label}</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Test THIS PART -->
+                            <aura:if isTrue="{!v.event.innohub__Communication__c=='Onsite and remote'}">
+                                <span class="slds-badge slds-m-left--xx-large slds-shrink-none slds-align-middle greenbadge tileCategory">WEBINAR AVAILABLE</span>    
+                                <aura:set attribute="else"><span class="empty">&nbsp;</span>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <div class="slds-p-top_large articleTitle txt-l" ><p class="slds-truncate">{!v.event.Name}</p></div>
+                        <div class="articleTitle txt-m">
+                            <aura:if isTrue="{!(v.event.innohub__Start__c==v.event.innohub__End__c )}">
+                                <ui:outputDate value="{!v.event.innohub__Start__c}" format="dd MMM yyyy" class="txt-m txt-100"/>
+                                <aura:set attribute="else">
+                                    <ui:outputDate value="{!v.event.innohub__Start__c}" format="dd MMMM yyyy"/>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                        <div class="slds-p-top_xx-large">
+                            <aura:if isTrue="{!or(v.event.innohub__Registration_Open__c, v.isRegistered)}">
+                                <aura:if isTrue="{!v.isFuture}">
+                                    <button aura:id="registerId" onclick="{!c.registerMessage}" class="slds-p-around_xx-small slds-button slds-button_outline-brand eventButton">{!$Label.c.event_Register_Me_Button}</button>
+                                    <!--<div aura:id="registerMessage" class="articleTitle slds-m-top_medium">Do Not Forget To add this to your Calendar</div>-->
+                                    <button aura:id="unregisterId" onclick="{!c.unregister}" class="slds-button slds-button_neutral eventButton slds-hide">{!$Label.c.event_Unregister_Me_Button}</button>
+                                    <aura:set attribute="else">
+                                        <div class="tileCategory">{!$Label.c.event_past_registration_closed}</div>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <div class="tileCategory">{!$Label.c.event_registration_full}</div>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+        </div>
+    </div>
+</aura:component>

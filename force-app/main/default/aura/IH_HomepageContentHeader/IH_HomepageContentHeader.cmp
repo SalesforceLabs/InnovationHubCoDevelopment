@@ -1,0 +1,15 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="ideaBoolean" type="Boolean" access="global"/>
+    <aura:attribute name="favIdeaBoolean" type="Boolean" access="global"/>
+    <aura:attribute name="favDemoBoolean" type="Boolean" access="global"/>
+    <aura:attribute name="myEventsBoolean" type="Boolean" access="global"/>
+    
+    <div class="slds-grid slds-wrap" >
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-3 slds-large-size--1-of-3">
+            <c:IH_HomepageGreeting />
+        </div>
+        <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--2-of-3 slds-large-size--2-of-3">
+            <c:IH_HomepageCounters ideaBoolean="{!v.ideaBoolean}" favIdeaBoolean="{!v.favIdeaBoolean}" favDemoBoolean="{!v.favDemoBoolean}" myEventsBoolean="{!v.myEventsBoolean}"/>
+        </div>
+    </div>
+</aura:component>

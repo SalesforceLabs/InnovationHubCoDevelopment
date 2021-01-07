@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Record Metrics Counter</masterLabel>
+    <description>Shows count of specific child records and count of related chatter posts</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="recordId" label="Record Id" default="{!recordId}" type="String" required="true" description="if component is used on record detail page set this to &quot;{!recordId}&quot;"/>
+            <property name="childObjectApiName" label="Child Object Api Name" type="String"/>
+            <property name="lookupFieldApiName" label="Lookup Field Api Name" type="String" description="Api name of lookup field on child object that looks up to parent"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

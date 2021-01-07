@@ -1,0 +1,29 @@
+/*.THIS .hidden{
+    display: none;
+}
+
+.THIS .picklistHeader{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    text-transform: uppercase; 
+}*/
+
+.THIS .noTopPadding{
+    padding-top:0px;
+}
+
+/* iPhone and iPad */
+@media all and (max-width : 766px) {
+    .THIS .desktopFilter{
+        display:none;
+    }
+    
+    .THIS .mobileFilter{
+        display:block !important;
+    }
+    
+    .THIS .noTopPadding{
+        padding-top:0px;
+    }
+}

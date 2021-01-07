@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub Record Banner</masterLabel>
+    <description>Fully flexibly record banner. Can be used on any record detail page.</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="recordId" label="Record Id" default="{!recordId}" type="String" required="true" description="if component is used on record detail page set this to &quot;{!recordId}&quot;"/>
+            <property name="authorImageField" label="Author Image Field Api Name" type="String" description="Accepts rich text &amp; url field types. If left blank, the banner will pull the profile image of the record creator"/>
+            <property name="authorImageUrl" label="Author Image Url" type="String"/>
+            <property name="authorField" label="Author Field Api Name" type="String"/>
+            <property name="backgroundColor" label="Background Color" type="color" description="RGB color code"/>
+            <property name="backgroundColorField" label="Background Color Field Api Name" type="String"/>
+            <property name="bodyField" label="Body Field Api Name" type="String"/>
+            <property name="categoryField" label="Catgeory Field Api Name" type="String" description="Shows in learn more pop-up"/>
+            <property name="closeDateField" label="Close Date Field Api Name" type="String"/>
+            <property name="headingField" label="Heading Field Api Name" type="String" default="Name"/>
+            <property name="imageField" label="Image Field Api Name" type="String" description="Accepts rich text &amp; url field types"/>
+            <property name="imageUrl" label="Image Url" type="String"/>
+            <property name="learnMoreField" label="Long Description Field Api Name" type="String" description="Shows in learn more pop-up"/>
+            <property name="metricsChildObjectApiName" label="Metrics Counter - Child Object Api Name" type="String" description="If specified, a counter shows with child records related to this record"/>
+            <property name="metricsLookupFieldApiName" label="Metrics Counter - Lookup Field Api Name" type="String" description="The field api name of the field on the child object that looks up to this record"/>
+            <property name="showLearnMoreButton" label="Show Learn More Button" type="Boolean"/>
+            <property name="startDateField" label="Start Date Field Api Name" type="String"/>
+            <property name="statusField" label="Stage Field Api Name" type="String" description="Value shows in countdown, once countdown has ended."/>
+            <property name="simpleCountdown" label="Simple Countdown" type="Boolean"/>
+            <property name="textColor" label="Text Color" type="color" description="RGB value. Defaults to Community text color. Doesn't override rich text."/>
+            <property name="textColorField" label="Text Color Field Api Name" type="String"/>
+            <property name="videoTitle" label="Video Title" type="String"/>
+            <property name="videoTitleField" label="Video Title Field Api Name" type="String"/>
+            <property name="videoFileId" label="Video File Id" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+            <property name="videoFileIdField" label="Video File Id Field Api Name" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+            <property name="videoUrl" label="Video Url" type="String" description="If specified video player will show in &quot;Learn More&quot; modal. Supported sources are YouTube, Vimeo and Google Drive"/>
+            <property name="videoUrlField" label="Video Url Field Api Name" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="authorImageField" label="Author Image Field Api Name" type="String" description="Accepts rich text &amp; url field types. If left blank, the banner will pull the profile image of the record creator"/>
+            <property name="authorImageUrl" label="Author Image Url" type="String"/>
+            <property name="authorField" label="Author Field Api Name" type="String"/>
+            <property name="backgroundColor" label="Background Color" type="String" description="RGB color code"/>
+            <property name="backgroundColorField" label="Background Color Field Api Name" type="String"/>
+            <property name="bodyField" label="Body Field Api Name" type="String"/>
+            <property name="categoryField" label="Catgeory Field Api Name" type="String" description="Shows in learn more pop-up"/>
+            <property name="closeDateField" label="Close Date Field Api Name" type="String"/>
+            <property name="headingField" label="Heading Field Api Name" type="String" default="Name"/>
+            <property name="imageField" label="Image Field Api Name" type="String" description="Accepts rich text &amp; url field types"/>
+            <property name="imageUrl" label="Image Url" type="String"/>
+            <property name="learnMoreField" label="Long Description Field Api Name" type="String" description="Shows in learn more pop-up"/>
+            <property name="metricsChildObjectApiName" label="Metrics Counter - Child Object Api Name" type="String" description="If specified, a counter shows with child records related to this record"/>
+            <property name="metricsLookupFieldApiName" label="Metrics Counter - Lookup Field Api Name" type="String" description="The field api name of the field on the child object that looks up to this record"/>
+            <property name="showLearnMoreButton" label="Show Learn More Button" type="Boolean"/>
+            <property name="startDateField" label="Start Date Field Api Name" type="String"/>
+            <property name="statusField" label="Stage Field Api Name" type="String" description="Value shows in countdown, once countdown has ended."/>
+            <property name="simpleCountdown" label="Simple Countdown" type="Boolean"/>
+            <property name="textColor" label="Text Color" type="String" description="RGB value. Defaults to Community text color. Doesn't override rich text."/>
+            <property name="textColorField" label="Text Color Field Api Name" type="String"/>
+            <property name="videoTitle" label="Video Title" type="String"/>
+            <property name="videoTitleField" label="Video Title Field Api Name" type="String"/>
+            <property name="videoFileId" label="Video File Id" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+            <property name="videoFileIdField" label="Video File Id Field Api Name" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+            <property name="videoUrl" label="Video Url" type="String" description="If specified video player will show in &quot;Learn More&quot; modal. Supported sources are YouTube, Vimeo and Google Drive"/>
+            <property name="videoUrlField" label="Video Url Field Api Name" type="String" description="If specified video player will show in &quot;Learn More&quot; modal"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

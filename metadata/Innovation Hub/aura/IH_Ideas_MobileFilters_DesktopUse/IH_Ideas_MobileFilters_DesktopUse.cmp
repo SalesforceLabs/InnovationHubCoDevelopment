@@ -1,0 +1,133 @@
+<aura:component controller="IH_IdeaCtr" access="global"> 
+    <aura:attribute name="categories" type="String[]"  />
+    <aura:attribute name="statuses" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:attribute name="labelName" type="String" access="global"/>
+    <aura:attribute name="ideasFilterLabel" type="String" access="global"/>
+    
+    <aura:attribute name="standardCategory" type="String" />
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    <aura:attribute name="customFilterLabel_1" type="String"/>
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    <aura:attribute name="customFilterLabel_2" type="String"/>
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    <aura:attribute name="customFilterLabel_3" type="String"/>
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="CategoryFilter" type="Boolean" access="global"/>  
+    
+    <aura:attribute name="FilterFieldType1" type="String" access="global"/>
+    <aura:attribute name="FilterFieldType2" type="String" access="global"/>
+    <aura:attribute name="FilterFieldType3" type="String" access="global"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="slds-p-top_small slds-is-relative maxWidth myPadding">
+        <div class="mobileSectionHeader slds-hide">
+            <div class="slds-is-relative tileTitle mobilePageHeader slds-p-top_small">
+                <u class="u">{!$Label.c.Ideas_Mobile_Header}
+                </u>
+            </div>
+            <center><hr class="slds-is-relative ideaHr theNumberHrMobile"/></center>
+        </div>
+        <aura:if isTrue="{!v.ideasFilterLabel}">
+            <lightning:button variant="brand" label="{!'Create ' + v.ideasFilterLabel}" onclick="{!c.handleShowModal}" class="createButton slds-truncate slds-p-vertical_small"/>
+            <aura:set attribute="else">
+                <lightning:button variant="brand" label="Create Idea" onclick="{!c.handleShowModal}" class="createButton slds-truncate slds-p-vertical_small"/>       
+            </aura:set>
+        </aura:if>
+        <div class="filterHeader slds-p-around_medium">
+            {!$Label.c.filter_Ideas_Header}
+        </div>
+        <div class="options">
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionOne}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left ">
+                            <lightning:icon class="slds-show" aura:id="listOne" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listOne" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">{!$Label.c.idea_Filter_Type_Title}</div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listOne">
+                    <c:IH_CheckBoxFilter_Mobile_DesktopVersion/>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.CategoryFilter}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionTwo}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listTwo" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listTwo" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.standardCategory}</div><!--Will use a design attribute to call this label name-->
+                        </div>
+                    </section>
+                </div>
+            </aura:if>
+            <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listTwo">
+                <c:IH_FilterCategory labelName="{!v.labelName}" filterName="innohub__Category__c" options="{!v.categories}" aura:id="categoryFilters"/>
+            </div>
+            <!-- New Filters-->
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionThree}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listThree" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listThree" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_1}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listThree">
+                    <c:IH_FilterCategory filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" type="{!v.FilterFieldType1}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionFour}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listFour" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listFour" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_2}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listFour">
+                    <c:IH_FilterCategory filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" type="{!v.FilterFieldType2}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionFive}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listFive" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listFive" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_3}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listFive">
+                    <c:IH_FilterCategory filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" type="{!v.FilterFieldType3}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+            
+        </div>
+    </div>
+</aura:component>

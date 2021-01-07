@@ -1,0 +1,137 @@
+<template>
+  <div class={cardClass}>
+    <div class="header">
+      <a href={recordPageUrl}>
+        <div if:true={date} class="overlay">
+          <center>
+            <div class="date">
+              <lightning-formatted-date-time
+                value={date}
+                day="2-digit"
+                class="dateDay"
+              ></lightning-formatted-date-time>
+              <lightning-formatted-date-time
+                value={date}
+                month="long"
+                class="dateMonth"
+              ></lightning-formatted-date-time>
+            </div>
+          </center>
+        </div>
+        <div if:true={image}>
+          <lightning-formatted-rich-text
+            value={image}
+          ></lightning-formatted-rich-text>
+        </div>
+        <div if:false={image}>
+          <center>
+            <lightning-icon
+              icon-name="utility:image"
+              alternative-text="No image set"
+            ></lightning-icon>
+          </center>
+        </div>
+      </a>
+    </div>
+    <div if:true={recordType} class="slds-is-absolute recordType">
+      <span class="slds-truncate slds-text-body_small recordTypeBanner"
+        >{recordType}</span
+      >
+    </div>
+    <div class="middle">
+      <div class="recommendedBannerContainer inline-block">
+        <div if:true={recommended}>
+          <span class="recommendedBanner">
+            <lightning-icon
+              icon-name="utility:favorite"
+              alternative-text="Recommended"
+              size="x-small"
+              variant="inverse"
+            ></lightning-icon>
+          </span>
+        </div>
+      </div>
+
+      <div class="slds-grid slds-has-flexi-truncate categoryContainer">
+        <div
+          class="slds-size_5-of-5 inline-block tileCategory"
+          if:true={category}
+        >
+          <p class="twoLines slds-text-title category">
+            {formattedCategories}
+          </p>
+        </div>
+        <div if:false={category}>
+          <i class="tileCategory">{noCategory}</i>
+        </div>
+      </div>
+
+      <div class="pointsContainer inline-block">
+        <span if:true={voteSobject} class="slds-badge points slds-float_right"
+          >{convertedPoints} {pointLabel}</span
+        >
+      </div>
+    </div>
+
+    <div class="body">
+      <div
+        class="slds-size_1-of-1 slds-p-around_medium slds-text-heading_small"
+      >
+        <div class="twoLines">
+          <a class="tileHeading" href={recordPageUrl}>{name}</a>
+        </div>
+      </div>
+    </div>
+    <div if:true={customField}>
+      <div class="slds-truncate slds-text-body_small customBanner">
+        {customField}
+      </div>
+    </div>
+    <div class="footer">
+      <div
+        class="creatorInfo slds-p-around_medium slds-p-vertical_small slds-grid slds-wrap slds-grid_pull-padded slds-text-align_center"
+      >
+        <div class="slds-size_2-of-12">
+          <span class="slds-avatar slds-avatar_medium avatar">
+            <img
+              if:true={creatorImage}
+              alt="Avatar"
+              src={creatorImage}
+              title="Avatar"
+            />
+            <img
+              if:false={creatorImage}
+              alt="Avatar"
+              src={defaultCreatorImage}
+              title="Avatar"
+              class="defaultImage"
+            />
+          </span>
+        </div>
+        <div class="slds-size_6-of-12 slds-text-align_left">
+          <p
+            class="slds-truncate creatorName slds-text-title slds-p-top_x-small"
+          >
+            {creator}
+          </p>
+        </div>
+
+        <div class="slds-size_4-of-12">
+          <div if:true={voteSobject}>
+            <lightning-button-stateful
+              label-when-off={likeLabel}
+              label-when-on={likedLabel}
+              label-when-hover={unlikeLabel}
+              icon-name-when-off="utility:like"
+              icon-name-when-on="utility:like"
+              icon-name-when-hover="utility:close"
+              selected={voteType}
+              onclick={handleVote}
+            >
+            </lightning-button-stateful>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

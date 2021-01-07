@@ -1,0 +1,23 @@
+<aura:component access="global">
+    <aura:attribute name="theDemos" type="Object[]" />
+    
+    <aura:if isTrue="{!v.theDemos.length == 0}">
+        <div class="slds-align_absolute-center slds-p-top_xx-large">
+            <div>
+                <lightning:icon class="slds-p-bottom_medium" iconName="utility:trail" size="large"/>
+            </div>
+            <div class="slds-text-heading_large slds-text-align_center slds-text-color_weak">
+                {!$Label.c.demos_None_Message}
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <lightning:layout verticalAlign="start" multipleRows="true" pullToBoundary="small">
+                <aura:iteration items="{!v.theDemos}" var='demo' indexVar="index">
+                    <lightning:layoutItem size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="4" padding="around-small">
+                        <c:IH_DemosTile demo="{!demo}"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+        </aura:set>
+    </aura:if>	
+</aura:component>

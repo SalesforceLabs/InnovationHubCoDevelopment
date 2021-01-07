@@ -1,0 +1,54 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes" access="global" controller="IH_DemoCtr">
+    <aura:attribute name="demos" type="Object[]" />
+    
+    <aura:attribute name="categories" type="String[]"  />
+    <aura:attribute name="theCategories" type="String[]"  />
+    <aura:attribute name="clouds" type="String[]"/>
+    
+    <aura:attribute name="customList_1" type="String[]"  />
+    <aura:attribute name="customList_2" type="String[]"  />
+    <aura:attribute name="customList_3" type="String[]"  />
+    <aura:attribute name="searchFilters" type="List" />
+    
+    <aura:attribute name="filterLayout" type="String" access="global" default="Desktop"/>
+    
+    <!--boolean-->
+    <aura:attribute name="TypeFilter" type="Boolean" access="global" default="true"/>
+    <aura:attribute name="DemoTypeFilter" type="Boolean" access="global" default="true"/>  
+    <aura:attribute name="CategoryFilter" type="Boolean" access="global" default="true"/>  
+    <aura:attribute name="WorkstreamsFilter" type="Boolean" access="global" default="true"/>  
+    
+    
+    <!--name of picklist field-->
+    <aura:attribute name="FilterFieldName1" type="String" access="global"/>
+    <aura:attribute name="FilterFieldName2" type="String" access="global"/>
+    <aura:attribute name="FilterFieldName3" type="String" access="global"/>
+    
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:handler name="filtersUpdated" event="c:IH_FilterListUpdated" action="{!c.filterChanged}"/>
+    
+    <div class="slds-p-around_x-small slds-grid slds-wrap slds-grid_pull-padded">
+        <div class="slds-p-around_small slds-size--1-of-1 slds-medium-size--2-of-6 slds-large-size--1-of-4 noTopPadding" >
+            <div class="desktopFilter">
+                <aura:if isTrue="{!v.filterLayout == 'Desktop'}">
+                    <div>
+                        <c:IH_Demos_ListViewFilters TypeFilter="{!v.TypeFilter}" DemoTypeFilter="{!v.DemoTypeFilter}" CategoryFilter="{!v.CategoryFilter}" WorkstreamsFilter="{!v.WorkstreamsFilter}" categories="{!v.categories}" clouds="{!v.clouds}" theCategories="{!v.theCategories}" customList_1="{!v.customList_1}" FilterFieldName1="{!v.FilterFieldName1}" customList_2="{!v.customList_2}" FilterFieldName2="{!v.FilterFieldName2}" customList_3="{!v.customList_3}" FilterFieldName3="{!v.FilterFieldName3}"/>
+                        
+                    </div>
+                </aura:if>
+                <aura:if isTrue="{!v.filterLayout == 'Mobile'}">
+                    <div>
+                        <c:IH_Demos_MobileFilters_DesktopUse  TypeFilter="{!v.TypeFilter}" DemoTypeFilter="{!v.DemoTypeFilter}" CategoryFilter="{!v.CategoryFilter}" WorkstreamsFilter="{!v.WorkstreamsFilter}" categories="{!v.categories}" clouds="{!v.clouds}" theCategories="{!v.theCategories}" customList_1="{!v.customList_1}" FilterFieldName1="{!v.FilterFieldName1}" customList_2="{!v.customList_2}" FilterFieldName2="{!v.FilterFieldName2}" customList_3="{!v.customList_3}" FilterFieldName3="{!v.FilterFieldName3}"/>
+                    </div>
+                </aura:if>
+            </div>
+            <div class="mobileFilter slds-hide">
+                <c:IH_Demos_MobileFilters  TypeFilter="{!v.TypeFilter}" DemoTypeFilter="{!v.DemoTypeFilter}" CategoryFilter="{!v.CategoryFilter}" WorkstreamsFilter="{!v.WorkstreamsFilter}" categories="{!v.categories}" clouds="{!v.clouds}" theCategories="{!v.theCategories}" customList_1="{!v.customList_1}" FilterFieldName1="{!v.FilterFieldName1}" customList_2="{!v.customList_2}" FilterFieldName2="{!v.FilterFieldName2}" customList_3="{!v.customList_3}" FilterFieldName3="{!v.FilterFieldName3}"/>    
+            </div>
+        </div>
+        <div class="slds-p-around_small slds-size--1-of-1 slds-medium-size--4-of-6 slds-large-size--3-of-4 noTopPadding slds-is-relative">
+            <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+            <c:IH_DemosTileList theDemos="{!v.demos}"/>
+        </div>
+    </div>
+</aura:component>

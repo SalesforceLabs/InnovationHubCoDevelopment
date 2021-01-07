@@ -1,0 +1,61 @@
+<aura:component access="global" controller="IH_UserVoiceCtr">
+    <aura:attribute name="userVoice" type="sObject" />
+    <aura:attribute name="creator" type="sObject" />
+    <aura:attribute name="catSet" type="Boolean" default="false" />    
+    <aura:attribute name="userVoiceCatTwo" type="String" />
+    <aura:attribute name="userVoiceCatAll" type="String[]" />
+    <aura:attribute name="recordTypeName" type="sObject" />
+    
+    <aura:handler name="change" value="{!v.userVoice}" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-card outerContainer">
+        <div class="myHeader ideaClick" onclick="{!c.goToUserVoice}">
+            <aura:if isTrue="{!v.userVoice.innohub__Image__c}">
+                <center><ui:outputRichText class="slds-text-longform" value="{!v.userVoice.innohub__Image__c}"/></center>
+                <aura:set attribute="else">
+                    <center>
+                        <lightning:icon iconName="utility:image" size="large" alternativeText="No image Set"/>
+                    </center>
+                </aura:set>
+            </aura:if>
+        </div>
+        
+        <div aura:id="theTile" class="tileBorderBottom tileInfo slds-p-around_medium">
+            <div class=" slds-clearfix">
+                <div class="slds-grid slds-has-flexi-truncate">
+                    <div class="slds-size_2-of-3">
+                        <div class="slds-grid slds-has-flexi-truncate">
+                            <aura:if isTrue="{!v.catSet}">
+                                <div aura:id="theSize" class="slds-size_3-of-5">
+                                    <p aura:id="theTrunc" class="tileCategory slds-truncate">{!v.userVoiceCatTwo}</p>
+                                </div>
+                                <div class="slds-size_2-of-5">
+                                    <span aura:id="theHelpText" class="slds-p-left_xx-small slds-is-relative bottomUp hidden"><lightning:helptext content="{!v.userVoiceCatAll}" iconName="utility:list"/></span>
+                                </div>
+                                <aura:set attribute="else">
+                                    <i class="tileCategory">No workstream selected</i>
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </div>
+                    <div class="slds-size_1-of-3">
+                    </div>
+                </div>       
+            </div>
+            <div class="slds-p-top_small">
+                <!-- removing sdls-truncate to review wrapping-->
+                
+                <span class="tileTitle ideaClick" onclick="{!c.goToUserVoice}">{!v.userVoice.Name}</span>
+            </div>
+            <div class="creatorInfo slds-p-vertical_small slds-grid slds-wrap slds-grid_pull slds-text-align_center">
+                <aura:if isTrue="{!v.userVoice.innohub__Submitter_Detail__c}">
+                    <span class="creatorName slds-text-title">Submitted by: {!v.userVoice.innohub__Submitter_Detail__c}</span>
+                    <aura:set attribute="else">
+                        <div class="slds-text-title theSubmitter">No Submitter provided</div>
+                    </aura:set>
+                </aura:if>
+            </div>            
+        </div>
+    </div>    
+</aura:component>

@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "17053560-aa6c-454e-a2b1-fc021e096d53",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "fb5ae47c-6b21-4dec-ad9f-2223f9872853",
+  "label" : "Idea (Innohub) Detail",
+  "objectApiName" : "innohub__Innovation_Idea__c",
+  "routeType" : "detail-a0G",
+  "type" : "route",
+  "urlPrefix" : "innovation-idea"
+}

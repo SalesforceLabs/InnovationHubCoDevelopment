@@ -1,0 +1,8 @@
+<design:component label="Inspiration Detail">
+    <design:attribute name="filevideoHeight" label="File Video Height"/>
+    <design:attribute name="filevideoWidth" label="File Video Width"/>
+    
+    <design:attribute name="videoHeight" label="Video Height"/>
+    <design:attribute name="videoWidth" label="Video Width"/>
+    
+</design:component>

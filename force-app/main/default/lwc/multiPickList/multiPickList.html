@@ -1,0 +1,65 @@
+<template>
+  <div class="slds-form-element" onblur={closeAllDropDown}>
+    <template if:true={label}>
+      <label class="slds-form-element__label">{label}</label>
+    </template>
+    <div class="slds-form-element__control">
+      <div class="slds-combobox_container slds-size_small slds-size_1-of-1">
+        <div
+          id="ms-picklist-dropdown"
+          class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click slds-picklist ms-picklist-dropdown slds-size_1-of-1"
+          aria-expanded="false"
+          aria-haspopup="listbox"
+          role="combobox"
+        >
+          <div
+            class="slds-combobox_form-element slds-input-has-icon slds-input-has-icon_right"
+            role="none"
+          >
+            <input
+              class="slds-combobox__input ms-input"
+              id="ms-input"
+              aria-controls="ms-dropdown-items"
+              role="textbox"
+              type="text"
+              value={inputValue}
+              readonly
+            />
+            <span
+              class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right"
+              title="Click to open the dropdown"
+            >
+              <lightning-icon
+                icon-name="utility:down"
+                size="x-small"
+                alternative-text="Click here"
+                class="slds-icon slds-icon--selected slds-icon--x-small slds-icon-text-default slds-m-right--x-small"
+              ></lightning-icon>
+            </span>
+          </div>
+          <template if:true={backdrop}>
+            <div class="backdrop" onclick={closeAllDropDown}></div>
+          </template>
+          <div id="ms-dropdown-items" class="te" role="listbox">
+            <ul
+              class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid"
+              role="presentation"
+              style="width: 100%;"
+            >
+              <template if:true={_mOptions}>
+                <template for:each={_mOptions} for:item="item">
+                  <c-pick-list-item
+                    key={item.value}
+                    item={item}
+                    onitems={handleItemSelected}
+                    class="li"
+                  ></c-pick-list-item>
+                </template>
+              </template>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

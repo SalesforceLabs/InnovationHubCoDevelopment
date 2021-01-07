@@ -1,0 +1,210 @@
+/*.THIS.maxWidth{
+    max-width: 336px;
+}*/
+
+.THIS .eventHr{
+    margin-top: -20px;
+    margin-bottom: 10px;
+    width: 54px;
+    bottom: 70px;
+}
+
+/*.THIS .filterName {
+    display: none;
+}
+
+.THIS .slds-form-element__legend{
+    display:none !important;
+}
+
+.THIS .noTopPadding{
+    padding-top:0px;
+}
+
+.THIS .u{
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.THIS .picklistHeader{
+    font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    text-transform: uppercase; 
+}
+.THIS .sectionHeader{
+    cursor: pointer; 
+    background-color: #ffffff;
+    padding-bottom:0px;
+}
+
+.THIS .mobilePageHeader{
+    font-weight: 100;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom:20px;
+    padding-top: 0px;
+    bottom: 70px;
+}
+
+.THIS .options {
+    background-color: #FFF;
+    border-left: 2px solid #d8dde6;
+    border-right: 2px solid #d8dde6;
+    border-bottom: 2px solid #d8dde6;
+}
+
+.THIS .createButton {
+    width: 100%;
+    border-radius: 0;
+    background-color: #f9e836;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 1em;
+    border: 1px solid #f9e836;
+    color: #27509a;
+    text-transform: uppercase;
+}
+
+.THIS.ql-bold {
+    display: none !important;
+}
+
+.THIS .myBlue{
+    color: rgb(21, 137, 238);
+}
+
+.THIS .myBlue span{
+    color: rgb(21, 137, 238);
+}
+
+.THIS .firstFilters{
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.THIS .firstFilters:active {
+    color: #ffffff;
+    fill: #ffffff;
+    
+}
+
+.THIS .headerBox{
+    background-color: #27509B !important;
+}
+
+
+.THIS .slds-p-around--large.cIH_Ideas_MobileFilters2 {
+    padding-top: 0px !important;
+}
+*/
+/*New CSS*/
+/*.THIS .demoHr{
+    margin-top: -20px;
+    margin-bottom: 10px;
+    width: 54px;
+    bottom: 70px;
+}*/
+
+.THIS .u{
+	text-decoration: none;
+    text-transform: uppercase;
+}
+
+.THIS .filterName{
+    display:none;
+}
+
+.THIS .picklistHeader{
+font-size: 15px;
+    font-weight: 500;
+    background-color: #fff;
+    text-transform: uppercase; 
+}
+
+.THIS .sectionHeader{
+    cursor: pointer; 
+    background-color: #ffffff;
+    padding-bottom:10px;
+}
+
+.THIS .mobilePageHeader{
+    font-weight: 100;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom:20px;
+    padding-top: 0;  
+    bottom: 70px;
+}
+
+.THIS .filterHeader{
+    color: #FFF;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: center; 
+}
+
+.THIS .options {
+    background-color: #FFF;
+    border-left: 2px solid #d8dde6;
+    border-right: 2px solid #d8dde6;
+    border-bottom: 2px solid #d8dde6;
+}
+
+
+.THIS .createButton {
+        width: 100%;
+    border-radius: 0;
+    background-color: #f9e836;
+    font-weight: 100;
+    font-size: 20px;
+    margin-bottom: 1em;
+    border: 1px solid #f9e836;
+    color: #27509a;
+    text-transform: uppercase;
+}
+
+.THIS.ql-bold {
+    display: none !important;
+}
+
+.THIS .myBlue{
+    color: rgb(21, 137, 238);
+}
+
+.THIS .myBlue span{
+    color: rgb(21, 137, 238);
+}
+
+.THIS .firstFilters{
+    color: #ffffff;
+    fill: #ffffff;
+}
+
+.THIS .firstFilters:active {
+     color: #ffffff;
+    fill: #ffffff;
+
+}
+
+.THIS .headerBox{
+background-color: #27509B !important;
+}
+
+
+.THIS .slds-p-around--large.cIH_Ideas_MobileFilters2 {
+    padding-top: 0px !important;
+}
+
+
+
+
+/* iPhone and iPad */
+@media all and (max-width : 766px) {
+    .THIS .mobileSectionHeader{
+        display:block !important;
+    }
+    .THIS .myPadding{
+        padding-top:0px;
+        bottom:10px;
+    }
+}

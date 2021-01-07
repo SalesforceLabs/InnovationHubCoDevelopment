@@ -1,0 +1,46 @@
+<aura:component controller="IH_ActivityCtr">
+    <aura:attribute name="ideaRecordTypes" type="List"/>
+    <aura:attribute name="selectedRecordType" type="String" default="null"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--Louise Edit nov9-->
+    <aura:attribute name="listOfRecordTypes" type="List"/>
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <fieldset class="slds-form-element">
+        <legend class="slds-form-element__legend slds-form-element__label"></legend>
+        <div class="slds-form-element__control">
+            
+            
+           <!-- <aura:iteration items="{!v.ideaRecordTypes}" var="recordType">
+                <span class="slds-radio slds-p-bottom_x-small">
+                    <lightning:input class="myBlue" aura:id="{!recordType.Id}" type="radio"  name="options" label="{!'New ' + recordType.Name}" value="{!recordType.Id}" onchange="{!c.createInnovation}"/>
+                    <div class="slds-p-left_large slds-text-title">{!recordType.Description}</div>
+                </span>
+            </aura:iteration>-->
+            
+            
+            <!--Louise Edit nov9-->
+             <aura:iteration items="{!v.listOfRecordTypes}" var="recordType">
+                <span class="slds-radio slds-p-bottom_x-small">
+                    <lightning:input class="myBlue" aura:id="{!recordType.myRecordTypeId}" type="radio"  name="options" label="{!recordType.myRecordTypeLabel}" value="{!recordType.myRecordTypeId}" onchange="{!c.createActivity}"/>
+                    <div class="slds-p-left_large slds-text-title">{!recordType.myRecordTypeDescription}</div>
+                </span>
+            </aura:iteration>
+                <!--Louise Edit nov9-->
+
+            
+        </div>
+    </fieldset>
+    
+    <div class="slds-float_right slds-p-top_medium">
+        <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >{!$Label.c.create_Activity_Modal_Cancel_Button}</button>
+        
+        <aura:if isTrue="{!v.isDisabled}">
+            <button class="slds-button slds-button--brand" aura:id="nextButton" disabled="true">{!$Label.c.create_Activity_Modal_Next_Button}</button>
+            <aura:set attribute="else">
+                <button class="slds-button slds-button--brand" aura:id="nextButton" onclick="{!c.next}">{!$Label.c.create_Activity_Modal_Next_Button}</button>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

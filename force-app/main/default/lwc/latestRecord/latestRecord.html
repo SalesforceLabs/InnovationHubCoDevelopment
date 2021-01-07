@@ -1,0 +1,49 @@
+<template>
+  <template if:true={objectInfo}>
+    <h3 class="slds-text-heading_small uppercase slds-m-bottom_medium">
+      {latestLabel} {objectInfo.label}
+    </h3>
+
+    <!-- Record Tile -->
+    <template if:true={recordTileInputData}>
+      <c-record-tile
+        record-id={recordTileInputData.recordId}
+        name={recordTileInputData.name}
+        record-type={recordTileInputData.recordType}
+        image={recordTileInputData.image}
+        recommended={recordTileInputData.recommended}
+        points={recordTileInputData.points}
+        category={recordTileInputData.category}
+        creator={recordTileInputData.creator}
+        creator-image={recordTileInputData.creatorImage}
+        default-creator-image={recordTileInputData.defaultCreatorImage}
+        vote-sobject={recordTileInputData.voteSObject}
+        vote-record-relationship={recordTileInputData.voteRecordRelationship}
+        vote-object-lookup={recordTileInputData.voteLookupField}
+        vote-field={recordTileInputData.voteField}
+        vote-type={recordTileInputData.voteType}
+        custom-field={recordTileInputData.customField}
+        date={recordTileInputData.date}
+      ></c-record-tile>
+    </template>
+
+    <!-- Missing Message -->
+    <template if:false={recordTileInputData}>
+      <c-illustration text={noRecordsFoundText}></c-illustration>
+    </template>
+
+    <!-- View All Button -->
+    <template if:true={showViewAll}>
+      <div class="slds-m-top_small">
+        <a href={viewAllUrl}>{viewAllLabel} {objectInfo.labelPlural}</a>
+      </div>
+    </template>
+  </template>
+
+  <!--Show error messages-->
+  <template if:true={error}>
+    <lightning-layout-item size="12" padding="around-small">
+      <c-error-panel errors={error}></c-error-panel>
+    </lightning-layout-item>
+  </template>
+</template>

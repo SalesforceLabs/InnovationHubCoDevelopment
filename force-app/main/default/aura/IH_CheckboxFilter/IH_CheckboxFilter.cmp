@@ -1,0 +1,19 @@
+<aura:component controller="IH_IdeaCtr" access="global"> 
+    <aura:attribute name="listOfRecordTypes" type="Map"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="filterChangedEvent" type="c:IH_FilterChanged"/>
+    
+    <aura:handler event="c:IH_Radio_Selected" action="{!c.theRadioSelected}"/>
+    
+    <aura:attribute name="value" type="String" default="All"/>
+    
+    
+    <div class="filterName">{!$Label.c.idea_Filter_Type_Title}</div> 
+    <lightning:radioGroup aura:id="mygroup"
+                          name="radioButtonGroup"
+                          options="{!v.listOfRecordTypes}"
+                          value="{!v.value}"
+                          onchange="{!c.handleChange}"
+                          required="true" >
+    </lightning:radioGroup>
+</aura:component>

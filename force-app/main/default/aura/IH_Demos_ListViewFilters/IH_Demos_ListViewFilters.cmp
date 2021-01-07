@@ -1,0 +1,56 @@
+<aura:component access="global">
+    <aura:attribute name="categories" type="String[]"  />
+    <aura:attribute name="theCategories" type="String[]"  />
+    <aura:attribute name="clouds" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    <aura:attribute name="FilterTitle" type="String" access="global"/>
+    
+    
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="DemoTypeFilter" type="Boolean" access="global"/>  
+    <aura:attribute name="CategoryFilter" type="Boolean" access="global"/>  
+    <aura:attribute name="WorkstreamsFilter" type="Boolean" access="global"/>  
+    
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    
+    <div class="slds-p-top_small theMax">
+        <div class="filterHeader slds-p-around_medium">
+         {!$Label.c.filter_Demos_Header}   
+        </div>
+        <div class="slds-p-vertical_medium slds-p-horizontal_medium options">
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_Demo_Radio /></div>
+            </aura:if>
+            <aura:if isTrue="{!v.DemoTypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="innohub__Demo_Type__c" options="{!v.categories}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.CategoryFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="innohub__Category__c" options="{!v.theCategories}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.WorkstreamsFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="innohub__Clouds_Involved__c" options="{!v.clouds}" aura:id="cloudFilters"/></div>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Demo filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            
+        </div>
+    </div>
+</aura:component>

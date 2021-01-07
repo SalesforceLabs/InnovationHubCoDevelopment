@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "7eaad490-d6dd-4baa-9da9-a70151979bb8",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "fdd0665b-a2e1-41fa-81e8-4219c10a635b",
+  "label" : "Inspiration Related List",
+  "objectApiName" : "innohub__User_Voice__c",
+  "routeType" : "relatedlist-a0I",
+  "type" : "route",
+  "urlPrefix" : "user-voice"
+}

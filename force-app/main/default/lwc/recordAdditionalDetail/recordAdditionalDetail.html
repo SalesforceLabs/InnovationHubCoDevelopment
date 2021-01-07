@@ -1,0 +1,102 @@
+<template>
+  <lightning-layout
+    horizontal-align="spread"
+    vertical-align="center"
+    class="slds-m-bottom_medium"
+  >
+    <!--Author Section-->
+    <template if:false={hideAuthorSection}>
+      <lightning-layout-item>
+        <lightning-layout vertical-align="center">
+          <template if:true={authorImageUrl}>
+            <lightning-layout-item>
+              <div style={authorImageStyle} class="author-image"></div>
+            </lightning-layout-item>
+          </template>
+          <template if:true={author}>
+            <lightning-layout-item class="slds-m-left_xx-small">
+              <h3 class="author">{author}</h3>
+            </lightning-layout-item>
+          </template>
+        </lightning-layout>
+      </lightning-layout-item>
+    </template>
+
+    <!--Category-->
+    <template if:true={category}>
+      <lightning-layout-item>
+        <p class="category">{category}</p>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+
+  <!--Title-->
+  <template if:true={title}>
+    <h1 class="slds-text-heading_medium title">
+      <strong>{title}</strong>
+    </h1>
+  </template>
+
+  <!--Date Section-->
+  <template if:true={showDateSection}>
+    <lightning-layout
+      vertical-align="center"
+      class="slds-m-bottom_medium"
+      multiple-rows
+    >
+      <lightning-layout-item>
+        <lightning-icon
+          icon-name="utility:event"
+          size="x-small"
+          alternative-text="calendar icon"
+          class="slds-m-right_xx-small slds-p-bottom_xx-small"
+        ></lightning-icon>
+      </lightning-layout-item>
+      <template if:true={startDate}>
+        <lightning-layout-item class="start-date">
+          <span>Start Date: </span>
+          <lightning-formatted-date-time
+            value={startDate}
+          ></lightning-formatted-date-time>
+        </lightning-layout-item>
+      </template>
+
+      <template if:true={showSeparator}>
+        <lightning-layout-item class="slds-p-horizontal_xx-small">
+          |
+        </lightning-layout-item>
+      </template>
+
+      <!--End Date-->
+      <template if:true={endDate}>
+        <lightning-layout-item class="end-date">
+          <span>End Date: </span>
+          <lightning-formatted-date-time
+            value={endDate}
+          ></lightning-formatted-date-time>
+        </lightning-layout-item>
+      </template>
+    </lightning-layout>
+  </template>
+
+  <!--Text Body-->
+  <template if:true={body}>
+    <lightning-formatted-rich-text
+      value={body}
+      class="body"
+    ></lightning-formatted-rich-text>
+  </template>
+
+  <!--Video-->
+  <template if:true={showVideo}>
+    <c-video-player
+      record-id={recordId}
+      title={videoTitle}
+      title-field={videoTitleField}
+      video-file-id={videoFileId}
+      video-file-id-field={videoFileIdField}
+      video-url={videoUrl}
+      video-url-field={videoUrlField}
+    ></c-video-player>
+  </template>
+</template>

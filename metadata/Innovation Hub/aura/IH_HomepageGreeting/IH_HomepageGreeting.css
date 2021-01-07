@@ -1,0 +1,38 @@
+.THIS .theGreetingHr{
+    margin-top: 10px;
+    width: 100px;
+}
+
+.THIS .homepageGreetingImg{
+    width: 90px;
+    border-radius: 50%;
+}
+
+.THIS .welcomeText{
+    font-size: 17px;
+}
+
+.THIS .maxWidth{
+    max-width:130px;
+}
+
+
+/*Louise Responsive CSS*/
+/* iPhone and iPad */
+@media all and (max-width : 768px) {
+    
+    .THIS .homepageGreetingImg{
+        display:none; 
+    }
+    
+    .THIS .theGreetingHr{
+        display:none;
+    }
+    
+    .THIS .welcomeText{
+        font-family: arial !important;
+        text-align:center;
+        font-style: bold;
+        font-size: 18px;
+    } 
+}

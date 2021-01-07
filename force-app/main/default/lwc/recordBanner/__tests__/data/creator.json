@@ -1,0 +1,16 @@
+{
+  "apiName": "User",
+  "childRelationships": {},
+  "fields": {
+    "MediumPhotoUrl": {
+      "displayValue": null,
+      "value": "/profilephoto/005/M"
+    },
+    "Name": { "displayValue": null, "value": "User User" }
+  },
+  "id": "0051X000002keCyQAI",
+  "lastModifiedById": "0051X000002keCyQAI",
+  "lastModifiedDate": "2020-01-16T14:45:35.000Z",
+  "recordTypeInfo": null,
+  "systemModstamp": "2020-01-20T12:58:33.000Z"
+}

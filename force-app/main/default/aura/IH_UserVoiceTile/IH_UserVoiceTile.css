@@ -1,0 +1,100 @@
+/*.THIS.outerContainer{
+max-width: 336px;
+}*/
+
+
+.THIS .innovationImg{
+    height: 161px; 
+}
+
+.THIS .innovationTile {
+    max-height: 350px;
+    max-width: 350px;
+    
+}
+
+.THIS .tileTitle{
+    font-size:.95rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-transform: uppercase;
+    line-height: 19px;
+}
+
+.THIS .tileCategory {
+    font-size: 0.65rem;
+    line-height: 2.25;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    font-style:italic;
+}
+
+.THIS .tileInfo {
+    background-color: white;
+    position: relative;
+    height: 168px;
+    margin-top: -21px;
+}
+
+.THIS .creatorInfo {
+    width: 95%;
+    position: absolute;
+    bottom: 2px;
+}
+
+.THIS .avatar {
+    border-radius: 50%;
+}
+
+.THIS .featuredRibbon {
+    position: absolute;
+    top: 30px;
+    left: -12px;
+    background-color: #963CBD;
+    width: 140px;
+    height: 40px;
+    color: white;
+}
+
+.THIS .iconActive {
+    color: rgb(30, 93, 136);
+}
+
+.THIS .ideaTileBanner{
+    height: 140px;
+    background-color: #dee2e7;
+    overflow:hidden;
+}
+
+.THIS .ideaClick{
+    cursor:pointer;
+}
+
+.THIS .myHeader{
+    height: 161px;
+    background-color:rgba(171, 173, 176, 0.72);
+    line-height: 148px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+
+.THIS .paddingTop{
+    margin-top: -44px;
+}
+
+.THIS .bottomUp{
+    bottom: 2px;
+}
+
+.THIS .hidden{
+    display: none;
+}
+
+.THIS .theSubmitter{
+    font-size: .65rem;
+    line-height: 2.25;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+}

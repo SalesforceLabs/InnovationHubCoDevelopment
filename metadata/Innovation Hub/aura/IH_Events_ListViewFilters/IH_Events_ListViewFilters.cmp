@@ -1,0 +1,53 @@
+<aura:component>
+    <aura:attribute name="countries" type="String[]"  />
+    <aura:attribute name="sessionTypes" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    
+    <aura:attribute name="customList_1" type="String[]"  />
+    <aura:attribute name="customList_2" type="String[]"  />
+    <aura:attribute name="customList_3" type="String[]"  />
+    <!-- FilterName Api Field  -->
+    <aura:attribute name="FilterFieldName1" type="String" access="global"/>
+    <aura:attribute name="FilterFieldName2" type="String" access="global"/>
+    <aura:attribute name="FilterFieldName3" type="String" access="global"/>
+    <!-- Boolean for default filters -->
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/> 
+    <aura:attribute name="LocationFilter" type="Boolean" access="global"/>  
+    <aura:attribute name="SessionTypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="DateFilter" type="Boolean" access="global"/>  
+    
+    
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    
+    <div class="slds-p-top_small">
+        
+        <div class="filterHeader slds-p-around_medium mobilePageHeader">{!$Label.c.filter_Events_Header}</div>
+        
+        <div class="slds-p-vertical_medium slds-p-horizontal_medium options">
+            
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_Event_Radio/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.LocationFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Events filterName="innohub__Location__c" options="{!v.countries}" aura:id="countryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.SessionTypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Events filterName="innohub__Type__c" options="{!v.sessionTypes}" aura:id="typeFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Events filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Events filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Events filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.DateFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_Event_CheckboxFilter /></div>
+            </aura:if>
+        </div>
+    </div>
+    
+</aura:component>

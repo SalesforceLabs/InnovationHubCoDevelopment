@@ -1,0 +1,61 @@
+<template>
+  <c-modal header={label}>
+    <lightning-radio-group
+      name="record-type-radio-group"
+      label="Select Type"
+      options={recordTypes}
+      value={selectedRecordType}
+      onchange={typeChangeHandler}
+      type="radio"
+    ></lightning-radio-group>
+
+    <div slot="footer">
+      <lightning-layout horizontal-align="end">
+        <lightning-button
+          variant="neutral"
+          label="Next"
+          onclick={nextButtonClickedHandler}
+          disabled={nextDisabled}
+        ></lightning-button>
+      </lightning-layout>
+    </div>
+  </c-modal>
+
+  <template if:true={showButton}>
+    <button
+      class="slds-button slds-button_brand slds-p-vertical_xx-small slds-p-horizontal_small button slds-size_1-of-1"
+      onclick={buttonClickedHandler}
+    >
+      <lightning-layout vertical-align="stretch" class="slds-size_1-of-1">
+        <lightning-layout-item
+          flexibility="shrink"
+          class="slds-align_absolute-center"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            class="slds-m-right_small plus-icon"
+          >
+            <path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"></path>
+          </svg>
+        </lightning-layout-item>
+        <lightning-layout-item
+          flexibility="grow"
+          class="slds-text-align_center"
+        >
+          <p>{label}</p>
+        </lightning-layout-item>
+      </lightning-layout>
+    </button>
+  </template>
+  <template if:true={isBuilder}>
+    <!--Show error messages-->
+    <template if:true={error}>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-error-panel errors={error}></c-error-panel>
+      </lightning-layout-item>
+    </template>
+  </template>
+</template>

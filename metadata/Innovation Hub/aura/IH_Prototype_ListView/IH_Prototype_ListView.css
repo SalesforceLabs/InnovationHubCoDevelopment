@@ -1,0 +1,19 @@
+.THIS .noTopPadding{
+    padding-top:0px;
+}
+
+
+/* iPhone and iPad */
+@media all and (max-width : 766px) {
+    .THIS .desktopFilter{
+        display:none;
+    }
+    
+    .THIS .mobileFilter{
+        display:block !important;
+    }
+    
+    .THIS .noTopPadding{
+        padding-top:0px;
+    }
+}

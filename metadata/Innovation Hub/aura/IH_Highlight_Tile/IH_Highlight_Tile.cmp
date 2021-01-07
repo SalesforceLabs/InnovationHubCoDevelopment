@@ -1,0 +1,135 @@
+<aura:component controller="IH_HomepageHighlights">
+    <aura:attribute name="popIdea" type="sObject" />
+    <aura:attribute name="ideaPresent" type="Boolean" default="false" />
+    <aura:attribute name="latestDemo" type="sObject" />
+    <aura:attribute name="demoPresent" type="Boolean" default="false" />
+    <aura:attribute name="thePrototype" type="sObject" />
+    <aura:attribute name="prototypePresent" type="Boolean" default="false" />
+    <aura:attribute name="theInspiration" type="sObject" />
+    <aura:attribute name="inspirationPresent" type="Boolean" default="false" />
+    <aura:attribute name="theActivity" type="sObject" />
+    <aura:attribute name="activityPresent" type="Boolean" default="false" />
+    <aura:attribute name="userField" type="String"  />
+    
+    <aura:attribute name="theTileObject" type="String" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="ideas slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+        <aura:if isTrue="{!v.theTileObject == 'Idea'}">
+            <h1 class="slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Idea_Header}</h1>
+            <aura:if isTrue="{!v.popIdea}">
+                <c:IH_IdeasTile idea="{!v.popIdea}" userField="{!v.userField}" isHighlight="true"/>
+                <div class="slds-p-top_small">
+                    <span class="theListView" onclick="{!c.goToAllIdeas}">{!$Label.c.view_All_Ideas_Button}</span>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-card tileBorderBottom outerContainerHighlight"> 
+                        <div class="myHeaderHighlight ideaClick">
+                            <center>
+                                <lightning:icon class="slds-p-bottom_medium" iconName="utility:image" size="large" alternativeText="No Ideas"/>
+                            </center>
+                        </div>
+                        <div aura:id="theTile" class="tileInfo slds-p-around_medium">
+                            <div class="slds-p-top_x-large">
+                                <P class=" tileTitle">Looks like we can't find any ideas yet</P>
+                            </div>          
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>    
+        </aura:if>
+        <aura:if isTrue="{!v.theTileObject == 'Demo'}">
+            <h1 class="slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Demo_Header}</h1>
+            <aura:if isTrue="{!v.latestDemo}">
+                <c:IH_DemosTile demo="{!v.latestDemo}" isHighlight="true"/>
+                <div class="slds-p-top_small">
+                    <span class="theListView" onclick="{!c.goToAllDemos}">{!$Label.c.view_All_Demos_Button}</span>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-card tileBorderBottom outerContainerHighlight"> 
+                        <div class="myHeaderHighlight ideaClick">
+                            <center>
+                                <lightning:icon class="slds-p-bottom_medium" iconName="utility:image" size="large" alternativeText="No Ideas"/>
+                            </center>
+                        </div>
+                        <div aura:id="theTile" class="tileInfo slds-p-around_medium">
+                            <div class="slds-p-top_x-large">
+                                <P class=" tileTitle">Looks like we can't find any demos yet</P>
+                            </div>          
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!v.theTileObject == 'Prototype'}">
+            <h1 class="slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Prototype_Header}</h1>
+            <aura:if isTrue="{!v.thePrototype}">
+                <c:IH_PrototypesTile prototype="{!v.thePrototype}"/>
+                <div class="slds-p-top_small">
+                    <span class="theListView" onclick="{!c.goToAllPrototypes}">{!$Label.c.view_All_Prototypes_Button}</span>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-card tileBorderBottom outerContainerHighlight"> 
+                        <div class="myHeaderHighlight ideaClick">
+                            <center>
+                                <lightning:icon class="slds-p-bottom_medium" iconName="utility:image" size="large" alternativeText="No Ideas"/>
+                            </center>
+                        </div>
+                        <div aura:id="theTile" class="tileInfo slds-p-around_medium">
+                            <div class="slds-p-top_x-large">
+                                <P class=" tileTitle">Looks like we can't find any prototypes yet</P>
+                            </div>          
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!v.theTileObject == 'Inspiration'}">
+            <h1 class="slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Inspiration_Header}</h1>
+            <aura:if isTrue="{!v.thePrototype}">
+                <c:IH_UserVoiceTile userVoice="{!v.theInspiration}"/>
+                <div class="slds-p-top_small">
+                    <span class="theListView" onclick="{!c.goToAllInspirations}">{!$Label.c.view_All_Inspirations_Button}</span>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-card tileBorderBottom outerContainerHighlight"> 
+                        <div class="myHeaderHighlight ideaClick">
+                            <center>
+                                <lightning:icon class="slds-p-bottom_medium" iconName="utility:image" size="large" alternativeText="No Ideas"/>
+                            </center>
+                        </div>
+                        <div aura:id="theTile" class="tileInfo slds-p-around_medium">
+                            <div class="slds-p-top_x-large">
+                                <P class=" tileTitle">Looks like we can't find any inspirations yet</P>
+                            </div>          
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+        <aura:if isTrue="{!v.theTileObject == 'Activity'}">
+            <h1 class="slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Activity_Header}</h1>
+            <aura:if isTrue="{!v.theActivity}">
+                <c:IH_ActivitiyTile activity="{!v.theActivity}"/>
+                <div class="slds-p-top_small">
+                    <span class="theListView" onclick="{!c.goToAllActivities}">{!$Label.c.view_All_Activities_Button}</span>
+                </div>
+                <aura:set attribute="else">
+                    <div class="slds-card tileBorderBottom outerContainerHighlight"> 
+                        <div class="myHeaderHighlight ideaClick">
+                            <center>
+                                <lightning:icon class="slds-p-bottom_medium" iconName="utility:image" size="large" alternativeText="No Ideas"/>
+                            </center>
+                        </div>
+                        <div aura:id="theTile" class="tileInfo slds-p-around_medium">
+                            <div class="slds-p-top_x-large">
+                                <P class=" tileTitle">Looks like we can't find any activities yet</P>
+                            </div>          
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </aura:if>
+    </div>
+</aura:component>

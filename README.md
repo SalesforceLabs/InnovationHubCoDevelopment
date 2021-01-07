@@ -2,11 +2,11 @@
 	<img align="right" width="150" src="images/qbranch_logo.gif">
 </div>
 
-# [AppExchange Listing Name](https://appexchange.my.salesforce.com/)
+# [Innovation Hub](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N3A00000EtEHSUA3)
 
-#### _Catchy title about your AppExchange Offering_
+#### _Encourage and foster collaborative ideation_
 
-#### Sub-title about your AppExchange goes here with any relevant <a href="https://developer.salesforce.com/">links..</a>
+#### Create a collaborative environment to encourage and foster innovation. Allow users to submit, vote on and see ideas become a reality in your organisation.
 
 <h4 align="center">
 	<a href="#features">Features</a> |
@@ -202,7 +202,7 @@ If you would like to join these awesome people, please refer to [contributing.md
 
 Special thanks to:
 
-- Q Branch Dublin for your continued support.
+- Q Branch for your continued support.
 - Everyone that has requested for, used and provided feedback on this project.
 
 ## License
@@ -215,11 +215,11 @@ Special thanks to:
 
 <!--- Urls -->
 
-[repository-url]: https://github.com/sfdc-qbranch/AppExchangeTemplate
-[downloads-url]: https://github.com/sfdc-qbranch/AppExchangeTemplate/releases
-[issues-url]: https://github.com/sfdc-qbranch/AppExchangeTemplate/issues
+[repository-url]: https://github.com/sfdc-qbranch/InnovationHub
+[downloads-url]: https://github.com/sfdc-qbranch/InnovationHub/releases
+[issues-url]: https://github.com/sfdc-qbranch/InnovationHub/issues
 [license-url]: http://opensource.org/licenses/BSD-3-Clause
-[author-url]: http://github.com/matqo
-[contributors-url]: https://github.com/sfdc-qbranch/AppExchangeTemplate/contributors
-[tests-url]: https://github.com/sfdc-qbranch/AppExchangeTemplate/tests
-[quip-url]: https://salesforce.quip.com/um8sAuXNyCnO
+[author-url]: http://github.com/
+[contributors-url]: https://github.com/sfdc-qbranch/InnovationHub/contributors
+[tests-url]: https://github.com/sfdc-qbranch/InnovationHub/tests
+[quip-url]: https://salesforce.quip.com/wvbiA9vXTqhw
