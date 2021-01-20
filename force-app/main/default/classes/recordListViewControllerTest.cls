@@ -11,7 +11,7 @@ global with sharing class recordListViewControllerTest {
         ihv1.innohub__Vote_Type__c = true;
         insert ihv1;
 
-        //                                                               String objApiName, String lookupField, String contextId, String filters,sortBy,show,rtyp ,votesObject,                         voteObjectLookup, String userType, String approvalCondition) {  
+        //String objApiName, String lookupField, String contextId, String filters,sortBy,show,rtyp ,votesObject,voteObjectLookup, String userType, String approvalCondition) {  
         Integer recordCount = recordListViewController.getRecordCount('innohub__Innovation_Idea__c', null, null, '{"innohub__Stage__c":"Stage1"}', null, 'liked', null, 'innohub__Innovation_Idea_Vote__c', 'innohub__Innovation_Idea__c', 'Creator', null, 'innohub__Vote_Type__c');
         System.assertEquals(recordCount, 1);
     }
