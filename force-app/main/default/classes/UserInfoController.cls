@@ -12,13 +12,14 @@ public with sharing class UserInfoController {
             query += ', typeof Owner when user then Id, Name, SmallPhotoUrl, FullPhotoUrl, MediumPhotoUrl when Group then Id, Name, Type end';
            
         }
-        //Customer__User__r
+        //Custom Field
         else {
             String fieldApiName = userType.left(userType.length()-1);
             query += ' ,' + fieldApiName + 'c';
             query += ',' + userType +'.Name,' + + userType +  '.MediumPhotoUrl ';
             
         }
+
         query += ' FROM ' + objApiName + ' WHERE IsDeleted = false AND  Id =: currentRecordId';
         query +=' WITH SECURITY_ENFORCED';
 
@@ -28,6 +29,5 @@ public with sharing class UserInfoController {
             throw new AuraHandledException('The following exception has occurred: ' + e.getMessage());
         }
         
-      
     }
 }

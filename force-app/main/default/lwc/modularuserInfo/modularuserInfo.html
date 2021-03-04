@@ -1,24 +1,29 @@
 <template>
-<template if:false={myerror}> 
-  <lightning-card >
-    <div class="slds-text-align_center creatorImg">
-   
-<template if:true={userRecord.MediumPhotoUrl}>
-        <img class="img-circle" alt="" src={userRecord.MediumPhotoUrl}/>
-</template> 
-<template if:false={userRecord.MediumPhotoUrl}>
-  <img class="img-circle" alt="" src={userRecord.SmallPhotoUrl}/>
-</template>
-    </div>
-    <h2 class="slds-text-align_center slds-p-top_small slds-p-bottom_small tileTitle ">
-        {userRecord.fullName}
-    </h2>
-</lightning-card> 
-</template>
-<template if:true={myerror}>
-  <lightning-layout-item size="12" padding="around-small">;kj xz
-  </lightning-layout-item>
-</template>
-</template>
+	<template if:false={myerror}>
+		<lightning-card>
 
+			<div class="slds-text-align_center creatorImg">
 
+				<template if:true={userRecord.MediumPhotoUrl}>
+					<img class="img-circle" alt="" src={userRecord.MediumPhotoUrl} />
+				</template>
+
+				<template if:false={userRecord.MediumPhotoUrl}>
+					<img class="img-circle" alt="" src={userRecord.SmallPhotoUrl} />
+				</template>
+
+			</div>
+
+			<h2 class="slds-text-align_center slds-p-top_small slds-p-bottom_small tileTitle ">
+				{userRecord.fullName}
+			</h2>
+
+		</lightning-card>
+	</template>
+
+	<template if:true={myerror}>
+		<lightning-layout-item size="12" padding="around-small">
+			<c-error-panel errors={myerror}></c-error-panel>
+		</lightning-layout-item>
+	</template>
+</template>
