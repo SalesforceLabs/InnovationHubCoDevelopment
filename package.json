@@ -16,6 +16,6 @@
   "author": "Maximilian Goldschmidt",
   "license": "ISC",
   "devDependencies": {
-    "@salesforce/sfdx-lwc-jest": "^0.7.0"
+    "@salesforce/sfdx-lwc-jest": "^0.7.1"
   }
 }
