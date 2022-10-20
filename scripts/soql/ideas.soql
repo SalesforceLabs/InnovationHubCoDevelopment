@@ -1,0 +1,31 @@
+// Use .soql files to store SOQL queries.
+// You can execute queries in VS Code by selecting the
+//     query text and running the command:
+//     SFDX: Execute SOQL Query with Currently Selected Text
+
+SELECT 
+Id, 
+Name, 
+innohub__Approval_Status__c, 
+innohub__Business_Value__c, 
+innohub__Category__c, 
+innohub__Department__c,
+innohub__Describe_your_evolution__c,
+innohub__Description__c,
+innohub__Engage_Team_Comments__c,
+innohub__Image__c,
+innohub__Impact_to_employee_customer_experience__c,
+innohub__Impacted_Regions__c,
+innohub__Improvement_Request__c,
+innohub__Overview__c,
+innohub__Points__c,
+innohub__Recommended__c,
+innohub__Rejected_reason__c,
+innohub__Replacement__c,
+innohub__Role__c,
+innohub__Stage__c,
+innohub__Type__c,
+innohub__Video_File_Id__c,
+innohub__Video_Title__c,
+innohub__Video_Url__c
+FROM innohub__Innovation_Idea__c

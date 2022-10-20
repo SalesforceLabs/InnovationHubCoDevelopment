@@ -1,0 +1,3 @@
+<design:component label="Section Header">
+    <design:attribute name="sectionHeader" label="Section Header" />
+</design:component>

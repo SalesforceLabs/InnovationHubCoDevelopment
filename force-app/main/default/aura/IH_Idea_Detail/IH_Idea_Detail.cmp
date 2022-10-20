@@ -1,0 +1,64 @@
+<aura:component
+  implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes"
+  access="global"
+  controller="IH_IdeaCtr"
+>
+  <aura:attribute name="recordId" type="Id" />
+  <aura:attribute name="idea" type="sObject" />
+  <aura:attribute name="theBoolean" type="Boolean" default="false" />
+  <aura:attribute name="filevideoHeight" type="String" access="global" />
+  <aura:attribute name="filevideoWidth" type="String" access="global" />
+  <aura:attribute name="videoHeight" type="String" access="global" />
+  <aura:attribute name="videoWidth" type="String" access="global" />
+  <aura:attribute name="edit" type="Boolean" default="true" />
+
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+  <aura:handler
+    event="c:editUnderReviewIdea"
+    action="{!c.handleApplicationEvent}"
+  />
+
+  <aura:if
+    isTrue="{!or(v.idea.innohub__Approval_Status__c == 'Approved', v.theBoolean)}"
+  >
+    <div class="wrapper slds-p-around_medium slds-p-bottom_small">
+      <div class="slds-form-element__label"
+        >{!$Label.c.detail_Overview_Header}</div
+      >
+      <div
+        ><lightning:formattedRichText
+          class="theHeader"
+          value="{!v.idea.innohub__Overview__c}"
+      /></div>
+      <div class="slds-m-top_large slds-form-element__label"
+        >{!$Label.c.detail_Description_Header}</div
+      >
+      <div
+        ><ui:outputRichText
+          class="slds-text-longform"
+          value="{!v.idea.innohub__Description__c + ' ' + v.idea.innohub__Describe_your_evolution__c }"
+      /></div>
+      <c:videoPlayer
+        videoFileId="{!v.idea.innohub__Video_File_Id__c}"
+        videoUrl="{!v.idea.innohub__Video_URL__c}"
+        title="{!v.idea.innohub__Video_Title__c}"
+        loop="true"
+      >
+      </c:videoPlayer>
+    </div>
+    <aura:set attribute="else">
+      <center>
+        <div class="tileCategory slds-p-bottom_medium slds-p-top_medium"
+          ><span
+            class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small"
+            title="Description of icon when needed"
+          >
+            <lightning:icon iconName="utility:warning" size="small" />
+          </span>
+          Details hidden as this submission is not approved
+        </div>
+      </center>
+    </aura:set>
+  </aura:if>
+</aura:component>

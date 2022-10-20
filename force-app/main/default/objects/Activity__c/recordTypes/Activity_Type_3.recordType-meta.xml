@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Type_3</fullName>
+    <active>true</active>
+    <description>Activity description</description>
+    <label>Activity Type 3</label>
+    <picklistValues>
+        <picklist>BU__c</picklist>
+        <values>
+            <fullName>Value 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Step__c</picklist>
+        <values>
+            <fullName>Step 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Step 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Category 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Category 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Category 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Category 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Category 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

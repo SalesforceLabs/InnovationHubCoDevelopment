@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub Latest Record</masterLabel>
+    <description>Component displaying latest record of a given sObject.</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="sObjectApiName" label="sObject API Name" type="String" description="If you use one of the standard Innovation Hub objects, you will not need to configure the field bindings below."/>
+            <property name="showViewAll" label="show &quot;View All&quot;" type="Boolean" description="when true, user can navigate to view all page of selected sObject"/>
+            <property name="userType" type="String" label="User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+            <property name="categoryField" label="Category field API Name" type="String" description="The API name of the field on the sObject that contains the category of the record."/>
+            <property name="creatorField" label="Creator field API Name" type="String" description="The API name of the field on the sObject that contains the name of the creator/owner. If left blank the creator name will be used."/>
+            <property name="creatorImageFallbackUrl" label="Creator Image Fallback Url" default="/img/icon/t4v35/standard/groups_120.png" type="String" description="You can provide an image url that will be used if the creator image is blank. Make sure to add the source of the image to your CSP Whitelisted Sites"/>
+            <property name="creatorImageField" label="Creator Image field API Name" type="String" description="The API name of the field on the sObject that contains the profile image of the record creator. If left blank, the creator profile image will be used."/>
+            <property name="customField" type="String" label="Custom Field" description="The Name or Label which is displayed as an overlay between the Name and voting section"/>
+            <property name="conditions" label="Conditions" type="String" description="If you want to exclude certain records you can add a condition expression here. E.g.: &quot;innohub__Approval_Status__c='Approved'&quot;"/>
+            <property name="dateField" label="Date Field API Name" type="String" description="Must be Date or Date/Time field"/>
+            <property name="imageField" label="Image field API Name" type="String" description="The API name of the field on the sObject that contains the banner image."/>
+            <property name="nameField" default="Name" label="Name field API Name" type="String" description="The API name of the field on the sObject that contains the record name"/>
+            <property name="pointsField" label="Points field API Name" type="String" description="The API name of the field on the sObject that contains the number of points given to this record. E.g.: Number of votes"/>
+            <property name="recommendedField" label="Recommended field API Name" type="String" description="The API name of the field on the sObject that contains a boolean flag indicating whether the record is recommended or not."/>
+            <property name="typeField" label="Type field API Name" type="String" description="The API name of the field on the sObject that contains the record type. If left blank, it will use the Record Type Name"/>
+            <property name="voteField" label="Vote Field API Name (deprecated in V4)" type="String" description=""/>
+            <property name="voteLookupField" label="Vote Lookup Field API Name" type="String" description="The api name of the field on the Vote sObject that looks up to the record sObject"/>
+            <property name="voteRecordRelationshipName" label="Vote Record Relationship" type="String" description="The relationship API name that links the sObject of this record to the Vote sObject"/>
+            <property name="voteSObject" label="Vote sObject API Name" type="String" description="The sObject that counts votes for this record"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

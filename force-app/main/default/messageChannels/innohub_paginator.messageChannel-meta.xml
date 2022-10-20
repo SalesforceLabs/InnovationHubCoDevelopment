@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>innohub_paginator</masterLabel>
+    <isExposed>true</isExposed>
+    <description>To exchange Pagesize and curent page</description>
+    <lightningMessageFields>
+        <fieldName>Pagesize</fieldName>
+        <description>Size of the page managed in paginator</description>
+    </lightningMessageFields>
+    <lightningMessageFields>
+        <fieldName>Currentpage</fieldName>
+        <description>Page number to display</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

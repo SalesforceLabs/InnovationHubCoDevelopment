@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>48.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub Latest Submissions</masterLabel>
+    <description>This component shows three latest record components. To be used when the home page doesn&apos;t feature a three column layout. </description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="firstObject" label="first sObject" type="String" default="innohub__Innovation_Idea__c" datasource="innohub__Innovation_Idea__c,innohub__Demo__c,innohub__Prototype__c,innohub__User_Voice__c,innohub__Activity__c"/>
+            <property name="firstObjectUserType" type="String" label="first User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+            <property name="secondObject" label="second sObject" type="String" default="innohub__Demo__c" datasource="innohub__Innovation_Idea__c,innohub__Demo__c,innohub__Prototype__c,innohub__User_Voice__c,innohub__Activity__c"/>
+            <property name="secondObjectUserType" type="String" label="second User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+            <property name="thirdObject" label="third sObject" type="String" default="innohub__Prototype__c" datasource="innohub__Innovation_Idea__c,innohub__Demo__c,innohub__Prototype__c,innohub__User_Voice__c,innohub__Activity__c"/>
+            <property name="thirdObjectUserType" type="String" label="third User Type" default="Creator" datasource="Creator,Owner" description="The Context of an User for List View and all related components, for full description and implications visit the documentation"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

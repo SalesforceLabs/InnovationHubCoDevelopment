@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub Filter Panel</masterLabel>
+    <description>A group of filters that filter the records in an Innovation Hub Record List when present
+        on the same page</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="objectApiName" type="String" label="Object Name" description="Automatically bind the page's object name to the component variable" default="{!objectApiName}"/>
+            <property name="backgroundColor" type="Color" label="Background Color" default="rgb(239, 239, 239)"/>
+            <property name="borderColor" type="Color" label="Border Color" default="rgb(239, 239, 239)"/>
+            <property name="borderSize" type="Integer" label="Border Size" default="0"/>
+            <property name="showSort" type="Boolean" label="Allow Sorting"/>
+            <property name="showFilterShow" type="Boolean" label="Show Owner Filter"/>
+            <property name="showRecordTypeFilter" type="Boolean" label="Show Record Type Filter"/>
+            <property name="filters" type="String" label="Comma separated list to show as filters" description="Only supports picklist and multipicklist fields"/>
+            <property name="inSidebar" type="Boolean" label="Component placed in sidebar"/>
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="objectApiName" type="String" label="Object Name" description="Automatically bind the page's object name to the component variable" default="{!objectApiName}"/>
+            <property name="backgroundColor" type="String" label="Background Color" default="rgb(239, 239, 239)"/>
+            <property name="borderColor" type="String" label="Border Color" default="rgb(239, 239, 239)"/>
+            <property name="borderSize" type="Integer" label="Border Size" default="0"/>
+            <property name="showSort" type="Boolean" label="Allow Sorting"/>
+            <property name="showFilterShow" type="Boolean" label="Show Owner Filter"/>
+            <property name="showRecordTypeFilter" type="Boolean" label="Show Record Type Filter"/>
+            <property name="filters" type="String" label="Comma separated list to show as filters" description="Only supports picklist and multipicklist fields"/>
+            <property name="inSidebar" type="Boolean" label="Component placed in sidebar"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

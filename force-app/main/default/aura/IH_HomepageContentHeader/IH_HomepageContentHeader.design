@@ -1,0 +1,6 @@
+<design:component label="Homepage Content Header">
+	<design:attribute name="ideaBoolean" label="Show Idea My Idea Counter" default="true"/>
+    <design:attribute name="favIdeaBoolean" label="Show Favourite Idea Counter" default="true"/>
+    <design:attribute name="favDemoBoolean" label="Show Favourite Demo Counter" default="true"/>
+    <design:attribute name="myEventsBoolean" label="Show My Event Counter" default="true"/>
+</design:component>

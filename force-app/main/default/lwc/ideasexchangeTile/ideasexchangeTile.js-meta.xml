@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="name" type="String" label="Name" default="Health &amp; Safety App = Capture Incidents With Mobile device" description="The Name or Label displayed in the center of each tile in order to identify the record"/>
+            <property name="image" type="String" label="Image Rich Text" default="&lt;img src='https://i.imgur.com/qREYm48.png'/>" description="The Rich Text content to display as image, accepts a HTML String. For full description visit the documentation"/>
+            <property name="recordType" type="String" label="Record Type" default="Evolution Request" description="The Name or Label which is displayed as an overlay over the image"/>
+            <property name="recommended" type="Boolean" label="Recommended" default="true" description="The checkbox determines whether a tile is recommended or not"/>
+            <property name="points" type="String" label="Integer" default="2" description="The number of points displayed in tile"/>
+            <property name="category" type="String" label="Categories" default="Sales;Marketing;Service" description="The comma separated value list of values to display underneath the image"/>
+            <property name="creator" type="String" label="Creator" default="Martin Futas" description="The Name or Label which is displayed as the author of the record"/>
+            <property name="creatorImage" type="String" label="Creator Image" default="https://media-exp1.licdn.com/dms/image/C4E03AQF4PoHmEUJGQw/profile-displayphoto-shrink_100_100/0?e=1585180800&amp;v=beta&amp;t=DnNw5BJ0B6I6zOCbYY22gYSaJMVzSDSqIznujl8Q3lo" description="The URL of Image to display as Author's avatar"/>
+            <property name="voteSobject" type="String" label="Vote sObject" default="innohub__Innovation_Idea__c" description="The API Name of an Object which looks up to the current object and is intended to work as a means of storing votes, for further clarification visit the documentation"/>
+            <property name="voteField" type="String" label="Vote sObject Field" default="innohub__Vote_Type__c" description="The API Name of a Checkbox field on Voting object which indicates whether a vote record is positive or negative (Negatives records are Ignored)"/>
+            <property name="customField" type="String" label="Custom Field" default="In Developement" description="The Name or Label which is displayed as an overlay between the Name and voting section"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

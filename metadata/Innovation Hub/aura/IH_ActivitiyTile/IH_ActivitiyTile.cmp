@@ -1,0 +1,48 @@
+<aura:component controller="IH_ActivityCtr">
+    <aura:attribute name="activity" type="sObject" />
+    <aura:attribute name="creator" type="sObject" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-card outerContainer" onclick="{!c.goToActivity}">
+        <div class="myHeader">
+            <aura:if isTrue="{!v.activity.innohub__Image__c}">
+                <center><ui:outputRichText class="slds-text-longform" value="{!v.activity.innohub__Image__c}"/></center>
+                <aura:set attribute="else">
+                    <center>
+                        <lightning:icon iconName="utility:image" size="large" alternativeText="No image Set"/>
+                    </center>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="tileInfo tileBorderBottom slds-p-around_medium">
+            <div class="slds-grid">
+                <aura:if isTrue="{!v.activity.innohub__Type__c}">
+                    <div aura:id="theSize">
+                        <p aura:id="theTrunc" class="slds-truncate tileCategory">{!v.activity.innohub__Type__c}</p>
+                    </div>
+                    <aura:set attribute="else">
+                        <i class="tileCategory">No category selected</i>
+                    </aura:set>
+                </aura:if>
+            </div>
+            <div class="slds-p-top_small">
+                <!-- removing sdls-truncate to review wrapping-->
+                <p class="tileTitle">{!v.activity.Name}</p>
+                <div>
+                    <ui:outputRichText class="tileDescription slds-truncate" aura:id="tileDescription" value="{!v.activity.innohub__Subject__c}" />
+                </div>
+            </div>
+            <div class="creatorInfo slds-p-vertical_small slds-grid slds-wrap slds-grid_pull-padded slds-text-align_center">
+                <div class="slds-size_2-of-12">
+                    <span class="slds-avatar slds-avatar_small avatar">
+                        <img alt="Person name" src="{!v.creator.SmallPhotoUrl}" title="User avatar"/>
+                    </span>
+                </div>
+                <div class="slds-size_7-of-12 slds-text-align_left">
+                    <span class="creatorName slds-text-title slds-p-top_xx-small">{!v.creator.Name}</span>
+                </div>
+            </div>            
+        </div>
+    </div>
+</aura:component>

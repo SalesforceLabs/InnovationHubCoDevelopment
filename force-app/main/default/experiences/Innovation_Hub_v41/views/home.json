@@ -1,0 +1,123 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "d288e300-35ae-4588-bed3-7e6425e587f9",
+  "label" : "Home",
+  "regions" : [ {
+    "id" : "f46f4c96-66b1-45a6-9a8a-64c2e6681431",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "favDemoBoolean" : true,
+        "favIdeaBoolean" : true,
+        "ideaBoolean" : true,
+        "myEventsBoolean" : true
+      },
+      "componentName" : "innohub:IH_HomepageContentHeader",
+      "id" : "efbc0a42-5620-41aa-b863-c456e1c9f92f",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "firstObject" : "innohub__Innovation_Idea__c",
+        "firstObjectUserType" : "Creator",
+        "secondObject" : "innohub__Demo__c",
+        "secondObjectUserType" : "Creator",
+        "thirdObject" : "innohub__Prototype__c",
+        "thirdObjectUserType" : "Creator"
+      },
+      "componentName" : "innohub:latestSubmissions",
+      "id" : "acf1ccd9-d892-4893-b952-4ad2c5e02ec5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : { },
+      "componentName" : "innohub:IH_Articles",
+      "id" : "8837f5ce-9264-4636-ad11-88a5883640df",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "sectionHeader" : "Your Calendar of Events"
+      },
+      "componentName" : "innohub:IH_Calendar_Header",
+      "id" : "f0d90053-7894-40c6-aec4-e4b501b11c1a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "showCreateNewCalendar" : false,
+        "showOtherCalendars" : false,
+        "showSidebar" : true
+      },
+      "componentName" : "forceCommunity:calendar",
+      "id" : "459471f7-0172-4319-871b-64f198cc33f5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "e25ba734-887e-4024-bb09-e90419f0e457",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "190fe4be-998e-44ba-9b28-3e074aaaf6c7",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "Home"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "befe2a5a-514e-438e-8aa1-d04c9ef2da40",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "a75a67f9-4db8-44f3-a9b2-541c51cbfa8c",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "context" : "GLOBAL",
+        "recordId" : "{!recordId}",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:feedPublisher",
+      "id" : "768f2116-dc16-4df5-8039-0f8b3e06b14c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "canChangeSorting" : true,
+        "defaultFilter" : "",
+        "defaultSortOrderHomeFeed" : "Relevance",
+        "defaultSortOrderTopicsFeed" : "Relevance",
+        "feedDesign" : "DEFAULT",
+        "hasFeedSearch" : true,
+        "subjectId" : "",
+        "type" : "News"
+      },
+      "componentName" : "forceCommunity:forceCommunityFeed",
+      "id" : "de007f30-585a-43bd-9a04-2e55f7e944fd",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d0f69cf-18aa-42d7-910a-44bb05a768e3",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Home",
+  "type" : "view",
+  "viewType" : "home"
+}

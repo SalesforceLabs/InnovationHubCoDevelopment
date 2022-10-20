@@ -1,0 +1,5 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <div class ="anHeader">
+        <div class="mobilePageBackButton slds-p-top_xx-small slds-p-bottom_medium slds-is-relative"><p onclick="{!c.goBack}">&#60; {!$Label.c.back_button_mobile} </p></div>
+    </div>
+</aura:component>

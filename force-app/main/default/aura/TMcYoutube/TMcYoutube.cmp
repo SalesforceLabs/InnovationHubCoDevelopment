@@ -1,0 +1,16 @@
+<aura:component access="global">
+    
+    <aura:attribute name="videoTitle" type="String" default="Youtube" />
+    <aura:attribute name="videoId" type="String" />
+    <aura:attribute name="videoHeight" type="String" />
+    <aura:attribute name="videoWidth" type="String"/>
+    
+    <div class="slds">
+        <div style="padding: 0px;" class="slds-card__header slds-grid">
+            <h2 class="slds-text-heading--small slds-truncate"> {!v.videoTitle}</h2>
+        </div>
+        <div class="slds-card__body">
+            <iframe width="{!v.videoWidth}" height="{!v.videoHeight}" src="{!v.videoId}" frameborder="0" allow="encrypted-media" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,24 @@
+.THIS .mobilePageBackButton{
+    display:none;  
+}
+
+/* iPhone and iPad */
+
+@media all and (max-width : 768px) {
+    
+ .THIS .mobilePageBackButton{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 100;
+        cursor: pointer;
+        color: #3c3c3c !important;
+    }
+    
+    
+    .THIS .anHeader{
+         text-align: center;
+        
+    }
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Step__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Step</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Step 1</fullName>
+                <default>false</default>
+                <label>Step 1</label>
+            </value>
+            <value>
+                <fullName>Step 2</fullName>
+                <default>false</default>
+                <label>Step 2</label>
+            </value>
+            <value>
+                <fullName>Step 3</fullName>
+                <default>false</default>
+                <label>Step 3</label>
+            </value>
+            <value>
+                <fullName>Step 4</fullName>
+                <default>false</default>
+                <label>Step 4</label>
+            </value>
+            <value>
+                <fullName>Step 5</fullName>
+                <default>false</default>
+                <label>Step 5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

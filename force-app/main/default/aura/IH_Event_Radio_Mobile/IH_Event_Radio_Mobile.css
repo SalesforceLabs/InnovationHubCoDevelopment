@@ -1,0 +1,11 @@
+.THIS {
+}
+
+.THIS .slds-radio .slds-form-element__label {
+    font-size: .82rem;
+    line-height: 2.5;
+}
+
+.THIS.slds-form-element__legend.slds-form-element__label {
+    display: none;
+}

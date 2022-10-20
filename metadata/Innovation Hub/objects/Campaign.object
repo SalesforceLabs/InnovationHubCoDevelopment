@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Agenda__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Agenda</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Campaign_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Campaign Type</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Type 1</fullName>
+                    <default>false</default>
+                    <label>Type 1</label>
+                </value>
+                <value>
+                    <fullName>Type 2</fullName>
+                    <default>false</default>
+                    <label>Type 2</label>
+                </value>
+                <value>
+                    <fullName>Type 3</fullName>
+                    <default>false</default>
+                    <label>Type 3</label>
+                </value>
+                <value>
+                    <fullName>Type 4</fullName>
+                    <default>false</default>
+                    <label>Type 4</label>
+                </value>
+                <value>
+                    <fullName>Type 5</fullName>
+                    <default>false</default>
+                    <label>Type 5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <length>100</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Location 1</fullName>
+                    <default>false</default>
+                    <label>Location 1</label>
+                </value>
+                <value>
+                    <fullName>Location 2</fullName>
+                    <default>false</default>
+                    <label>Location 2</label>
+                </value>
+                <value>
+                    <fullName>Location 3</fullName>
+                    <default>false</default>
+                    <label>Location 3</label>
+                </value>
+                <value>
+                    <fullName>Location 4</fullName>
+                    <default>false</default>
+                    <label>Location 4</label>
+                </value>
+                <value>
+                    <fullName>Location 5</fullName>
+                    <default>false</default>
+                    <label>Location 5</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Event_Venue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Event Venue</label>
+        <length>32768</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Image__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Image</label>
+        <length>32768</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Speaker__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Speaker</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <recordTypes>
+        <fullName>Innovation_Hub_Event</fullName>
+        <active>true</active>
+        <description>Events associated with your Innovation Hub</description>
+        <label>Innovation Hub Event</label>
+        <picklistValues>
+            <picklist>Campaign_Type__c</picklist>
+            <values>
+                <fullName>Type 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Type 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Country__c</picklist>
+            <values>
+                <fullName>Location 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location 4</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Location 5</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Aborted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Planned</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Advertisement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Banner Ads</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Conference</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Direct Mail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Partners</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Public Relations</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral Program</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+</CustomObject>

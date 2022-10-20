@@ -1,0 +1,73 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "a94b4b85-11f0-42c6-9f14-ab70a773b390",
+  "label" : "Challenge List",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "objectApiName" : "{!objectApiName}",
+        "showFilterShow" : true,
+        "showRecordTypeFilter" : false,
+        "showSort" : true
+      },
+      "componentName" : "innohub:filterPanel",
+      "id" : "eb10e16c-3e93-4822-928a-1d38925a70f8",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "1a023d4f-3092-45af-a263-cca3de3d96b0",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "approvalCondition" : "innohub__Status__c='Published'",
+        "category" : "innohub__Category__c",
+        "customField" : "",
+        "dateField" : "",
+        "defaultUserImage" : "/img/icon/t4v35/standard/groups_120.png",
+        "image" : "innohub__Image__c",
+        "inSidebar" : false,
+        "lookupField" : "",
+        "name" : "Name",
+        "object" : "{!objectApiName}",
+        "points" : "",
+        "recommended" : "",
+        "recordId" : "{!recordId}",
+        "recordType" : "",
+        "usePagination" : true,
+        "userType" : "Creator",
+        "voteField" : "",
+        "voteObjectLookup" : "",
+        "voteRecordRelationship" : "",
+        "votesObject" : ""
+      },
+      "componentName" : "innohub:recordListView",
+      "id" : "c1a0f733-ef13-43c7-9449-2e286758ee0a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "pageSize" : 15
+      },
+      "componentName" : "innohub:paginator",
+      "id" : "3b033694-2551-4a5a-b50d-bb3cea562221",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "cb18b4ee-2dc7-46ea-8359-195234c69572",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "fa9f77e6-3ab4-48c7-9967-a22d24fff9b8",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a01"
+}

@@ -1,0 +1,67 @@
+<template>
+  <div class="listContainer" style={containerStyle}>
+    <template if:true={isLoading}>
+      <center class="slds-is-relative slds-p-around_xx-large">
+        <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+      </center>
+    </template>
+    <lightning-layout multiple-rows="true">
+      <template if:true={records.data}>
+        <template for:each={records.data} for:item="record">
+          <!--
+              <lightning-layout-item class="slds-p-around_medium" size="12" smallDeviceSize="6" mediumDeviceSize="4" largeDeviceSize="3" padding="around-small" key={record.id}>
+            size="12" small-device-size="6" medium-device-size="4" large-device-size="4" padding="around-medium"
+                <lightning-layout-item class="slds-p-bottom_large slds-p-left_small slds-p-right_small" size={size} key={record.id}>
+                  <lightning-layout-item flexibility="auto, no-grow" padding="around-small" key={record.id}>
+                     <lightning-layout-item class="slds-p-bottom_medium slds-p-left_xx-small slds-p-right_xx-small" size={size} key={record.id}>
+              -->
+
+
+          <template if:true={mobileTile}>
+
+            <lightning-layout-item class="slds-p-around_xx-small" size={size} key={record.id}>
+              <c-mobilerecord-tile-v2 record-id={record.id} name={record.name} record-type={record.recordType}
+                image={record.image} recommended={record.recommended} points={record.points} category={record.category}
+                creator={record.creator} creator-image={record.creatorImage}
+                default-creator-image={record.defaultCreatorImage} vote-type={record.voteType}
+                vote-sobject={votesObject} vote-record-relationship={voteRecordRelationship} vote-field={voteField}
+                vote-object-lookup={voteObjectLookup} custom-field={record.customField} date={record.dateField}
+                onrefreshrecords={handleRefreshRecords}></c-mobilerecord-tile-v2>
+            </lightning-layout-item>
+          </template>
+
+          <template if:true={standardTile}>
+            <lightning-layout-item class="slds-p-bottom_large slds-p-left_small slds-p-right_small" size={size} key={record.id}>
+              <c-record-tile record-id={record.id} name={record.name} record-type={record.recordType}
+                image={record.image} recommended={record.recommended} points={record.points} category={record.category}
+                creator={record.creator} creator-image={record.creatorImage}
+                default-creator-image={record.defaultCreatorImage} vote-type={record.voteType}
+                vote-sobject={votesObject} vote-record-relationship={voteRecordRelationship} vote-field={voteField}
+                vote-object-lookup={voteObjectLookup} custom-field={record.customField} date={record.dateField}
+                onrefreshrecords={handleRefreshRecords}></c-record-tile>
+            </lightning-layout-item>
+          </template>
+
+        </template>
+      </template>
+    </lightning-layout>
+    <template if:true={noResults}>
+      <center class="slds-is-relative slds-p-around_xx-large">
+        <div class="slds-p-bottom--xx-large">
+          <img src="/img/search/no-results.png" class="" alt="No Results" />
+        </div>
+        <div class="slds-text-heading_large noResultsTitle slds-p-bottom--large">
+          {noResultsLabel}
+        </div>
+        <div class="slds-text-heading_small noResultsMessage">
+          {noResultsSuggestionLabel}
+        </div>
+      </center>
+    </template>
+    <template if:true={myerror}>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-error-panel errors={myerror}></c-error-panel>
+      </lightning-layout-item>
+    </template>
+  </div>
+</template>

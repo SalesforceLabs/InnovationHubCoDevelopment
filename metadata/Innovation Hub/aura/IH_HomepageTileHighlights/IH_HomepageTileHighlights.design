@@ -1,0 +1,7 @@
+<design:component label="Latest Submissions">
+	<design:attribute name="tile_1" label="First Tile Object" datasource="none,Idea,Demo,Prototype,Inspiration,Activity" />
+    <design:attribute name="tile_2" label="Second Tile Object" datasource="none,Idea,Demo,Prototype,Inspiration,Activity" />
+    <design:attribute name="tile_3" label="Third Tile Object" datasource="none,Idea,Demo,Prototype,Inspiration,Activity" />
+    <design:attribute name="UserField" label="Idea - User Field To Display" description="If an Idea object is selected for highhtlight, the selected user field will be displayed on bottom of each tile" datasource="Created By, Owner" default="Created By" />
+
+</design:component>

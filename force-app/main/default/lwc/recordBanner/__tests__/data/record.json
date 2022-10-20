@@ -1,0 +1,95 @@
+{
+  "apiName": "innohub__Innovation_Idea__c",
+  "childRelationships": {},
+  "fields": {
+    "CreatedBy": {
+      "displayValue": "User User",
+      "value": {
+        "apiName": "User",
+        "childRelationships": {},
+        "fields": {
+          "Id": { "displayValue": null, "value": "0051X000002keCyQAI" },
+          "Name": { "displayValue": null, "value": "User User" }
+        },
+        "id": "0051X000002keCyQAI",
+        "lastModifiedById": "0051X000002keCyQAI",
+        "lastModifiedDate": "2020-01-16T14:45:35.000Z",
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-01-20T12:58:33.000Z"
+      }
+    },
+    "CreatedById": { "displayValue": null, "value": "0051X000002keCyQAI" },
+    "CreatedDate": {
+      "displayValue": "21/01/2020, 11:44",
+      "value": "2020-01-21T11:44:05.000Z"
+    },
+    "LastModifiedBy": {
+      "displayValue": "User User",
+      "value": {
+        "apiName": "User",
+        "childRelationships": {},
+        "fields": {
+          "Id": { "displayValue": null, "value": "0051X000002keCyQAI" },
+          "Name": { "displayValue": null, "value": "User User" }
+        },
+        "id": "0051X000002keCyQAI",
+        "lastModifiedById": "0051X000002keCyQAI",
+        "lastModifiedDate": "2020-01-16T14:45:35.000Z",
+        "recordTypeInfo": null,
+        "systemModstamp": "2020-01-20T12:58:33.000Z"
+      }
+    },
+    "LastModifiedById": {
+      "displayValue": null,
+      "value": "0051X000002keCyQAI"
+    },
+    "LastModifiedDate": {
+      "displayValue": "21/01/2020, 11:44",
+      "value": "2020-01-21T11:44:05.000Z"
+    },
+    "Name": { "displayValue": null, "value": "Amazing Idea" },
+    "innohub__Approval_Status__c": {
+      "displayValue": "Approved",
+      "value": "Approved"
+    },
+    "innohub__Category__c": { "displayValue": "Value 1", "value": "Value 1" },
+    "innohub__Department__c": { "displayValue": null, "value": "Magic" },
+    "innohub__Describe_your_evolution__c": {
+      "displayValue": null,
+      "value": "<p style=\"\"><span style=\"color: rgb(0, 0, 0);\">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class=\"ql-cursor\" style=\"\">﻿</span></span></p><p style=\"\"><br style=\"\"></p>"
+    },
+    "innohub__Engage_Team_Comments__c": {
+      "displayValue": null,
+      "value": null
+    },
+    "innohub__Image__c": {
+      "displayValue": null,
+      "value": "<p style=\"\"><img src=\"/servlet/rtaImage?eid=a0F1X000000ZvNE&amp;feoid=00N1X0000035zTp&amp;refid=0EM1X0000001bQX\" alt=\"goofyImage.png\"></img></p>"
+    },
+    "innohub__Overview__c": {
+      "displayValue": null,
+      "value": "Wow. Such an amazing idea!"
+    },
+    "innohub__Recommended__c": { "displayValue": null, "value": false },
+    "innohub__Rejected_reason__c": { "displayValue": null, "value": null },
+    "innohub__Stage__c": { "displayValue": "Stage1", "value": "Stage1" },
+    "innohub__Type__c": {
+      "displayValue": "New Functionality",
+      "value": "New Functionality"
+    },
+    "innohub__Video_File_Id__c": { "displayValue": null, "value": null },
+    "innohub__Video_Title__c": { "displayValue": null, "value": null },
+    "innohub__Video_URL__c": { "displayValue": null, "value": null }
+  },
+  "id": "a0F1X000000ZvNEUA0",
+  "lastModifiedById": "0051X000002keCyQAI",
+  "lastModifiedDate": "2020-01-21T11:44:05.000Z",
+  "recordTypeInfo": {
+    "available": true,
+    "defaultRecordTypeMapping": false,
+    "master": false,
+    "name": "Idea",
+    "recordTypeId": "0121X000000hfNhQAI"
+  },
+  "systemModstamp": "2020-01-21T11:44:05.000Z"
+}

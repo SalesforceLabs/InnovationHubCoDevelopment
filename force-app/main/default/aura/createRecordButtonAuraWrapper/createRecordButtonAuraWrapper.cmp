@@ -1,0 +1,22 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes,flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+  <aura:attribute name='recordId' type='String' access='global'/>
+  <aura:attribute name='fieldApiName' type='String' access='global'/>
+  <aura:attribute name='visibilityField' type='String' access='global'/>
+  <aura:attribute name='fieldValue' type='String' access='global'/>
+  <aura:attribute name='label' type='String' access='global'/>
+  <aura:attribute name='objectApiName' type='String' access='global'/>
+  <aura:attribute name='possibleRecordTypes' type='String' access='global'/>
+  <aura:attribute name='defaultFieldValues' type='String' access='global'/>
+
+  <c:createRecordButton
+    recordId="{!v.recordId}"
+    fieldApiName="{!v.fieldApiName}"
+    fieldValue="{!v.fieldValue}"
+    label="{!v.label}"
+    objectApiName="{!v.objectApiName}"
+    possibleRecordTypes="{!v.possibleRecordTypes}"
+    defaultValuesString="{!v.defaultFieldValues}"
+    visibilityField="{!v.visibilityField}"
+    oncreate="{!c.createNewRecord}"
+  ></c:createRecordButton>
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component access="global" controller="IH_IdeaCtr">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="theBoolean" type="Boolean" default="true"/>
+    <aura:attribute name="theReason" type="String" default="Idea under review"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:if isTrue="{!v.theBoolean}">
+        <aura:set attribute="else">
+            <div class="slds">
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                    <span class="slds-assistive-text">warning</span>
+                    <span class="slds-icon_container slds-icon-utility-warning slds-m-right_x-small" title="Description of icon when needed">
+                        <lightning:icon iconName="utility:warning" size="small"/>
+                    </span>
+                    <h2 class="theLabel">{!v.theReason}</h2>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

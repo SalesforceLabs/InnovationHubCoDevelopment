@@ -1,0 +1,37 @@
+{
+  "controllerValues": {},
+  "defaultValue": null,
+  "url": "/services/data/v47.0/ui-api/object-info/innohub__Innovation_Idea__c/picklist-values/012000000000000AAA/innohub__Category__c",
+  "values": [
+    {
+      "attributes": null,
+      "label": "Value 1",
+      "validFor": [],
+      "value": "Value 1"
+    },
+    {
+      "attributes": null,
+      "label": "Value 2",
+      "validFor": [],
+      "value": "Value 2"
+    },
+    {
+      "attributes": null,
+      "label": "Value 3",
+      "validFor": [],
+      "value": "Value 3"
+    },
+    {
+      "attributes": null,
+      "label": "Value 4",
+      "validFor": [],
+      "value": "Value 4"
+    },
+    {
+      "attributes": null,
+      "label": "Value 5",
+      "validFor": [],
+      "value": "Value 5"
+    }
+  ]
+}

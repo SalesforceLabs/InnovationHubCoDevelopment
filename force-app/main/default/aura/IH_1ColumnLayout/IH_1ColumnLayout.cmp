@@ -1,0 +1,29 @@
+<aura:component implements="forceCommunity:layout" description='Custom 1 Column Layout' access="global">
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="content" type="Aura.Component[]" required="false"></aura:attribute>
+    <aura:attribute name="customHeader" type="Aura.Component[]" required="false"></aura:attribute>
+    
+    <div class="container">
+        <div class="contentPanel">
+            <div class="slds-grid slds-wrap slds-grid_pull">
+                <div class="slds-p-horizontal_small slds-size_1-of-1 slds-medium-size_1-of-1 slds-large-size_1-of-1 slds-align_absolute-center" style="font-size: 32px; background-color:#27509b; display: none;">                     
+                    <lightning:layout horizontalAlign="space">
+                        <lightning:layoutItem flexibility="auto" padding="around-small">
+                        </lightning:layoutItem>
+                        <lightning:layoutItem flexibility="auto">
+                            {!v.newHeader}
+                        </lightning:layoutItem>
+                         <lightning:layoutItem flexibility="auto" padding="around-small">
+                             <div class="slds-align_absolute-center"> <!-- panelImage -->
+                             </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+                <div class="columns slds-p-horizontal_small slds-size_12-of-12 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                    {!v.content}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

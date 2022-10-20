@@ -1,0 +1,52 @@
+<aura:component>
+    <aura:attribute name="regions" type="String[]"  />
+    <aura:attribute name="workstreams" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    <aura:attribute name="types" type="String[]" default="['Recent','My Prototypes']" />
+    
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    <aura:attribute name="FilterLabel" type="String" />
+    <aura:attribute name="labelName1" type="string"/>
+    <aura:attribute name="labelName2" type="string"/>
+    
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="WorkstreamsFilter" type="Boolean" access="global" />  
+    <aura:attribute name="RegionFilter" type="Boolean" access="global" />  
+    
+    <div class="slds-p-top_small theMax">
+        <div class="filterHeader slds-p-around_medium">
+            {!$Label.c.filter_Prototypes_Header}            
+        </div>
+        <div class="slds-p-vertical_medium slds-p-horizontal_medium options">
+            
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_Prototype_Radio /></div>
+            </aura:if>
+            <aura:if isTrue="{!v.WorkstreamsFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Prototype labelName="{!v.labelName1}" filterName="innohub__Workstream__c" options="{!v.workstreams}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.RegionFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Prototype labelName="{!v.labelName2}" filterName="innohub__Region__c" options="{!v.regions}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" aura:id="categoryFilters"/></div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

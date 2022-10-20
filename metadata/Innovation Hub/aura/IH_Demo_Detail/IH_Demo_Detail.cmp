@@ -1,0 +1,18 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="IH_DemoCtr">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="demo" type="sObject" />
+    <aura:attribute name="filevideoHeight" type="String" access="global"/>
+    <aura:attribute name="filevideoWidth" type="String" access="global"/>
+    <aura:attribute name="videoHeight" type="String" access="global"/>
+    <aura:attribute name="videoWidth" type="String" access="global"/>
+    <aura:attribute name="edit" type="Boolean" default="true"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="wrapper slds-p-around_medium slds-p-bottom_small">
+        <div class="slds-form-element__label">{!$Label.c.detail_Overview_Header}</div>
+        <div><lightning:formattedRichText class="theHeader" value="{!v.demo.innohub__Overview__c}" /></div> 
+        <div class="slds-m-top_large slds-form-element__label">{!$Label.c.detail_Description_Header}</div>
+        <div><ui:outputRichText class="slds-text-longform" value="{!v.demo.innohub__Description__c}" /></div>
+        <c:dermoTestVideo filevideoHeight="{!v.filevideoHeight}" filevideoWidth="{!v.filevideoWidth}" videoHeight="{!v.videoHeight}" videoWidth="{!v.videoWidth}" recordId = "{!v.recordId}"/> 
+    </div>
+</aura:component>

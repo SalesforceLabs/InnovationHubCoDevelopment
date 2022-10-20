@@ -1,0 +1,10 @@
+<design:component label="Events List View">
+    <design:attribute name="TypeFilter" label="Show Default Type Filter" />
+    <design:attribute name="LocationFilter" label="Show Default Location Filter" />
+    <design:attribute name="SessionTypeFilter" label="Show Default Session Type Filter" />
+    <design:attribute name="DateFilter" label="Show Default Date Filter" />
+    <design:attribute name="FilterFieldName1" placeholder="Filter Field API name" label="Custom Filter 1"/>
+    <design:attribute name="FilterFieldName2" placeholder="Filter Field API name" label="Custom Filter 2"/>
+    <design:attribute name="FilterFieldName3" placeholder="Filter Field API name" label="Custom Filter 3"/>
+    <design:attribute name="filterLayout" label="Filter Layout" datasource="Desktop,Mobile" />
+</design:component>

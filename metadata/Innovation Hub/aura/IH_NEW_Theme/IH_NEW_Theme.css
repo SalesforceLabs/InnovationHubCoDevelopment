@@ -1,0 +1,29 @@
+.THIS .brandLogo{
+    max-width: 80px;; 
+    padding-bottom: 11px; 
+    cursor:pointer;
+}
+
+.THIS .forceCommunitySearchBox .search-field {
+    height: 2.5rem;
+}
+
+.THIS .topBar {
+    min-height: 60px!important;
+    padding-top: 0.5%;
+}
+
+.THIS .profileMenuRegion {
+    margin-top: 20px;
+}
+
+@media all and (max-width : 1022px) {
+    
+    .THIS .slds-button--neutral {
+        color: white !important;
+    }
+    
+    .THIS .slds-grid.slds-grid--align-space {
+        margin-top: 10px;
+    }
+}

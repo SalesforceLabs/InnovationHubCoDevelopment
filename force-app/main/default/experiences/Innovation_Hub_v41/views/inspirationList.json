@@ -1,0 +1,35 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsOneColLayout",
+  "id" : "2aa0f5b1-1303-4027-8829-f59d946bbe20",
+  "label" : "Inspiration List",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "objectApiName" : "{!objectApiName}",
+        "showFilterShow" : true,
+        "showRecordTypeFilter" : true,
+        "showSort" : true
+      },
+      "componentName" : "innohub:filterPanel",
+      "id" : "11ff71c2-7cb7-4b39-90d2-0363b6e1c27a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "19a53356-cc53-4e04-8498-eaa1280e76d3",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "id" : "0e953525-fe9a-4e2e-851f-487b014bad34",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "af06d48a-75de-4750-b9ad-bb6ab5812d63",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a0I"
+}

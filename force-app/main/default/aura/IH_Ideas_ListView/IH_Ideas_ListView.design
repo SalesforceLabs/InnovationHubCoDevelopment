@@ -1,0 +1,12 @@
+<design:component label="Ideas List View">
+    <design:attribute name="TypeFilter" label="Show Default Type Filter" />
+    <design:attribute name="CategoryFilter" label="Show Default Category Filter" />
+    <design:attribute name="FilterFieldName1" placeholder="Filter Field API name" label="Custom Filter 1"/>
+    <design:attribute name="FilterFieldName2" placeholder="Filter Field API name" label="Custom Filter 2"/>
+    <design:attribute name="FilterFieldName3" placeholder="Filter Field API name" label="Custom Filter 3"/>
+    <design:attribute name="filterLayout" label="Filter Layout" datasource="Desktop,Mobile" />
+    <design:attribute name="UserField" label="Select User Field To Display" description="The selected user field will be displayed on bottom of each tile" datasource="Created By, Owner" default="Created By" />
+    <design:attribute name="CustomField" label="Custom Field in Tile (Optional)" placeholder="Custom Field API name (Not required)" description="Name of the Field to display opposite the Record Type Label in the image section of each tile"/>
+    <design:attribute name="pageSize" label="Default Page Size" description="Default Page Size dictates how many ideas will display on initialization of the component" datasource="3,6,9,12,15,18,21,24,27" default="9" required="true"/>
+
+</design:component>

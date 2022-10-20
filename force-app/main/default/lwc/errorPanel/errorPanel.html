@@ -1,0 +1,30 @@
+<template>
+  <lightning-card
+    title="Error"
+    icon-name="utility:error"
+    class="slds-text-color_default"
+  >
+    <div class="slds-p-horizontal_small">
+      <p>{friendlyMessage}</p>
+      <template if:true={errorMessages.length}>
+        <div class="slds-p-vertical_x-small">
+          <lightning-input
+            label="Show Details"
+            type="checkbox"
+            onchange={handleCheckboxChange}
+          ></lightning-input>
+        </div>
+        <!-- ppinon 11/27/2020 I want to see the error
+        <template if:true={viewDetails}>
+          <template for:each={errorMessages} for:item="message">
+            <p key={message} class="error-message">{message}</p>
+          </template>
+        </template>
+        -->
+        <template for:each={errorMessages} for:item="message">
+          <p key={message} class="error-message">{message}</p>
+        </template>
+      </template>
+    </div>
+  </lightning-card>
+</template>

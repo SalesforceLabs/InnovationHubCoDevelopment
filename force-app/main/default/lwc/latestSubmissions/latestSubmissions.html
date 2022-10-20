@@ -1,0 +1,45 @@
+<template>
+  <lightning-layout multiple-rows pull-to-boundary="small">
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="4"
+      large-device-size="4"
+      padding="around-small"
+    >
+      <c-latest-record
+        s-object-api-name={firstObject}
+        user-type={firstObjectUserType}
+        show-view-all="true"
+      ></c-latest-record>
+    </lightning-layout-item>
+
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="4"
+      large-device-size="4"
+      padding="around-small"
+    >
+      <c-latest-record
+        s-object-api-name={secondObject}
+        user-type={secondObjectUserType}
+        show-view-all="true"
+      ></c-latest-record>
+    </lightning-layout-item>
+
+    <lightning-layout-item
+      size="12"
+      small-device-size="12"
+      medium-device-size="4"
+      large-device-size="4"
+      padding="around-small"
+    >
+      <c-latest-record
+        s-object-api-name={thirdObject}
+        user-type={thirdObjectUserType}
+        show-view-all="true"
+      ></c-latest-record>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

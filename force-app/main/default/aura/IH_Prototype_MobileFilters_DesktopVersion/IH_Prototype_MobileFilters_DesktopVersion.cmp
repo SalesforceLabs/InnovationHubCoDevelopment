@@ -1,0 +1,157 @@
+<aura:component controller="IH_prototypeCtr" access="global">
+    <aura:attribute name="regions" type="String[]"  />
+    <aura:attribute name="workstreams" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    <aura:attribute name="types" type="String[]" default="['Recent','My Prototypes']" />
+    
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    
+    <aura:attribute name="standardWorkstream" type="String" />
+    <aura:attribute name="standardRegion" type="String" />
+    
+    <aura:attribute name="FilterLabel" type="String" />
+    <aura:attribute name="labelName1" type="string"/>
+    <aura:attribute name="labelName2" type="string"/>
+    
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    <aura:attribute name="customFilterLabel_1" type="String"/>
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    <aura:attribute name="customFilterLabel_2" type="String"/>
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    <aura:attribute name="customFilterLabel_3" type="String"/>
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="WorkstreamsFilter" type="Boolean" access="global" />  
+    <aura:attribute name="RegionFilter" type="Boolean" access="global" />  
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    
+    
+    <div class="slds-p-top_small slds-is-relative maxWidth myPadding" >
+        
+        <div class="mobileSectionHeader slds-hide">
+            <div class="slds-is-relative tileTitle mobilePageHeader slds-p-top_small">
+                <u class="u">
+                    {!$Label.c.Prototypes_Mobile_Header}
+                </u>
+            </div>
+            <center><hr class="slds-is-relative prototypeHr theNumberHrMobile"/></center>
+        </div>
+        <div class="filterHeader slds-p-around_medium">
+            {!$Label.c.filter_Prototypes_Header}       
+        </div>
+        
+        <div class="options">
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionOne}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left ">
+                            <lightning:icon class="slds-show" aura:id="listOne" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listOne" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">{!$Label.c.prototype_Filter_Type_Title}</div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listOne">
+                    <c:IH_Prototype_Radio_Mobile_DesktopVersion />
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.WorkstreamsFilter}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionTwo}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listTwo" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listTwo" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.standardWorkstream}</div>   
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listTwo">
+                    <div class="slds-p-bottom_medium">
+                        <c:IH_FilterCategory_Prototype labelName="{!v.labelName1}" filterName="innohub__Workstream__c" options="{!v.workstreams}" aura:id="categoryFilters"/>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.RegionFilter}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionThree}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listThree" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listThree" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <aura:if isTrue="{!v.labelName2}">
+                                <div class="filterNameMobile">{!v.labelName2}</div> 
+                                <aura:set attribute="else">
+                                    <div class="filterNameMobile">{!v.standardRegion}</div>          
+                                </aura:set>
+                            </aura:if>
+                        </div>
+                    </section>
+                    
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listThree">
+                    <div class="slds-p-bottom_medium">
+                        <c:IH_FilterCategory_Prototype labelName="{!v.labelName2}" filterName="innohub__Region__c" options="{!v.regions}" aura:id="categoryFilters"/>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionFour}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listFour" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listFour" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_1}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listFour">
+                    <c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName1}" options="{!v.customList_1}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionFive}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listFive" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listFive" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_2}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listFive">
+                    <c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName2}" options="{!v.customList_2}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-page-header sectionHeader" onclick="{!c.sectionSix}">
+                    <section class="slds-clearfix">
+                        <div class="slds-float--left">
+                            <lightning:icon class="slds-show" aura:id="listSix" iconName="utility:chevronright" size="x-small" alternativeText="Indicates add"/>
+                            <lightning:icon class="slds-hide" aura:id="listSix" iconName="utility:chevrondown" size="x-small" alternativeText="Indicates dash"/>
+                        </div>
+                        <div class="slds-m-left--large picklistHeader">
+                            <div class="filterNameMobile">{!v.customFilterLabel_3}</div>     
+                        </div>
+                    </section>
+                </div>
+                <div class="slds-hide slds-p-around--medium noTopPadding" aura:id="listSix">
+                    <c:IH_FilterCategory_Prototype filterName="{!v.FilterFieldName3}" options="{!v.customList_3}" aura:id="categoryFilters"/>
+                </div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

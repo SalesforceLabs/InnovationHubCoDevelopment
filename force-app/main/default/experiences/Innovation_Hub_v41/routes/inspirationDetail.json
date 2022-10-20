@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "39b03bfe-d9ee-4fa9-b4af-496ab3fa137a",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "3978a5d7-027d-4047-af50-4265d225f874",
+  "label" : "Inspiration Detail",
+  "objectApiName" : "innohub__User_Voice__c",
+  "routeType" : "detail-a0I",
+  "type" : "route",
+  "urlPrefix" : "user-voice"
+}

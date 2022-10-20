@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_on_or_before_End</fullName>
+    <active>true</active>
+    <description>Start Date must be on or before the End Date</description>
+    <errorConditionFormula>End__c &lt; Start__c</errorConditionFormula>
+    <errorMessage>Event Start Date must be on or before the Event End Date</errorMessage>
+</ValidationRule>

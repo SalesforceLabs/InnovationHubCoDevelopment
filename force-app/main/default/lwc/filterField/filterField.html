@@ -1,0 +1,38 @@
+<template>
+  <template if:false={error}>
+    <template if:true={fieldIsPicklist}>
+      <lightning-combobox
+        name="field-filter"
+        label={label}
+        value={selectedValue}
+        options={options}
+        onchange={handleChange}
+      ></lightning-combobox>
+    </template>
+    <template if:true={isMultiPicklist}>
+      <template if:true={options}>
+        <c-multi-pick-list
+          label={label}
+          value={selectedValue}
+          options={options}
+          onchange={handleChange}
+        ></c-multi-pick-list>
+      </template>
+    </template>
+  </template>
+
+  <template if:true={isBuilder}>
+    <template if:true={invalidField}>
+      <p class="instructions">
+        Specify Picklist or Multi-Picklist field.
+      </p>
+    </template>
+
+    <!--Show error messages-->
+    <template if:true={error}>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-error-panel errors={error}></c-error-panel>
+      </lightning-layout-item>
+    </template>
+  </template>
+</template>

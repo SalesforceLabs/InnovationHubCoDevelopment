@@ -1,0 +1,56 @@
+<template>
+  <template if:true={wrongDateFormat}>
+    <p class={errorMessageClasses}>
+      <strong>No date specified or date in wrong format</strong>
+    </p>
+  </template>
+  <template if:true={showCountdown}>
+    <div
+      class="countdown box slds-text-align_center slds-p-vertical_large slds-p-horizontal_xx-large"
+      style={countDownStyle}
+    >
+      <template if:true={startDateInMs}>
+        <p class="slds-m-bottom_x-small detail-text">
+          From&MediumSpace;
+          <lightning-formatted-date-time
+            value={startDateInMs}
+          ></lightning-formatted-date-time>
+          &MediumSpace;-&MediumSpace;
+          <lightning-formatted-date-time
+            value={dateInMs}
+          ></lightning-formatted-date-time>
+        </p>
+      </template>
+      <template if:false={startDateInMs}>
+        <p class="slds-m-bottom_x-small">
+          Ends&MediumSpace;
+          <lightning-formatted-date-time
+            value={dateInMs}
+          ></lightning-formatted-date-time>
+        </p>
+      </template>
+      <template if:false={simple}>
+        <h2 class="slds-text-heading_medium">
+          <strong>{days}:{hours}:{minutes}:{seconds}</strong>
+        </h2>
+      </template>
+      <template if:true={simple}>
+        <p class="slds-text-heading_medium">
+          <strong>
+            <span>
+              {closesLabel}&MediumSpace;
+            </span>
+            <lightning-relative-date-time
+              value={dateInMs}
+            ></lightning-relative-date-time>
+          </strong>
+        </p>
+      </template>
+    </div>
+  </template>
+  <template if:true={expired}>
+    <p class={expiredMessageClasses}>
+      <strong>{status}</strong>
+    </p>
+  </template>
+</template>

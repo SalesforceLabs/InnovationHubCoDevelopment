@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workstream__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Workstream</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Value 1</fullName>
+                <default>false</default>
+                <label>Value 1</label>
+            </value>
+            <value>
+                <fullName>Value 2</fullName>
+                <default>false</default>
+                <label>Value 2</label>
+            </value>
+            <value>
+                <fullName>Value 3</fullName>
+                <default>false</default>
+                <label>Value 3</label>
+            </value>
+            <value>
+                <fullName>Value 4</fullName>
+                <default>false</default>
+                <label>Value 4</label>
+            </value>
+            <value>
+                <fullName>Value 5</fullName>
+                <default>false</default>
+                <label>Value 5</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

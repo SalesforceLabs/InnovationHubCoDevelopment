@@ -1,0 +1,48 @@
+<aura:component controller="IH_IdeaCtr" access="global"> 
+    <aura:attribute name="categories" type="String[]"  />
+    <aura:attribute name="statuses" type="String[]"/>
+    <aura:attribute name="filters" type="List" default="[]"/>
+    
+    <aura:attribute name="FilterFieldName1" type="String"/>
+    <aura:attribute name="customList_1" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName2" type="String"/>
+    <aura:attribute name="customList_2" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldName3" type="String"/>
+    <aura:attribute name="customList_3" type="String[]"  />
+    
+    <aura:attribute name="FilterFieldType1" type="String" access="global"/>
+    <aura:attribute name="FilterFieldType2" type="String" access="global"/>
+    <aura:attribute name="FilterFieldType3" type="String" access="global"/>
+    
+    <aura:attribute name="TypeFilter" type="Boolean" access="global"/>
+    <aura:attribute name="CategoryFilter" type="Boolean" access="global"/> 
+    
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:registerEvent name="filtersUpdated" type="c:IH_FilterListUpdated"/>
+    <aura:handler name="filterChangedEvent" event="c:IH_FilterChanged" action="{!c.filterChanged}"/>
+    
+    <div class="slds-p-top_small slds-is-relative theMax">
+        <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+        <lightning:button variant="brand" label = "{!$Label.c.create_Idea_Button}" onclick="{!c.handleShowModal}" class="createButton slds-truncate slds-p-vertical_small"/>
+        <div class="filterHeader slds-p-around_medium mobilePageHeader">{!$Label.c.filter_Ideas_Header}</div>
+        <div class="slds-p-vertical_medium slds-p-horizontal_medium options">
+            <aura:if isTrue="{!v.TypeFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_CheckboxFilter/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.CategoryFilter}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory filterName="innohub__Category__c" options="{!v.categories}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName1}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory filterName="{!v.FilterFieldName1}" type="{!v.FilterFieldType1}" options="{!v.customList_1}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName2}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory filterName="{!v.FilterFieldName2}" type="{!v.FilterFieldType2}" options="{!v.customList_2}" aura:id="categoryFilters"/></div>
+            </aura:if>
+            <aura:if isTrue="{!v.FilterFieldName3}">
+                <div class="slds-p-bottom_medium"><c:IH_FilterCategory filterName="{!v.FilterFieldName3}" type="{!v.FilterFieldType3}" options="{!v.customList_3}" aura:id="categoryFilters"/></div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

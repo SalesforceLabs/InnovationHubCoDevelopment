@@ -1,0 +1,8 @@
+
+.img-circle {
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 50%;
+    position: relative;
+    border: 5px solid white;
+}

@@ -1,0 +1,29 @@
+.THIS .filterHeader{
+    color: #FFF;
+    font-weight: 100;
+    font-size: 15px;
+    font-family:arial black;
+    font-style:italic;
+    /*background-color:#27509B !important;*/
+}
+
+.THIS .options {
+    background-color: #FFF;
+    border-left: 2px solid #d8dde6;
+    border-right: 2px solid #d8dde6;
+    border-bottom: 2px solid #d8dde6;
+}
+
+.THIS.theMax{
+    max-width: 331px;
+}
+
+.THIS .slds-form-element__legend{
+    display:none;
+}
+
+
+.THIS .slds-radio .slds-form-element__label {
+    font-size: .82rem;
+    line-height: 2.5;
+}

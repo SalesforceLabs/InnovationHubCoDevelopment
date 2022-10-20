@@ -1,0 +1,13 @@
+{
+  "orgName": "InnovationLab company",
+  "edition": "Developer",
+  "features": ["Communities", "SiteDotCom", "Sites", "DebugApex"],
+  "settings": {
+    "experienceBundleSettings": {
+      "enableExperienceBundleMetadata": true
+    },
+    "communitiesSettings": {
+      "enableNetworksEnabled": true
+    }
+  }
+}

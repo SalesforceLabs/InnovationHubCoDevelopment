@@ -1,0 +1,5 @@
+<design:component label="Custom List View">
+	<design:attribute name="queryObject" label="Query sObject __r" description="The object you are on" />
+    <design:attribute name="queryObjectwithC" label="Query sObject __c" description="The object you are on" />
+    <design:attribute name="relatedObject" label="Related sObject" default="API Name" description="The related object you'd like the list of" />
+</design:component>

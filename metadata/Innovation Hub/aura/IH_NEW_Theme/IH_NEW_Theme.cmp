@@ -1,0 +1,47 @@
+<aura:component  access="global" description="Innovation Lab Theme 2">
+    <!-- implements="forceCommunity:availableForAllPageTypes" -->
+    <!-- Theme Standard Attributes -->
+    <aura:attribute name="search" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="navBar" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="newHeader" type="Aura.Component[]" required="false"/>
+    <aura:attribute name="brandLogo" type="String" access="global"/>
+    
+    <aura:handler event="c:IH_HeaderCss" action="{!c.editCss}"/>
+    
+    <div>
+        <div class="wrapper ">
+            <div class="panelImage" aura:id="panelImage">
+                <lightning:layout horizontalAlign="end" class="topbar">
+                    <lightning:layoutItem size="10" flexibility="auto" padding="around-small" class="logoTopPadding">
+                        <center><img src="{!v.brandLogo}" onclick="{!c.gotoHome}" class="brandLogo"/></center>
+                    </lightning:layoutItem>
+                    
+                    <lightning:layoutItem size="2" flexibility="auto" padding="around-small" class="profileTopPadding">
+                        <div class="profileMenuRegion">
+                            {!v.profileMenu}
+                        </div>
+                    </lightning:layoutItem>
+                </lightning:layout>
+                <div class="lineAbove"/>
+                <div class="topBar">
+                    <lightning:layout horizontalAlign="space" >
+                        <lightning:layoutItem size="8" flexibility="auto" class="slds-is-relative">
+                            <div class="slds-m-left_xx-large">
+                                {!v.navBar}
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="4" flexibility="auto" padding="horizontal-large" class="searchBarClass">
+                            <div class="slds-m-right_xx-large">
+                                {!v.search}
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+            </div>           
+            <div class="newBody">
+                {!v.body} 
+            </div>
+        </div>
+    </div> 
+</aura:component>

@@ -1,0 +1,163 @@
+<template>
+  <!--Learn More Modal-->
+  <c-modal header={learnMoreLabel}>
+    <c-record-additional-detail
+      record-id={recordId}
+      title={heading}
+      author-image-url={authorImage}
+      author={author}
+      start-date={startDate}
+      end-date={closeDate}
+      category={category}
+      body={learnMoreContent}
+      video-title={videoTitle}
+      video-title-field={videoTitleField}
+      video-file-id={videoFileId}
+      video-file-id-field={videoFileIdField}
+      video-url={videoUrl}
+      video-url-field={videoUrlField}
+    ></c-record-additional-detail>
+  </c-modal>
+
+  <lightning-layout
+    multiple-rows
+    vertical-align="stretch"
+    class="container"
+    style={backgroundColorStyle}
+  >
+    <!--Error Panel-->
+    <template if:true={error}>
+      <lightning-layout-item size="12" padding="around-small">
+        <c-error-panel errors={error}></c-error-panel>
+      </lightning-layout-item>
+    </template>
+
+    <!--If on mobile show image on top-->
+    <template if:true={isMobile}>
+      <lightning-layout-item
+        size="12"
+        class="image-container"
+        style={backgroundImageStyle}
+      >
+      </lightning-layout-item>
+    </template>
+
+    <lightning-layout-item
+      size="12"
+      medium-device-size="6"
+      large-device-size="4"
+      class="content-container"
+    >
+      <!--Heading-->
+      <template if:true={heading}>
+        <h1 class="slds-text-heading_large slds-m-vertical_medium">
+          <strong>
+            {heading}
+          </strong>
+        </h1>
+      </template>
+
+      <!--Body-->
+      <template if:true={body}>
+        <lightning-formatted-rich-text
+          class="content-body"
+          value={body}
+        ></lightning-formatted-rich-text>
+      </template>
+
+      <!--Learn More Button-->
+      <template if:true={showLearnMoreButton}>
+        <br />
+        <button
+          onclick={showLearnMoreModal}
+          class="learn-more"
+          style={buttonStyle}
+        >
+          {learnMoreLabel} >
+        </button>
+      </template>
+
+      <!--Author Section & Metrics Counter-->
+      <lightning-layout
+        horizontal-align="spread"
+        vertical-align="center"
+        class="author-container"
+      >
+        <!--Author-->
+        <lightning-layout-item>
+          <lightning-layout vertical-align="center">
+            <lightning-layout-item>
+              <div style={authorImageStyle} class="author-image"></div>
+            </lightning-layout-item>
+            <lightning-layout-item class="slds-p-left_x-small">
+              <span class="author">{author}</span>
+            </lightning-layout-item>
+          </lightning-layout>
+        </lightning-layout-item>
+
+        <!--Metrics Counter-->
+        <template if:true={showMetricsCounter}>
+          <lightning-layout-item>
+            <c-metrics-counter
+              record-id={recordId}
+              child-object-api-name={metricsChildObjectApiName}
+              lookup-field-api-name={metricsLookupFieldApiName}
+              text-color={textBodyColor}
+            ></c-metrics-counter>
+          </lightning-layout-item>
+        </template>
+      </lightning-layout>
+    </lightning-layout-item>
+
+    <!--If on mobile show countdown below body-->
+    <template if:true={isMobile}>
+      <lightning-layout-item size="12">
+        <lightning-layout multiple-rows class="slds-p-horizontal_large">
+          <template if:true={closeDate}>
+            <lightning-layout-item size="12" class="slds-m-bottom_large">
+              <c-countdown
+                date-time={closeDate}
+                start-date={startDate}
+                background-color={bgColor}
+                text-color={textBodyColor}
+                simple={simpleCountdown}
+                status-input={status}
+              ></c-countdown>
+            </lightning-layout-item>
+          </template>
+        </lightning-layout>
+      </lightning-layout-item>
+    </template>
+
+    <!--If not on mobile show image on the right-->
+    <template if:false={isMobile}>
+      <lightning-layout-item
+        size="12"
+        medium-device-size="6"
+        large-device-size="8"
+        class="image-container"
+        style={backgroundImageStyle}
+      >
+        <lightning-layout
+          style="height: 100%"
+          vertical-align="end"
+          horizontal-align="center"
+          class="slds-grid_vertical slds-p-horizontal_xx-large"
+        >
+          <div style="max-width: 25rem;">
+            <template if:true={closeDate}>
+              <c-countdown
+                date-time={closeDate}
+                start-date={startDate}
+                background-color={bgColor}
+                text-color={textBodyColor}
+                simple={simpleCountdown}
+                status-input={status}
+              ></c-countdown>
+            </template>
+          </div>
+        </lightning-layout>
+      </lightning-layout-item>
+    </template>
+  </lightning-layout>
+</template>

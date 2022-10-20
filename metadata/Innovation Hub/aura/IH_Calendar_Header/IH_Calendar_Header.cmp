@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:attribute name="sectionHeader" type="String" default="Section Header" access="global"/>
+    
+    <h1 class="highlightTitle tileTitle">{!v.sectionHeader}</h1>
+    <hr class="theNumberHr slds-m-bottom_small" />
+</aura:component>

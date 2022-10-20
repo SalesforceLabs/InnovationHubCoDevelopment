@@ -1,0 +1,14 @@
+.THIS .theVideoContainer{
+    margin-top: 15px; 
+    width: 900px;
+    height:800px; 
+}
+
+
+/* iPhone and iPad */
+
+@media all and (max-width : 766px) {
+    .THIS .theVideo{
+        width: 80%;
+    }
+}

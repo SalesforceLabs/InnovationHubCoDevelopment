@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CommunityThemeDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableExtendedCleanUpOnDelete>true</enableExtendedCleanUpOnDelete>
+    <masterLabel>Innovation_Hub</masterLabel>
+    <publisher>Salesforce</publisher>
+    <themeSetting>
+        <themeLayout>Innovation_Hub_themeLayout_Login</themeLayout>
+        <themeLayoutType>Login</themeLayoutType>
+    </themeSetting>
+    <themeSetting>
+        <themeLayout>Innovation_Hub_themeLayout_Default</themeLayout>
+        <themeLayoutType>Inner</themeLayoutType>
+    </themeSetting>
+</CommunityThemeDefinition>

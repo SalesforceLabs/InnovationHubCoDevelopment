@@ -1,0 +1,124 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsTwoCol48Layout",
+  "id" : "de519a33-a9e6-4c45-bc7d-847f96d0e531",
+  "label" : "Idea (Innohub) List",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "backgroundColor" : "rgb(236, 236, 236)",
+        "borderColor" : "rgb(0, 54, 98)",
+        "borderSize" : 5,
+        "filters" : "innohub__Approval_Status__c,innohub__Category__c,innohub__Stage__c",
+        "inSidebar" : false,
+        "objectApiName" : "{!objectApiName}",
+        "showFilterShow" : true,
+        "showRecordTypeFilter" : true,
+        "showSort" : true
+      },
+      "componentName" : "innohub:filterPanel",
+      "id" : "b2fcafcd-b0db-4a14-acaa-3e3202b4a25e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "9d73de2f-c8d7-44f8-8df2-a1ba3dd376ec",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "approvalCondition" : "",
+        "category" : "innohub__Category__c",
+        "customField" : "innohub__Stage__c",
+        "dateField" : "",
+        "defaultUserImage" : "/img/icon/t4v35/standard/groups_120.png",
+        "image" : "innohub__Image__c",
+        "inSidebar" : true,
+        "lookupField" : "",
+        "name" : "Name",
+        "object" : "{!objectApiName}",
+        "points" : "innohub__Points__c",
+        "recommended" : "innohub__Recommended__c",
+        "recordId" : "{!recordId}",
+        "recordType" : "RecordType.Name",
+        "usePagination" : true,
+        "userType" : "Creator",
+        "voteField" : "innohub__Vote_Type__c",
+        "voteObjectLookup" : "innohub__Innovation_Idea__c",
+        "voteRecordRelationship" : "innohub__Innovation_Idea_Votes__r",
+        "votesObject" : "innohub__Innovation_Idea_Vote__c"
+      },
+      "componentName" : "innohub:recordListView",
+      "id" : "dc76c9b9-ed43-46f6-b11c-8d4ba842187e",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "pageSize" : 9
+      },
+      "componentName" : "innohub:paginator",
+      "id" : "2f4909e4-0db7-4f18-be67-282de2f44c9d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "81b29dc2-a769-4cd7-897b-2c24b5c59819",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "224c4326-0c47-4828-bc5f-f21d02eb009d",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "defaultFieldValues" : "",
+        "fieldApiName" : "",
+        "fieldValue" : "",
+        "label" : "Add New Idea",
+        "objectApiName" : "{!objectApiName}",
+        "possibleRecordTypes" : "Idea, Evolution Request",
+        "visibilityField" : ""
+      },
+      "componentName" : "innohub:createRecordButtonAuraWrapper",
+      "id" : "fc599e5b-6eff-4752-826d-e849effcff7a",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "context" : "GLOBAL",
+        "recordId" : "{!recordId}",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:feedPublisher",
+      "id" : "25d8101d-1d78-4c23-9722-de798577dd2d",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "defaultSortOrderHomeFeed" : "CreatedDateDesc",
+        "defaultSortOrderTopicsFeed" : "Relevance",
+        "showComments" : true,
+        "showLikes" : false,
+        "showViews" : true,
+        "subjectId" : "{!recordId}",
+        "type" : "Home"
+      },
+      "componentName" : "forceChatter:compactFeed",
+      "id" : "c62cd308-44d4-4363-9a24-2a39b6bc8254",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "128b1bf7-bd9a-4da8-83f6-0ff0952a248d",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "list-a0G"
+}

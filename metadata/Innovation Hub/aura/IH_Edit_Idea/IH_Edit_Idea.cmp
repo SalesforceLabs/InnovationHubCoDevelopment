@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="IH_IdeaCtr">
+	<aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="theBoolean" type="Boolean" default="false"/>
+    <aura:attribute name="innovation" type="Innovation_Idea__c" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:registerEvent name="appEvent" type="c:editUnderReviewIdea"/>
+    
+    <center>
+        <aura:if isTrue="{!v.theBoolean}">
+            <div class="slds-m-top_medium slds-m-bottom_x-large">
+                    <button onclick="{!c.editSubmission}" class="slds-button slds-button_neutral">
+                        <lightning:icon iconName="utility:approval" size="xx-small" alternativeText="Edit submission"/>
+                        {!$Label.c.edit_Submission_Button}
+                    </button>
+                </div>
+        </aura:if>
+    </center>
+</aura:component>

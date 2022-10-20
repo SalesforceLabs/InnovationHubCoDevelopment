@@ -1,0 +1,103 @@
+<template>
+  <div class="slds-p-vertical_small container" style={containerStyle}>
+    <section title="Heading & Buttons">
+      <lightning-layout
+        horizontal-align="spread"
+        vertical-align="center"
+        class="slds-p-horizontal_small"
+      >
+        <lightning-layout-item>
+          <h3
+            class="slds-text-heading_medium slds-p-bottom_xx-small color-brand"
+          >
+            <strong>
+              {filterLabel}
+            </strong>
+          </h3>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="grow">
+          <template if:true={showShowMoreButton}>
+            <lightning-button
+              variant="base"
+              class="slds-m-left_medium"
+              label={buttonLabel}
+              onclick={toggleAccordion}
+            ></lightning-button>
+          </template>
+        </lightning-layout-item>
+        <lightning-layout-item flexibility="shrink">
+          <lightning-button
+            variant="base"
+            class="reset-button"
+            label={resetButtonLabel}
+            onclick={resetFilters}
+          ></lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+    </section>
+
+    <section title="Filter Dropdowns">
+      <lightning-layout
+        horizontal-align="start"
+        vertical-align="end"
+        multiple-rows
+      >
+        <!--Sort By-->
+        <template if:true={showSort}>
+          <lightning-layout-item
+            class="slds-p-horizontal_small"
+            size="12"
+            medium-device-size="12"
+            large-device-size={largeDeviceSize}
+          >
+            <c-filter-sort></c-filter-sort>
+          </lightning-layout-item>
+        </template>
+
+        <!--Show-->
+        <template if:true={showFilterShow}>
+          <lightning-layout-item
+            class="slds-p-horizontal_small"
+            size="12"
+            medium-device-size="12"
+            large-device-size={largeDeviceSize}
+          >
+            <c-filter-show></c-filter-show>
+          </lightning-layout-item>
+        </template>
+
+        <!--Record Type-->
+        <template if:true={showRecordTypeFilter}>
+          <lightning-layout-item
+            class="slds-p-horizontal_small"
+            size="12"
+            medium-device-size="12"
+            large-device-size={largeDeviceSize}
+          >
+            <c-filter-record-type
+              object-api-name={objectApiName}
+            ></c-filter-record-type>
+          </lightning-layout-item>
+        </template>
+
+        <!--Custom Filters-->
+        <template if:true={showMoreFilters}>
+          <template for:each={filterArray} for:item="filter">
+            <lightning-layout-item
+              key={filter}
+              class="slds-p-horizontal_small filter"
+              size="12"
+              medium-device-size="12"
+              large-device-size={largeDeviceSize}
+            >
+              <c-filter-field
+                object-api-name={objectApiName}
+                field-api-name={filter}
+              ></c-filter-field>
+            </lightning-layout-item>
+          </template>
+        </template>
+      </lightning-layout>
+    </section>
+  </div>
+</template>

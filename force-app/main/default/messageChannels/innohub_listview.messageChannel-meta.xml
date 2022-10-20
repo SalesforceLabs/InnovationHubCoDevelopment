@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata">
+    <masterLabel>innohub_listview</masterLabel>
+    <isExposed>true</isExposed>
+    <description>To exchange recordcount to paginator</description>
+    <lightningMessageFields>
+        <fieldName>recordCount</fieldName>
+        <description>Number of total records</description>
+    </lightningMessageFields>
+</LightningMessageChannel>

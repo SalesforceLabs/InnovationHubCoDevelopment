@@ -1,0 +1,57 @@
+<aura:component controller="IH_EventCtr" access="global">
+    <aura:attribute name="event" type="sObject" />
+    <aura:attribute name="creator" type="sObject" />
+    
+    <aura:attribute name="dateCheck" type="Boolean" description="check if event is in the past" default="true"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="today" type="Date" />
+    
+    <div class="slds-card outerContainer" aura:id="theEvent">
+        <div class="myHeader">
+            <aura:if isTrue="{!v.event.innohub__Image__c}">
+                <center><ui:outputRichText class="slds-text-longform" value="{!v.event.innohub__Image__c}"/></center>
+                <aura:set attribute="else">
+                    <center class="slds-p-top_x-large">
+                        <lightning:icon iconName="utility:image" size="medium" alternativeText="No image Set"/>
+                    </center>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-is-relative headerArea">
+            <div class="overlay"> 
+                <center>
+                    <div class="tileBg eventDate">
+                        <div><ui:outputDate format="dd" value="{!v.event.innohub__Start__c}" class="text-lrg" /></div>
+                        <div class="theDate"><ui:outputDate format="MMMM" value="{!v.event.innohub__Start__c}" class="slds-text-body--small txt-100 eventDate" /></div>
+                    </div>
+                </center>
+            </div>
+        </div>
+        
+        <div class="slds-is-relative tileBorderBottom tileInfo slds-p-around_medium">
+            <div class="slds-clearfix">
+                <div class="slds-grid ">
+                    <div class="slds-size_2-of-3">
+                        <aura:if isTrue="{!v.event.innohub__Type__c}">
+                            <span class="tileCategory ">{!v.event.innohub__Type__c}</span>
+                            <aura:set attribute="else">
+                                <i class="tileCategory">No session type selected</i>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                    <div class="slds-size_1-of-3" aura:id="theCountofSpaces">
+                        <span class="slds-badge slds-float_right">{!v.event.innohub__Spaces_Available__c + ' '} {!$Label.c.spaces_Label}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-p-top_small">
+                <!-- removing sdls-truncate to review wrapping-->
+                <span class="tileTitle">{!v.event.Name}</span>
+            </div>
+            <div class="slds-is-absolute slds-text-align_center slds-m-around-medium detailButton">
+                <button onclick="{!c.handleClick}" class="slds-button slds-button_neutral">{!$Label.c.view_Details_Event_Button}</button>
+            </div>
+        </div>            
+    </div> 
+</aura:component>

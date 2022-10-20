@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>47.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Innovation Hub Video Player</masterLabel>
+    <description>Flexible Video player to be used on record detail pages or as standalone</description>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightning__RecordPage</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default,lightning__AppPage,lightning__HomePage,lightning__RecordPage">
+            <property name="recordId" label="Record Id" default="{!recordId}" type="String" description="if component is used on record detail page set this to &quot;{!recordId}&quot;"/>
+            <property name="title" label="Title" type="String"/>
+            <property name="titleField" label="Title Field Api Name" type="String"/>
+            <property name="videoFileId" label="Video File Id" type="String" description="Enter the public file Id number"/>
+            <property name="videoFileIdField" label="Video File Id Field Api Name" type="String"/>
+            <property name="videoUrl" label="Video Url" type="String" description="Accepted sources are YouTube, Vimeo or Google Drive"/>
+            <property name="videoUrlField" label="Video Url Field Api Name" type="String"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

@@ -1,0 +1,21 @@
+<aura:component access="global" controller="IH_DemoCtr">
+    <aura:attribute name="filterName" type="String" />
+    <aura:attribute name="filterLabel" type="String" />
+    <aura:attribute name="options" type="String[]" />
+    <aura:attribute name="type" type="string" default="checkbox"/>
+    <aura:attribute name="labelName" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <aura:registerEvent name="filterChangedEvent" type="c:IH_FilterChanged"/>
+    
+    <div>
+        <div class="filterName">{!v.filterLabel}</div> 
+        <aura:iteration items="{!v.options}" var="option" indexVar="index">
+            <div class="filters slds-m-vertical_small">
+                <lightning:input type="{!v.type}" label="{!option}" value="{!index}" name="{!(v.type=='radio'?globalId+'radio':globalId+'option')}" onchange="{!c.handleChange}" aura:id="filterCB"/>
+            </div> 
+        </aura:iteration>
+    </div>
+    
+</aura:component>

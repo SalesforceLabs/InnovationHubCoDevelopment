@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BrandingSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brandingSetProperty>
+        <propertyName>TextTransformStyle</propertyName>
+        <propertyValue>none</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>DetailTextColor</propertyName>
+        <propertyValue>rgba(0, 0, 0, 0.6)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>BorderColor</propertyName>
+        <propertyValue>rgb(222, 222, 222)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>_OverlayTextColorShadow</propertyName>
+        <propertyValue>#000000</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>HeaderFonts</propertyName>
+        <propertyValue>Montserrat</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>CardBackgroundColor</propertyName>
+        <propertyValue>rgba(255, 255, 255, 0)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>LoginBackgroundColor</propertyName>
+        <propertyValue>rgb(222, 50, 50)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>ActionColor</propertyName>
+        <propertyValue>rgb(33, 121, 192)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>_ActionColorTrans</propertyName>
+        <propertyValue>rgba(33, 121, 192, 0.9)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>CompanyLogo</propertyName>
+        <propertyValue>/file-asset/innohub__salesforce_innovation_hub?v=1&amp;height=300&amp;width=300</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>LoginBackgroundImage</propertyName>
+        <propertyValue>../../../../sfsites/picasso/core/external/salesforceIdentity/images/background.jpg?v=1</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>PageBackgroundColor</propertyName>
+        <propertyValue>#FFFFFF</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>_LinkColorDarker</propertyName>
+        <propertyValue>#000000</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>_ActionColorDarker</propertyName>
+        <propertyValue>#1a5e94</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>_HoverColor</propertyName>
+        <propertyValue>rgba(33, 121, 192, 0.05)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>ErrorFontColor</propertyName>
+        <propertyValue>#ff9e9e</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>TextColor</propertyName>
+        <propertyValue>rgba(0, 0, 0, 0.8)</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>OverlayTextColor</propertyName>
+        <propertyValue>#FFFFFF</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>PrimaryFont</propertyName>
+        <propertyValue>Lato</propertyValue>
+    </brandingSetProperty>
+    <brandingSetProperty>
+        <propertyName>LinkColor</propertyName>
+        <propertyValue>#111111</propertyValue>
+    </brandingSetProperty>
+    <masterLabel>Innovation_Hub_Version_4</masterLabel>
+    <type>jepson:branding-jepson</type>
+</BrandingSet>

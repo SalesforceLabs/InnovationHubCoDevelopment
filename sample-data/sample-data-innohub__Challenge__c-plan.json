@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "innohub__Challenge__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "sample-data-innohub__Challenge__cs.json"
+        ]
+    }
+]

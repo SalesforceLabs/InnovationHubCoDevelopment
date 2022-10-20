@@ -1,0 +1,59 @@
+<template>
+  <template if:true={recordCount}>
+    <div style={containerStyle}>
+      <lightning-layout horizontal-align="center">
+        <lightning-layout-item padding="around-small" class="prev">
+          <lightning-button label={previousLabel} onclick={previous} icon-name="utility:chevronleft"
+            icon-position="left" disabled={nopreviousRecords}></lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" class="buttons">
+          <lightning-button-group>
+            <button value="1" onclick={changePage} class="slds-button slds-button_neutral slds-button_brand"
+              if:true={firstActive}>
+              1
+            </button>
+            <button value="1" onclick={changePage} class="slds-button slds-button_neutral slds-button_neutral"
+              if:false={firstActive}>
+              1
+            </button>
+            <template if:true={hideLeft}>
+              <button class="slds-button slds-button_neutral" disabled>
+                ...
+              </button>
+            </template>
+            <template for:each={pages} for:item="page">
+              <button value={page.page} key={page.page} onclick={changePage} class="slds-button slds-button_brand"
+                if:true={page.active}>
+                {page.page}
+              </button>
+              <button value={page.page} key={page.page} onclick={changePage} class="slds-button slds-button_neutral"
+                if:false={page.active}>
+                {page.page}
+              </button>
+            </template>
+            <template if:true={hideRight}>
+              <button class="slds-button slds-button_neutral" disabled>
+                ...
+              </button>
+            </template>
+            <template if:true={multiplePages}>
+              <button value={pageCount} onclick={changePage} class="slds-button slds-button_brand" if:true={lastActive}>
+                {pageCount}
+              </button>
+              <button value={pageCount} onclick={changePage} class="slds-button slds-button_neutral"
+                if:false={lastActive}>
+                {pageCount}
+              </button>
+            </template>
+          </lightning-button-group>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" class="next">
+          <lightning-button label={nextLabel} onclick={next} icon-name="utility:chevronright" icon-position="right"
+            disabled={nofurtherRecords}></lightning-button>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </template>
+</template>

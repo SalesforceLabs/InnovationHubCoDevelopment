@@ -1,0 +1,16 @@
+<aura:component >    
+    <aura:registerEvent name="filterChangedEvent" type="c:IH_FilterChanged"/>
+    <aura:handler event="c:IH_Radio_Selected" action="{!c.theRadioSelected}"/>
+    
+    <aura:attribute name="listOfRecordTypes" type="Map"/>
+    <aura:attribute name="value" type="String" default="All"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="filterName">{!$Label.c.demo_Filter_Type_Title}</div> 
+    <lightning:radioGroup aura:id="mygroup"
+                          name="radioButtonGroup"
+                          options="{!v.listOfRecordTypes}"
+                          value="{!v.value}"
+                          onchange="{!c.handleChange}"
+                          required="true" />
+</aura:component>

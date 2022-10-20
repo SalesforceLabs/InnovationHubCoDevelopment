@@ -1,0 +1,33 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="IH_ArticleController">
+    <aura:attribute name="theArticles" type="sObject[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="articleMargin">
+        <h1 class="slds-m-left_small slds-p-top_medium slds-p-bottom_medium highlightTitle tileTitle">{!$Label.c.latest_Events_Header}</h1>
+        <div class="slds-grid slds-wrap">
+            <aura:if isTrue="{!v.theArticles.length != 0}">
+                <aura:iteration items="{!v.theArticles}" var='article' indexVar="index">
+                    <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-2 slds-large-size--1-of-3">
+                        <c:IH_theArticle article="{!article}"/>
+                    </div>
+                </aura:iteration>
+                <aura:set attribute="else">
+                    <div class="slds-col--padded">
+                        <article class="slds-card">
+                            <div class="myHeaderMain">
+                                <center><lightning:icon iconName="utility:image" size="small" alternativeText="No image Set"/>
+                                </center>
+                            </div>
+                            <div class="slds-is-relative theArea">
+                                <div class="overlay">                       
+                                    <div aura:id="articleTitleId" class="articleTitle">Looks like we can't find any events yet</div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </aura:set>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

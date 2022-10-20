@@ -1,0 +1,19 @@
+[
+  {
+    "Id": "a0G3N000000Gj0tUAC",
+    "Name": "Very new",
+    "RecordTypeId": "0123N000000QwWJQA0",
+    "innohub__Image__c": "<p style=\"\"><img src=\"/servlet/rtaImage?eid=a0G3N000000Gj0t&amp;feoid=00N3N000001TY0I&amp;refid=0EM3N0000008YAe\" alt=\"hero.png\"></img></p>",
+    "innohub__Recommended__c": false,
+    "innohub__Points__c": 0,
+    "innohub__Category__c": "Value 1;Value 3",
+    "CreatedById": "0053N000000sUEqQAM",
+    "RecordType": { "Name": "Idea", "Id": "0123N000000QwWJQA0" },
+    "CreatedBy": {
+      "Name": "User User",
+      "SmallPhotoUrl": "/profilephoto/005/T",
+      "Id": "0053N000000sUEqQAM",
+      "CommunityNickname": "test-hce9lq9dg1hh"
+    }
+  }
+]

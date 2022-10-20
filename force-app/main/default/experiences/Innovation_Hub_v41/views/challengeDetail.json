@@ -1,0 +1,126 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "ac8bff3e-9a50-42ae-9e30-4b0316c0eb94",
+  "label" : "Challenge Detail",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "authorField" : "innohub__Author__c",
+        "authorImageField" : "innohub__Author_Image__c",
+        "backgroundColorField" : "innohub__Banner_Background_Color__c",
+        "bodyField" : "innohub__Short_Description__c",
+        "categoryField" : "innohub__Category__c",
+        "closeDateField" : "innohub__End_Date__c",
+        "headingField" : "Name",
+        "imageField" : "innohub__Image__c",
+        "learnMoreField" : "innohub__Long_Description__c",
+        "metricsChildObjectApiName" : "innohub__Innovation_Idea__c",
+        "metricsLookupFieldApiName" : "innohub__Challenge__c",
+        "recordId" : "{!recordId}",
+        "showLearnMoreButton" : true,
+        "simpleCountdown" : true,
+        "startDateField" : "innohub__Start_Date__c",
+        "statusField" : "innohub__Status__c",
+        "textColorField" : "innohub__Banner_Text_Color__c",
+        "videoFileIdField" : "innohub__Video_File_Id__c",
+        "videoTitleField" : "innohub__Video_Title__c",
+        "videoUrl" : "",
+        "videoUrlField" : "innohub__Video_Url__c"
+      },
+      "componentName" : "innohub:recordBanner",
+      "id" : "d1eb92aa-a36b-4496-a68e-01a68debecd2",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "7ac4a7e6-cc42-4f4b-80ea-861e0a99416f",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "pageSize" : 9
+      },
+      "componentName" : "innohub:paginator",
+      "id" : "4a545ed1-1b09-4a08-9227-088da294ac3c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "65de95f0-3806-4e4b-8f6e-89de4e76471d",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "ab4c3346-89b4-4224-a7e8-24a0327dde94",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "e2aa940c-b679-4ed0-a94a-a91572340ffe",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "76728c3e-9b45-43c3-aef8-47b8ff4da698",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "defaultFieldValues" : {
+          "innohub__Approval_Status__c" : "Submitted"
+        },
+        "fieldApiName" : "innohub__Challenge__c",
+        "fieldValue" : "{!recordId}",
+        "label" : "Add New Idea",
+        "objectApiName" : "innohub__Innovation_Idea__c",
+        "possibleRecordTypes" : "Challenge Submission",
+        "visibilityField" : "innohub__Allow_Idea_Submission__c"
+      },
+      "componentName" : "innohub:createRecordButtonAuraWrapper",
+      "id" : "4951a27b-8103-4185-b07b-0a230766c502",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "context" : "RECORD",
+        "recordId" : "{!recordId}",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:feedPublisher",
+      "id" : "18332d0a-8c90-4824-a8c7-c396ca0439d5",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "canChangeSorting" : true,
+        "defaultFilter" : "",
+        "defaultSortOrderHomeFeed" : "Relevance",
+        "defaultSortOrderTopicsFeed" : "Relevance",
+        "feedDesign" : "DEFAULT",
+        "hasFeedSearch" : true,
+        "subjectId" : "{!recordId}",
+        "type" : "Record"
+      },
+      "componentName" : "forceCommunity:forceCommunityFeed",
+      "id" : "5872a2e0-1309-4ca1-9d42-c56126d547fe",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "64dab0fb-cb52-4aa5-92c2-3d725f141d9b",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-a01"
+}

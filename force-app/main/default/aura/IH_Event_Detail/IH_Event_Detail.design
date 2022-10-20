@@ -1,0 +1,8 @@
+<design:component label="Event Detail">
+    <design:attribute name="filevideoHeight" label="File Video Height" default="300"/>
+    <design:attribute name="filevideoWidth" label="File Video Width" default="400"/>
+    
+    <design:attribute name="videoHeight" label="Video Height" default="315px"/>
+    <design:attribute name="videoWidth" label="Video Width" default="100%"/>
+    
+</design:component>

@@ -1,0 +1,8 @@
+.plus-icon {
+  fill: var(--lwc-colorTextButtonBrand);
+}
+
+.button {
+  text-transform: uppercase;
+  font-weight: bold;
+}

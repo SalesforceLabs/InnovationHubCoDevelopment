@@ -1,0 +1,12 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="tile_1" type="String" default="Idea" access="global"/>
+    <aura:attribute name="tile_2" type="String" default="Demo" access="global"/>
+    <aura:attribute name="tile_3" type="String" default="Prototype" access="global"/>
+    <aura:attribute name="UserField" type="String" access="global"/>
+    
+    <div class="slds-grid slds-wrap">
+        <c:IH_Highlight_Tile userField="{!v.UserField}" theTileObject="{!v.tile_1}" />
+        <c:IH_Highlight_Tile userField="{!v.UserField}" theTileObject="{!v.tile_2}" />
+        <c:IH_Highlight_Tile userField="{!v.UserField}" theTileObject="{!v.tile_3}" />
+    </div>
+</aura:component>

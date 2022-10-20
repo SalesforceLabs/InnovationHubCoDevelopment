@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DCAD</fullName>
+    <active>true</active>
+    <label>DCAD Project</label>
+    <picklistValues>
+        <picklist>Approval_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On Hold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Value 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Value 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Impacted_Regions__c</picklist>
+        <values>
+            <fullName>ALL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Africa%2C India%2C Middle East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East Asia and Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Europe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Replacement__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Stage__c</picklist>
+        <values>
+            <fullName>Stage1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stage2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type__c</picklist>
+        <values>
+            <fullName>Enhance Existing Functionality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Functionality</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Activity</label>
+    <referenceTo>Activity__c</referenceTo>
+    <relationshipLabel>Demo-Activity Association</relationshipLabel>
+    <relationshipName>Demo_Activity_Association</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

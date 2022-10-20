@@ -1,0 +1,20 @@
+<aura:component access="global" controller="IH_HomepageController">
+    <aura:attribute name="user" type="sObject" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="theGreetingBlock">
+        <lightning:layout horizontalAlign="center">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <img class="homepageGreetingImg" src="{!v.user.MediumPhotoUrl}" />
+                <center>
+                    <hr class="theGreetingHr"/>
+                </center>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <div class="maxWidth">
+                    <p class="slds-truncate greetingTitle welcomeText">{!$Label.c.homepage_Greeting_Message} <br/>{!v.user.FirstName}</p>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

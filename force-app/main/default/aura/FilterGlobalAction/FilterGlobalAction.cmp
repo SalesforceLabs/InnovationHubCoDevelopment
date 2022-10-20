@@ -1,0 +1,18 @@
+<aura:component implements="force:lightningQuickAction" access="global">
+    
+<!-- @api backgroundColor;
+    @api borderColor;
+    @api borderSize;
+    @api showSort = false;
+    @api showFilterShow = false;
+    @api showRecordTypeFilter = false;
+    @api filters;
+    @api objectApiName;
+    @api inSidebar = false;
+    -->
+    <c:filterPanel
+    showRecordTypeFilter="true"
+  ></c:filterPanel>
+
+
+</aura:component>	

@@ -1,0 +1,58 @@
+<aura:component implements="force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="IH_UserVoiceCtr">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="userVoice" type="sObject" />
+    <aura:attribute name="userVoiceCat" type="String" />
+    <aura:attribute name="userVoiceCatAll" type="String" />
+    <aura:attribute name="creator" type="sObject" />
+    <aura:attribute name="filevideoHeight" type="String"  access="global"/>
+    <aura:attribute name="filevideoWidth" type="String"  access="global"/>
+    <aura:attribute name="videoHeight" type="String"  access="global"/>
+    <aura:attribute name="videoWidth" type="String"  access="global"/>
+    <aura:attribute name="edit" type="Boolean" default="true"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-is-relative"> 
+        <lightning:spinner aura:id="mySpinner" class="slds-hide" alternativeText="Updating vote"/>
+        <div class="mobilePageBackButton">
+            <p onclick="{!c.gotoUserVoices}">&#60; {!$Label.c.back_button_mobile}</p>
+        </div>
+        <aura:if isTrue="{!v.userVoice.innohub__Image__c}">
+            <center>
+                <div class="ImageDiv">
+                    <ui:outputRichText class="slds-text-longform" value="{!v.userVoice.innohub__Image__c}"/>
+                </div>
+            </center>
+            <aura:set attribute="else">
+                <center>
+                    <div class="noImageDiv">
+                        <lightning:icon iconName="utility:image" size="large" class="myIcon" alternativeText="No image Set"/>
+                    </div>
+                </center>
+            </aura:set>
+        </aura:if>
+        <center>
+            <div class="creatorInfo slds-p-vertical_small">
+                <div><span class="creatorName slds-text-title"><b>{!$Label.c.inspirations_AuthorPublication}</b></span></div>
+                <span class="creatorName slds-text-title">{!v.userVoice.innohub__Headline__c}</span>
+            </div> 
+        </center>
+        <h2 class="slds-text-align_center slds-p-top_small slds-p-bottom_small tileTitle objectName">
+            {!v.userVoice.Name}
+        </h2>
+    </div>
+    <center  class="slds-m-top_small slds-m-bottom_small"><hr class="theNumberHr" /></center>
+    <center>
+        <div class=" slds-clearfix">
+            <span class="tileCategory slds-m-bottom_small">{!v.userVoiceCatAll}</span>         
+        </div>
+    </center>
+    <div class="wrapper slds-p-around_medium slds-p-bottom_small">
+        <div class="slds-form-element__label">{!$Label.c.detail_Overview_Header}</div>
+        <div><lightning:formattedRichText class="theHeader" value="{!v.userVoice.innohub__Introduction__c}" /></div> 
+        <div class="slds-m-top_large slds-form-element__label">{!$Label.c.detail_Description_Header}</div>
+        <div><ui:outputRichText class="slds-text-longform" value="{!v.userVoice.innohub__Detail__c}" /></div>
+     
+        <c:dermoTestVideo filevideoHeight="{!v.filevideoHeight}" filevideoWidth="{!v.filevideoWidth}" videoHeight="{!v.videoHeight}" videoWidth="{!v.videoWidth}" recordId = "{!v.recordId}"/>
+    </div> 
+</aura:component>

@@ -1,0 +1,24 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "innohub__Challenge__c",
+                "referenceId": "innohub__Challenge__cRef1"
+            },
+            "Name": "Innovation Hub Features",
+            "innohub__Author__c": "Maximilian Goldschmidt",
+            "innohub__Author_Image__c": "<p style=\"\"><img src=\"https://innovation-site-394-dev-ed--c.documentforce.com/servlet/rtaImage?eid=a0I1X00000139Uv&amp;feoid=00N1X000003QITg&amp;refid=0EM1X0000001fvD\" alt=\"profile.png\"></img></p>",
+            "innohub__Banner_Background_Color__c": "rgb(13, 19, 53)",
+            "innohub__Banner_Text_Color__c": "rgb(255, 255, 255)",
+            "innohub__Category__c": "Value 2;Value 3",
+            "innohub__End_Date__c": "2020-02-21",
+            "innohub__Image__c": "<p style=\"\"><img src=\"https://innovation-site-394-dev-ed--c.documentforce.com/servlet/rtaImage?eid=a0I1X00000139Uv&amp;feoid=00N1X000003QJpA&amp;refid=0EM1X0000001fvI\" alt=\"opTV_header.jpg\"></img></p>",
+            "innohub__Long_Description__c": "<p><span style=\"font-size: 14px; color: rgb(0, 0, 0);\">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</span></p>",
+            "innohub__Short_Description__c": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",
+            "innohub__Start_Date__c": "2020-01-31",
+            "innohub__Status__c": "Published",
+            "innohub__Video_Title__c": "A Message From Our Sponsor",
+            "innohub__Video_Url__c": "https://vimeo.com/385647949"
+        }
+    ]
+}

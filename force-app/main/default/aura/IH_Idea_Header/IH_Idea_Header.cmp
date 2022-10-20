@@ -1,0 +1,87 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes" access="global" controller="IH_IdeaCtr">
+    <aura:attribute name="recordId" type="Id" />
+    <aura:attribute name="idea" type="sObject" />
+    <aura:attribute name="creator" type="sObject" />
+    <aura:attribute name="catSet" type="Boolean" default="false" />    
+    <aura:attribute name="ideaCatTwo" type="String" />
+    <aura:attribute name="ideaCatAll" type="String" />
+    <aura:attribute name="theVote" type="Boolean"/>
+    <aura:attribute name="votePresent" type="Boolean" />
+    <aura:attribute name="thePoints" type="Double" default="0"/>
+    <aura:attribute name="recordTypeName" type="sObject" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <center>
+        <div class="slds-m-bottom_small theWidth">
+            <c:IH_Idea_Approval recordId="{!v.recordId}"/>
+        </div>
+    </center>
+    <div class="slds-is-relative"> 
+        <lightning:spinner aura:id="mySpinner" class="slds-hide" alternativeText="Updating vote"/>
+        <div class="mobilePageBackButton slds-p-top_small">  
+            <p onclick="{!c.gotoIdeas}">&#60; {!$Label.c.back_button_mobile}</p>
+        </div>
+        
+        <aura:if isTrue="{!v.idea.innohub__Image__c}">
+            <center>
+                <div class="detailImage">
+                    <ui:outputRichText class="slds-text-longform" value="{!v.idea.innohub__Image__c}"/>
+                </div>
+            </center>
+            <aura:set attribute="else">
+                <center>
+                    <div class="noImageDiv">
+                        <lightning:icon iconName="utility:image" size="large" class="myIcon" alternativeText="No image Set"/>
+                    </div>
+                </center>
+            </aura:set>
+        </aura:if>
+        <div class="slds-text-align_center creatorImg">
+            <img class="img-circle" alt="" src="{!v.creator.MediumPhotoUrl}"/>		
+        </div>
+        <div class="slds-text-align_center slds-p-top_medium">
+            {!v.creator.Name}
+        </div>
+        <h2 class="slds-text-align_center slds-p-top_small slds-p-bottom_small tileTitle objectName">
+            {!v.idea.Name}
+        </h2>
+        <center class="slds-m-top_small slds-m-bottom_small"><hr class="theHr" /></center>
+        <center>
+            <aura:if isTrue="{!v.catSet}">
+                <span class="tileCategory slds-m-bottom_small">{!v.ideaCatAll}</span>
+                <aura:set attribute="else">
+                    <i class="tileCategory">No category selected</i>
+                </aura:set>
+            </aura:if>
+        </center>
+        <aura:if isTrue="{!v.idea.innohub__Approval_Status__c == 'Approved'}">
+            <div class="slds-text-align_center slds-m-top_x-large">
+                <span class="slds-badge">{!v.thePoints * 10 + ' '} {!$Label.c.points_Label}</span>
+                            
+            </div>
+            <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_x-large">
+                <aura:if isTrue="{!v.votePresent}">
+                    <aura:if isTrue="{!v.theVote}">
+                        <lightning:buttonIconStateful selected="true" variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                        <lightning:buttonIconStateful variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                        <aura:set attribute="else">
+                            <lightning:buttonIconStateful variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                            <lightning:buttonIconStateful selected="true" variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                        </aura:set>
+                    </aura:if>
+                    <aura:set attribute="else">
+                        <lightning:buttonIconStateful variant="bare" iconName="utility:like" size="small" onclick="{!c.voteUp}" class="slds-m-right_xx-small"/>
+                        <lightning:buttonIconStateful variant="bare" iconName="utility:dislike" size="small"  onclick="{!c.voteDown}"/>
+                    </aura:set>
+                </aura:if>
+            </div>
+            <aura:set attribute="else">
+                <div class="slds-text-align_center slds-m-top_medium slds-m-bottom_x-large">
+                    <lightning:buttonIconStateful variant="bare" iconName="utility:like" size="small" class="slds-m-right_xx-small" alternativeText="Disabled" disabled="true"/>
+                    <lightning:buttonIconStateful variant="bare" iconName="utility:dislike" size="small" alternativeText="Disabled" disabled="true"/>     
+                </div>
+            </aura:set>
+        </aura:if>
+    </div>
+</aura:component>

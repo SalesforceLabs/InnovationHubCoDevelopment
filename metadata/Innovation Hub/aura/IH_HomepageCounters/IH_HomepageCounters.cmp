@@ -1,0 +1,85 @@
+<aura:component access="global" controller="IH_HomepageController">
+    <aura:attribute name="myIdeas" type="Integer" />
+    <aura:attribute name="ideaBoolean" type="Boolean" />
+    <aura:attribute name="favIdeas" type="Integer" />
+    <aura:attribute name="favIdeaBoolean" type="Boolean" />
+    <aura:attribute name="favDemos" type="Integer" />
+    <aura:attribute name="favDemoBoolean" type="Boolean" />
+    <aura:attribute name="myEvents" type="Integer" />
+    <aura:attribute name="myEventsBoolean" type="Boolean" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:handler event="c:IdeaVoteChange" action="{!c.getIdeaCount}" />
+    <aura:handler event="c:DemoVoteChange" action="{!c.getDemoCount}" />
+    <aura:registerEvent name="radioSelect" type="c:IH_Radio_Selected"/>
+    
+    <div class="slds-grid slds-wrap" >
+        <aura:if isTrue="{!v.ideaBoolean}">
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-4">
+                <div class="overallDivClick" onclick="{!c.gotoIdeas}">
+                    <center><div class="slds-truncate tileTitle theTitleCounter">{!$Label.c.my_Submissions_Counter_Header}</div>
+                        <aura:if isTrue="{!v.myIdeas}">
+                            <div class="theNum">{!v.myIdeas}</div>
+                            <aura:set attribute="else">
+                                <div class="shortNum theNum">0</div>
+                            </aura:set>
+                        </aura:if>
+                        <hr class="theNumberHr"/>
+                    </center>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.favIdeaBoolean}">
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-4">
+                <div class="slds-is-relative overallDivClick" onclick="{!c.gotoIdeasFavourite}">
+                    <center><div class="slds-truncate tileTitle theTitleCounter">{!$Label.c.favourite_Submissions_Counter_Header}</div>
+                        <lightning:spinner aura:id="mySpinner" class="slds-hide"/>
+                        <aura:if isTrue="{!v.favIdeas}">
+                            <div class="theNum">{!v.favIdeas}</div>
+                            <aura:set attribute="else">
+                                <div class="theNum">0</div>
+                            </aura:set>
+                        </aura:if>
+                        <hr class="theNumberHr"/>
+                    </center>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.favDemoBoolean}">
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-4">
+                <div class="slds-is-relative overallDivClick" onclick="{!c.gotoDemos}">
+                    <center><div class="slds-truncate tileTitle theTitleCounter">{!$Label.c.favourite_Demos_Counter_Header}</div>
+                        <lightning:spinner aura:id="myDemoSpinner" class="slds-hide"/>
+                        <aura:if isTrue="{!v.favDemos}">
+                            <div class="theNum">{!v.favDemos}</div>
+                            <aura:set attribute="else">
+                                <div class="theNum">0</div>
+                            </aura:set>
+                        </aura:if>
+                        <hr class="theNumberHr"/>
+                    </center>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.myEventsBoolean}">
+            <div class="slds-col slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-4">
+                <div class="overallDivClick" onclick="{!c.gotoEvents}">
+                    <center><div class="slds-truncate tileTitle theTitleCounter">{!$Label.c.my_Events_Counter_Header}</div>
+                        
+                        <aura:if isTrue="{!v.myEvents}">
+                            <div class="theNum">{!v.myEvents}</div>
+                            <aura:set attribute="else">
+                                <div class="shortNum theNum">0</div>
+                            </aura:set>
+                        </aura:if>
+                        <hr class="theNumberHr"/>
+                    </center>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

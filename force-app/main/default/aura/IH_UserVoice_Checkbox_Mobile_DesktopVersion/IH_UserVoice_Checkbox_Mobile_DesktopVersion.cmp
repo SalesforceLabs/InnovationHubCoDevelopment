@@ -1,0 +1,14 @@
+<aura:component access="global">    
+    <aura:registerEvent name="filterChangedEvent" type="c:IH_FilterChanged"/>
+    <aura:attribute name="listOfRecordTypes" type="Map"/>
+    <aura:attribute name="value" type="String" default="All"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div class="filterName">{!$Label.c.inspirations_Filter_Type_Title}</div> 
+    <lightning:radioGroup
+        name="radioButtonGroupMobileDesktopVersion"
+        options="{!v.listOfRecordTypes}"
+        value="{!v.value}"
+        onchange="{!c.handleChange}"
+        required="true" />
+</aura:component>

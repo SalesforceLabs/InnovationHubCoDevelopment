@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "b2c15f73-8090-4582-96eb-fc9cd7b26daa",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "6ebcd709-08e5-4444-b482-a6ea6125415e",
+  "label" : "Activity (innohub) Detail",
+  "objectApiName" : "innohub__Activity__c",
+  "routeType" : "detail-a00",
+  "type" : "route",
+  "urlPrefix" : "activity"
+}

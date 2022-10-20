@@ -1,0 +1,82 @@
+{
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "componentName" : "siteforce:sldsTwoCol84Layout",
+  "id" : "39b03bfe-d9ee-4fa9-b4af-496ab3fa137a",
+  "label" : "Inspiration Detail",
+  "regions" : [ {
+    "id" : "fa8bea89-4d08-4811-a272-d3359748a07b",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "filevideoHeight" : "",
+        "filevideoWidth" : "",
+        "videoHeight" : "",
+        "videoWidth" : ""
+      },
+      "componentName" : "innohub:IH_UserVoice_Detail",
+      "id" : "3ffafc2b-9d2a-4b42-8c49-c6cfd3e0a525",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "990bc021-9000-46a2-a69b-0c9f533e3ba1",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "c42a4390-a7d0-49e2-a246-2893e5973f9a",
+    "regionName" : "footer",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "description" : "",
+        "metaTags" : "",
+        "title" : "{!Record._Object}: {!Record._Title}"
+      },
+      "componentName" : "forceCommunity:seoAssistant",
+      "id" : "70d86251-d8df-4207-93bb-b624e83ce42d",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "3ef3e83a-61eb-4e6d-ba0d-bda319b99873",
+    "regionName" : "sfdcHiddenRegion",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "context" : "RECORD",
+        "recordId" : "{!recordId}",
+        "width" : "MEDIUM"
+      },
+      "componentName" : "forceCommunity:feedPublisher",
+      "id" : "c68c5082-796a-4278-8d72-ddd7d2aa88ab",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "canChangeSorting" : true,
+        "defaultFilter" : "",
+        "defaultSortOrderHomeFeed" : "Relevance",
+        "defaultSortOrderTopicsFeed" : "Relevance",
+        "feedDesign" : "DEFAULT",
+        "hasFeedSearch" : true,
+        "subjectId" : "{!recordId}",
+        "type" : "Record"
+      },
+      "componentName" : "forceCommunity:forceCommunityFeed",
+      "id" : "03b96878-b9f8-46de-9fe1-1af249025b3c",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "027a9086-eefd-4198-b1ab-2413ff9a170b",
+    "regionName" : "sidebar",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-a0I"
+}

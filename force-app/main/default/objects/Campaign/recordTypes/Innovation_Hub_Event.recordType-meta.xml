@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Innovation_Hub_Event</fullName>
+    <active>true</active>
+    <description>Events associated with your Innovation Hub</description>
+    <label>Innovation Hub Event</label>
+    <picklistValues>
+        <picklist>Campaign_Type__c</picklist>
+        <values>
+            <fullName>Type 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Type 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country__c</picklist>
+        <values>
+            <fullName>Location 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location 4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Location 5</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Aborted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Planned</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banner Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Direct Mail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partners</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral Program</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telemarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

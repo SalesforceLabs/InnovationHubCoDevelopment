@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NavigationMenu xmlns="http://soap.sforce.com/2006/04/metadata">
+    <container>Innovation Hub v4</container>
+    <containerType>Network</containerType>
+    <label>BU Navigation</label>
+    <navigationMenuItem>
+        <label>BU1</label>
+        <position>1</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/analytics</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>BU2</label>
+        <position>2</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/analytics</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>BU3</label>
+        <position>3</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/analytics</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+    <navigationMenuItem>
+        <label>BU4</label>
+        <position>4</position>
+        <publiclyAvailable>false</publiclyAvailable>
+        <target>/analytics</target>
+        <type>InternalLink</type>
+    </navigationMenuItem>
+</NavigationMenu>

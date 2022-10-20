@@ -1,0 +1,121 @@
+.THIS .eventBanner {
+    height: 300px;
+    width: 100%;
+}
+
+.THIS .overlay{
+    overflow: hidden;
+}
+
+.THIS svg.slds-icon.slds-icon-text-default.slds-icon--large {
+    fill: white;
+}
+
+.THIS .topBanner{
+    width: 100%;
+    background-color: #00396B;
+    height: 200px;
+    position: relative;
+    top: -37px;
+    
+}
+
+.THIS .txt-xl{
+    font-size: 5rem;
+    color: grey;
+    font-weight: 600;
+}
+
+.THIS .txt-l{
+    font-size: 2rem;
+}
+
+.THIS .txt-m{
+    font-size: 1.6rem;
+}
+
+.THIS .txt-s{
+    font-size: 1rem;
+}
+
+.THIS .txt-100 {
+    font-weight: 100;
+}
+
+.THIS .greenBorder {
+    
+    border-radius: 0px;
+}
+
+.THIS .myHeader{
+    height:0px;
+    width: 50%;
+}
+
+.THIS .lineHeight{
+    line-height: 292px;
+}
+
+.THIS .myIcon{
+    line-height: 175px;
+}
+
+.THIS .section_2{
+    height: 300px;
+    margin-left: -24px;
+    width: 50%;
+    text-transform: uppercase;
+}
+
+.THIS .tileCategory {
+    font-size: .7rem;
+    line-height: 1.25;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+}
+
+.THIS .uiOutputRichText {
+    padding-bottom: 50px;
+}
+
+.THIS .uiOutputRichText img {
+    width: 100%;
+}
+
+.THIS .uiOutputDate{
+    font-size: 1.4rem;
+    line-height: 1.25;
+    font-weight: 100;
+}
+
+.THIS .mobilePageBackButton{
+   display:none;
+}
+
+@media all and (max-width : 1022px) {
+    .THIS .uiOutputRichText {
+        width: 0% !important;
+        padding-bottom: 50px;
+        display: none;
+    }
+    .THIS .section_2 {
+        height: 300px;
+        margin-left: -24px;
+        width: 100%!important;
+        text-align: center;
+    }
+    
+    .THIS .mobilePageBackButton{
+       display: block;
+       text-align: center;
+       bottom: 30px;
+       text-decoration: none;
+       font-size: 13px;
+       font-weight: 100;
+       cursor: pointer;
+       color: #3c3c3c!important;
+       margin-bottom: 10px;
+       padding-top: 10px;
+   }
+}

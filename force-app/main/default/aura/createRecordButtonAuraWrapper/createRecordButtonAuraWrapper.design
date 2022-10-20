@@ -1,0 +1,14 @@
+<design:component label="Innovation Hub: Create Record Button">
+  <design:attribute name="visibilityField" label="Button Visibility Field Api Name"
+    description="Optional: The field api name of a checkbox field (if used on record detail page) that controls whether this button renders or not." />
+  <design:attribute name="objectApiName" label="Object Name"
+    description="The object you want to create a record of" />
+  <design:attribute name="possibleRecordTypes" label="List of available Record Type Ids or Names"
+    description="If only one record type is provided, the user won't be able to choose the record type. If no record type is specified, the user will be able to pick the record type from all record types." />
+  <design:attribute name="label" label="Button Label" />
+  <design:attribute name="fieldApiName" label="Pre-fill Field Api Name"
+    description="If you want to pre-fill a field in the create record form, provide the api name of that field." />
+  <design:attribute name="fieldValue" label="Pre-fill Field Value"
+    description="Value to be entered in the pre-fill field" />
+  <design:attribute name="defaultFieldValues" label="Default field values JSON object" />
+</design:component>

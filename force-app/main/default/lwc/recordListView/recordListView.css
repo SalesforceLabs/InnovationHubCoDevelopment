@@ -1,0 +1,10 @@
+.noResultsTitle{
+    font-weight: var(--lwc-fontWeightRegular,400);
+    min-width: 75%;
+    max-width: 500px;
+}
+
+.noResultsMessage{
+    word-break: break-word;
+    word-wrap: break-word;
+}

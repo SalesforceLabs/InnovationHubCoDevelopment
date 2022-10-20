@@ -1,0 +1,191 @@
+.THIS .img-circle {
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 50%;
+    position: relative;
+    bottom: 80px;
+    margin-bottom: -80px;
+    border: 5px solid white;
+    
+}
+
+.THIS .objectName{
+    max-width: 90%;
+    font-size: 36px;
+    font-weight: bold;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+
+.THIS .detailImage{
+    min-height: 344px;
+    background-color: #e1e1e1;
+    height: 334px;
+    overflow: hidden;
+    max-width: 768px;
+    margin: auto;
+    line-height: 334px;
+}
+.THIS .imageBanner {
+    height: 344px;
+    width: 100%;
+    background-color: #dee2e7;
+    overflow: hidden;
+}
+
+.THIS .slds-text-longform{
+    width:100% !important;
+}
+
+.THIS.uiOutputRichText  img{
+    width: 981px;
+    height: 338px;
+}
+
+.THIS .theNumberHr{
+    width: 78%;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.THIS .tileCategory {
+    font-size: 0.7rem;
+    line-height: 1.25;
+    text-transform: uppercase;
+    letter-spacing: .0625rem;
+    font-style:italic;
+}
+
+.THIS .noImageDiv{
+    height: 200px;
+    width: 78%;
+    background-color: #f3f2f2;
+    line-height: 145px;
+}
+
+.THIS .mobilePageBackButton{
+   display:none;
+}
+
+
+/* iPhone 6/7/8 */
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    .THIS .imageBanner {
+        display: none;
+    }
+    .THIS .creatorImg {
+        display: none;
+    }
+    .THIS .objectName{
+        font-size: 36px;
+        
+    }
+    .THIS .noImageDiv {
+        display: none;
+    }
+    
+    .THIS .detailImage {
+   display:none;
+}
+    .THIS .mobilePageBackButton{
+       display:block;
+       text-align: center;
+       bottom: 30px;
+       text-decoration: none; 
+       font-size: 13px;
+       font-weight: 100;
+       cursor:pointer;
+       color: #3c3c3c !important;
+   }
+    
+}
+
+/* iPhone 6/7/8plus */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+    .THIS .imageBanner {
+        display: none;
+    }
+    .THIS .creatorImg {
+        display: none;
+    }
+    .THIS .objectName{
+        font-size: 36px;
+        
+    }
+    .THIS .noImageDiv {
+        
+        display: none;
+    }
+    
+    .THIS .mobilePageBackButton{
+       display:block;
+       text-align: center;
+       bottom: 30px;
+       text-decoration: none; 
+       font-size: 13px;
+       font-weight: 100;
+       cursor:pointer;
+       color: #3c3c3c !important;
+   }
+    
+    
+}
+
+/* iPhone X */
+@media only screen and (min-device-width : 375px) and (max-device-width : 812px) {
+    .THIS .imageBanner {
+        display: none;
+    }
+    .THIS .creatorImg {
+        display: none;
+    }
+    .THIS .objectName{
+        font-size: 36px;
+        
+    }
+    .THIS .noImageDiv {
+        
+        display: none;
+    }
+	
+	.THIS .mobilePageBackButton{
+       display:block;
+       text-align: center;
+       bottom: 30px;
+       text-decoration: none; 
+       font-size: 13px;
+       font-weight: 100;
+       cursor:pointer;
+       color: #3c3c3c !important;
+   }    
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .THIS .imageBanner {
+        display: none;
+    }
+    .THIS .creatorImg {
+        display: none;
+    }
+    .THIS .objectName{
+        font-size: 36px;
+        
+    }
+    .THIS .noImageDiv {
+        
+        display: none;
+    }
+    
+    .THIS .mobilePageBackButton{
+       display:block;
+       text-align: center;
+       bottom: 30px;
+       text-decoration: none; 
+       font-size: 13px;
+       font-weight: 100;
+       cursor:pointer;
+       color: #3c3c3c !important;
+   }
+}

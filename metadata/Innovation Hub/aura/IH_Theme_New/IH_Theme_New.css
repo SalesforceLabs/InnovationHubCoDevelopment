@@ -1,0 +1,96 @@
+/*Lousie edits below*/
+.THIS .brandLogo{
+    width: 60%;
+    cursor: pointer;   
+}
+
+.THIS .dermo{
+    max-width: 1340px;
+    margin: auto;
+}
+
+.THIS .panelImage {
+    min-height: 60px;
+    padding-top: 0.5%; 
+    padding-bottom: 1%;
+}
+
+.THIS ul.comm-navigation__list.slds-list_horizontal.slds-has-flexi-truncate{
+    text-align: center !important;
+    margin: 0% 1.5% !important;
+}
+
+.THIS .forceCommunitySearchBox .body-search {
+    max-width: 1190px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+
+.THIS .headerUnderLine{
+    width: 100%; 
+    height: 7px; 
+    background-color: white;
+}
+/*Lousie edits above*/
+
+
+
+.THIS .forceCommunitySearchBox .search-button {
+    width: 35px;
+    height: 100%;
+    background: transparent;
+    /*background-image: url(https://c.eu10.content.force.com/servlet/servlet.ImageServer?id=0150X000007OSCF&oid=00D0X000000uZG4&lastMod=1530643953000) !important;*/
+    background-repeat: no-repeat;
+    color: rgba(255,255,255,0) !important;
+}
+
+
+/* Search Icon - White*/
+.THIS .forceCommunitySearchBox .slds-button.slds-button_brand.search-button {
+    /*background-image: url(https://dermo1-dev-ed--c.eu12.content.force.com/servlet/servlet.ImageServer?id=0151r000006jQz7&oid=00D1r000000fu7B&lastMod=1531822759000)!important;*/
+    top: 11px;/*Add positioning to dev console*/
+}
+
+/* Search line */
+.THIS .search-field {
+    background-color: transparent!important;
+    border-bottom: 1px solid white !important;
+}
+
+.THIS .search-field{
+    background-color: transparent!important;
+    border-bottom: 1px solid grey;
+}
+
+@media all and (max-width : 760px) {
+    .THIS .theNav{
+        left: 37%;
+    bottom: .2rem;
+    width: 80px;
+       
+    }
+        
+    
+    .THIS .theSearch{
+        bottom: 50px;
+    }
+    
+    .THIS .brandLogo{
+        width: 100%;
+        cursor: pointer;
+        min-width: 100px;
+        margin-top: 9%;  
+    }
+    
+    .THIS community_navigation-global-navigation-trigger {
+        z-index: 300;
+    }
+    
+
+    
+}
+/* search icon in mobile version */
+.THIS svg.slds-icon.slds-icon--small {
+    fill: #3c3c3c;
+}

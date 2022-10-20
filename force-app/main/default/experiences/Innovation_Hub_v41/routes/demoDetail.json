@@ -1,0 +1,10 @@
+{
+  "activeViewId" : "daf82593-355d-4af4-92db-bffa699f0d2e",
+  "appPageId" : "6ab2d718-c9e5-4b87-87ad-6a909a96a231",
+  "id" : "3e23c628-3b09-4d65-adde-7c785e4cc46e",
+  "label" : "Demo Detail",
+  "objectApiName" : "innohub__Demo__c",
+  "routeType" : "detail-a06",
+  "type" : "route",
+  "urlPrefix" : "demo"
+}

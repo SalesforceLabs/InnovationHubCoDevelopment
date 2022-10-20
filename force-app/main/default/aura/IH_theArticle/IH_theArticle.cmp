@@ -1,0 +1,40 @@
+<aura:component access="global">
+    <aura:attribute name="article" type="sObject" />
+    
+    <article class="slds-card">
+        <div class="myHeader">
+            <aura:if isTrue="{!v.article.innohub__Image__c}">
+                <center><ui:outputRichText class="slds-text-longform" value="{!v.article.innohub__Image__c}"/></center>
+                <aura:set attribute="else">
+                    <center>
+                        <lightning:icon iconName="utility:image" size="medium" alternativeText="No image Set"/>
+                    </center>
+                </aura:set>
+            </aura:if>
+        </div>
+        <div class="slds-is-relative theArea">
+            <div class="overlay">        
+                <div class="evetDate">
+                    <aura:if isTrue="{!v.article.innohub__Type__c}">
+                        <span class="tileCategory ">{!v.article.innohub__Type__c}</span>
+                        <aura:set attribute="else">
+                            <i class="tileCategory">Type Not Specified</i>
+                        </aura:set>
+                    </aura:if>                
+                    <div aura:id="articleTitleId" class="articleTitle slds-truncate">{!v.article.Name}</div>
+                    <div class="articleTitle txt-m">
+                        <aura:if isTrue="{!(v.article.innohub__Start__c==v.article.innohub__End__c )}">
+                            <ui:outputDate value="{!v.article.innohub__Start__c}" format="dd MMM yyyy" class="txt-m txt-100"/>
+                            <aura:set attribute="else">
+                                <ui:outputDate value="{!v.article.innohub__Start__c}" format="dd MMMM yyyy"/>
+                            </aura:set>
+                        </aura:if>
+                    </div>
+                    <div class="mtm txtleft slds-is-relative">
+                        <button class="slds-button slds-button_neutral" onclick="{!c.navigateToEvent}">{!$Label.c.view_Event_Button}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+</aura:component>

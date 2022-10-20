@@ -1,0 +1,21 @@
+{
+  "name": "innovation-hub-v4",
+  "version": "4.0.0",
+  "description": "Salesforce Community template. Give your users a voice to propose their own ideas or improvement requests. Provides a platform to allow users to record their ideas for their peers to review.",
+  "scripts": {
+    "test:unit": "sfdx-lwc-jest",
+    "test:unit:watch": "sfdx-lwc-jest --watch",
+    "test:unit:debug": "sfdx-lwc-jest --debug",
+    "build": "./orgInit.sh",
+    "reset": "./reset.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.soma.salesforce.com/demo-engineering-emea/innovation-hub-v4.git"
+  },
+  "author": "Maximilian Goldschmidt",
+  "license": "ISC",
+  "devDependencies": {
+    "@salesforce/sfdx-lwc-jest": "^0.7.1"
+  }
+}

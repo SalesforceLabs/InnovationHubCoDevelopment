@@ -1,0 +1,189 @@
+.tile {
+  border: 1px solid #dddbda;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  min-width: 20rem;
+  max-width: 30rem;
+  height: 150px;
+  background-color: white;
+}
+
+span .slds-text-not-selected {
+  font-size: 9px;
+}
+
+.insideelement {
+  height: 35px;
+  vertical-align: middle;
+}
+
+.insideelement2 {
+  height: 70px;
+  vertical-align: middle;
+}
+
+.insideelement3 {
+  height: 45px;
+  vertical-align: middle;
+}
+
+.tileRecommended {
+  border: 1px solid #205ca0;
+}
+
+.header {
+  height: 52px;
+  background-color: rgba(171, 173, 176, 0.72);
+  line-height: 52px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(171, 173, 176, 0.72);
+}
+
+.recordType {
+  top: 5px;
+  display: inline-flex;
+  max-width: 90%;
+  color: #205ca0;
+}
+
+.recordTypeBanner {
+  background-color: white;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  text-transform: uppercase;
+  padding: 1px 3px;
+  font-weight: 300;
+}
+
+.categoryContainer{
+    margin-left: 0.5rem;
+}
+
+.recommendedBanner {
+  background-color: #205ca0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding: 1px 3px 3px 3px;
+  vertical-align: middle;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.middle {
+    height: 1.5rem;
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.body {
+    height: 2.5rem;
+}
+
+.middleSection {
+    padding-left: 0.5rem;
+  vertical-align: top;
+}
+
+.pointsContainer{
+    margin-right: 1rem;
+    margin-left: .25rem;
+}
+
+.points {
+
+  background-color: #d8ecf9;
+  color: #59575c;
+}
+
+.tileCategory {
+  display: flex;
+    align-items: center;
+}
+
+.twoLines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.threeLines {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.tileHeading {
+  text-decoration: none;
+  color: #032e61;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+
+.customBanner {
+  max-width: 90%;
+  background-color: #032e61;
+  color: white;
+  float: right;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  text-transform: uppercase;
+  padding: 2px 5px;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  font-weight: 300;
+}
+
+.overlay {
+  width: 100%;
+  height: 52px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(171, 173, 176, 0.72);
+}
+
+.date{
+  color: white;
+  font-style: italic;
+}
+
+.dateDay{
+  font-size: 25px;
+  display: block;
+  height: 15px;
+margin-top: -5px;
+}
+
+.dateMonth{
+  font-weight: 500;
+  display: block;
+  height: 15px;
+  font-size: 7px;
+}
+
+div .LARGE{
+  color: yellow;
+}
+
+div .MEDIUM{
+  color: green;
+}
+
+.defaultImage{
+  background-color: #769ED9;
+}
